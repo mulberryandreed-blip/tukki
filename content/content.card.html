@@ -1,0 +1,22 @@
+<!-- @dsCard group="Components" viewport="700x620" name="Content" subtitle="Eyebrow, SectionIntro, ServiceCard, PriceRow, PostCard, NumberedSection, AccentLine, Testimonial" -->
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script><style>body{padding:24px}</style></head><body><div id="r"></div><script type="text/babel">
+const D=window.MulberryReedDesignSystem_309c80;
+
+const {SectionIntro,PriceRow,ServiceCard,PostCard,NumberedSection,AccentLine,Testimonial}=D;
+ReactDOM.createRoot(document.getElementById('r')).render(<div style={{display:'flex',flexDirection:'column',gap:20}}>
+<div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:24}}>
+<div style={{display:'flex',flexDirection:'column',gap:16}}>
+<SectionIntro eyebrow="Pricing" title="What does it cost?" weight={400}/>
+<div style={{borderTop:'1px solid var(--border-default)'}}><PriceRow name="Discovery call" price="Free"/><PriceRow name="One-off projects" price="From $1,500"/></div>
+<div style={{background:'var(--espresso)',padding:16,borderRadius:16}}><ServiceCard name="Brand" desc="Naming, identity and voice that people recognise at a glance."/></div>
+</div>
+<PostCard image="../../assets/journal/memorable-beats-clever.png" tag="Brand" date="Sep 2026" title="Why memorable beats clever" excerpt="The brands people choose are the ones they can recall without trying." href="#"/>
+</div>
+<NumberedSection number="01" title="What we do" closing="We only recommend work we believe has a reason to exist.">{["Some businesses come to us with a clear brief. Others know something needs to change."]}</NumberedSection>
+<div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:24,alignItems:'start'}}><AccentLine>No obligation starts with the discovery call.</AccentLine><Testimonial quote="Communication was clear, the work felt organised." attribution="Client details withheld for confidentiality."/></div>
+</div>);
+</script></body></html>
