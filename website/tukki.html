@@ -1,0 +1,104 @@
+<!-- @dsCard group="Website" viewport="1280x900" name="Tukki landing" subtitle="Arabic sub-brand page, RTL; English links to the M&R site" -->
+<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>تُكِّي — من مولبيري آند ريد</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marhey:wght@400;600&display=swap"><link rel="stylesheet" href="../../styles.css"><link rel="stylesheet" href="site.css">
+<meta name="ext-resource-dependency" content="../../assets/web/ink-wash.png" data-resource-id="inkWash">
+<meta name="ext-resource-dependency" content="../../assets/web/bush-line.png" data-resource-id="bushLine">
+<meta name="ext-resource-dependency" content="../../assets/web/mulberry-bush.png" data-resource-id="bush">
+<style>.tk-ar{--font-display:var(--font-arabic-display);--font-sans:var(--font-arabic-text);--font-accent:var(--font-arabic-display)}.tk-faq summary{list-style:none;cursor:pointer}.tk-faq summary::-webkit-details-marker{display:none}.tk-faq[open] .tk-plus{transform:rotate(45deg)}.tk-plink{color:var(--ink);text-decoration:underline;text-decoration-color:rgba(123,27,51,.35);text-underline-offset:6px;text-decoration-thickness:1.5px}.tk-plink:hover{color:var(--berry);text-decoration-color:var(--berry)}.tk-plink .tk-parrow{color:var(--berry);transition:transform .2s}.tk-plink:hover .tk-parrow{transform:translateX(-4px)}html{scroll-behavior:smooth}.tk-hk{position:absolute;top:.04em;font-size:.6em;line-height:1;color:rgba(123,27,51,.45);clip-path:inset(0 0 50% 0);pointer-events:none}.tk-scrib{stroke-dasharray:1;stroke-dashoffset:1}.tk-scrib.on{animation:tk-draw .9s cubic-bezier(.6,.1,.3,1) .2s forwards}@keyframes tk-draw{to{stroke-dashoffset:0}}@media (prefers-reduced-motion:reduce){.tk-hk{position:absolute;top:.04em;font-size:.6em;line-height:1;color:rgba(123,27,51,.45);clip-path:inset(0 0 50% 0);pointer-events:none}.tk-scrib{stroke-dashoffset:0}}.tk-rtl .mr-plant{right:auto;left:-60px;bottom:0;width:min(48vw,660px);transform:scaleX(-1)}@media (min-width:761px) and (max-width:1100px){.tk-rtl .mr-plant{left:max(-140px,-14vw);width:50vw;bottom:0}}@media (max-width:760px){.tk-rtl .mr-plant{left:-22vw;width:120vw;bottom:0}.tk-links{display:none!important}}</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script><script>window.DS=window.MulberryReedDesignSystem_309c80;</script>
+<script src="tukki-content.js?v=20"></script><script src="content.js"></script><script type="text/babel" src="Hero.jsx"></script><script type="text/babel" src="tukki-story.jsx"></script>
+</head><body><template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" data-bg-color="#FAF7F2"><rect width="100" height="100" fill="#FAF7F2"/><text x="50" y="62" text-anchor="middle" font-family="Georgia,serif" font-size="30" fill="#7B1B33">Tukki</text></svg></template><div id="root"></div>
+<script type="text/babel">
+const sec={position:'relative',zIndex:1,padding:'var(--section-pad-y) var(--section-pad-x)',maxWidth:1100,margin:'0 auto'};
+const twoCol={display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(300px,1fr))',gap:'var(--column-gap)',alignItems:'start'};
+function Eb({children,onDark,ar}){return <p style={{fontFamily:'var(--font-sans)',fontSize:ar?15:14,fontWeight:600,letterSpacing:ar?0:'0.14em',textTransform:ar?'none':'uppercase',color:onDark?'var(--rose)':'var(--berry)',margin:'0 0 16px'}}>{children}</p>;}
+function H2({children,onDark,style}){return <h2 style={{fontFamily:'var(--font-display)',fontWeight:500,fontSize:'clamp(30px,4.5vw,52px)',letterSpacing:'-0.005em',lineHeight:1.15,margin:0,color:onDark?'var(--paper)':'var(--ink)',textWrap:'pretty',...style}}>{children}</h2>;}
+function Brand({t,ar}){return <a href="#top" style={{display:'flex',alignItems:'baseline',gap:5,textDecoration:'none'}}><img src="../../assets/web/tukki-wordmark.png" alt={t.brandName} style={{height:105,width:'auto'}}/></a>;}
+function Nav({t,ar}){const {Button}=window.DS;const ids=['how','why','pricing','faq'];
+ return <nav style={{position:'sticky',top:0,zIndex:50,display:'flex',alignItems:'center',justifyContent:'space-between',gap:24,padding:'14px clamp(20px,5vw,64px)',background:'var(--nav-glass)',backdropFilter:'blur(8px)'}}>
+  <Brand t={t} ar={ar}/>
+  <div style={{display:'flex',alignItems:'center',gap:'clamp(14px,3vw,32px)',fontFamily:'var(--font-sans)',fontSize:15,fontWeight:500}}>
+   <span className="tk-links" style={{display:'flex',gap:'clamp(14px,3vw,28px)'}}>{t.nav.map((l,i)=><a key={l} href={'#'+ids[i]} style={{color:'var(--ink)'}}>{l}</a>)}</span>
+   <a href="index.html" lang="en" style={{fontFamily:"'Inter',sans-serif",fontSize:14,fontWeight:600,border:'1.5px solid var(--border-button)',borderRadius:999,padding:'7px 14px',color:'var(--ink)'}}>English</a>
+   <Button size="sm" href="#contact">{t.navCta}</Button>
+  </div></nav>;}
+function Scribble({children}){const ref=React.useRef();const [on,setOn]=React.useState(false);
+ React.useEffect(()=>{const io=new IntersectionObserver(es=>{if(es[0].isIntersecting){setOn(true);io.disconnect()}},{threshold:1});io.observe(ref.current);return()=>io.disconnect()},[]);
+ return <span ref={ref} style={{position:'relative',display:'inline-block',paddingBottom:10}}>{children}<svg aria-hidden="true" viewBox="0 0 300 20" preserveAspectRatio="none" style={{position:'absolute',left:'-3%',bottom:-4,width:'106%',height:16,overflow:'visible'}}><path className={'tk-scrib'+(on?' on':'')} pathLength="1" d="M296 9 C 230 4, 150 6, 80 11 S 18 17, 4 13" fill="none" stroke="var(--berry)" strokeWidth="3" strokeLinecap="round"/></svg></span>;}
+function App(){
+ const {Button,ServiceCard,ContactPanel,WhatsAppIcon}=window.DS;
+ const t=TUKKI.ar;const ar=true;const [layer,onPop]=useStains();
+ const all=t.hero.join('');const [n,setN]=React.useState(all.length);const [caret,setCaret]=React.useState(false);
+ React.useEffect(()=>{if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;setN(0);setCaret(true);let k=0,tm;
+  const step=()=>{k++;setN(k);if(k<all.length){tm=setTimeout(step,all[k-1]==='.'?340:42+Math.random()*46)}else tm=setTimeout(()=>setCaret(false),1600)};tm=setTimeout(step,500);return()=>clearTimeout(tm)},[]);
+ const L=t.hero,h1=L[0].slice(0,n),h2=L[1].slice(0,Math.max(0,n-L[0].length)),h3=L[2].slice(0,Math.max(0,n-L[0].length-L[1].length));
+ const pop=e=>{const b=e.currentTarget;b.animate&&b.animate([{transform:'translate(-50%,-50%) scale(1)'},{transform:'translate(-50%,-50%) scale(.72,.55)'},{transform:'translate(-50%,-50%) scale(1)'}],{duration:240,easing:'ease-out'});onPop(e.clientX,e.clientY)};
+ const body={fontFamily:'var(--font-sans)',fontSize:17,lineHeight:ar?1.85:1.65,color:'var(--ink-2)',margin:0};
+ return <div className={ar?'tk-ar tk-rtl':''} style={{minHeight:'100vh',position:'relative',overflowX:'clip',fontFamily:'var(--font-sans)'}}>
+  <img src={MRres('inkWash','../../assets/web/ink-wash.png')} alt="" aria-hidden="true" style={{position:'absolute',left:0,top:'30%',width:'100%',zIndex:0,pointerEvents:'none',transform:ar?'scaleX(-1)':'none'}}/>
+  {layer}
+  <Nav t={t} ar={ar}/>
+  <header id="top" style={{position:'relative',padding:'clamp(56px,10vw,120px) clamp(20px,5vw,64px) clamp(48px,8vw,110px)',maxWidth:1100,margin:'0 auto'}}>
+   <div className="mr-plant">
+    <div className="mr-lean mr-lean-a" aria-hidden="true"><div className="mr-sway-a"><img src={MRres('bush','../../assets/web/mulberry-bush.png')} alt=""/></div></div>
+    <div className="mr-lean mr-lean-b" aria-hidden="true"><div className="mr-sway-b"><img src={MRres('bush','../../assets/web/mulberry-bush.png')} alt=""/></div></div>
+    {MR.berryPos.map((q,i)=><button key={i} className="mr-berry" tabIndex={-1} aria-hidden="true" style={{left:q[0]+'%',top:q[1]+'%'}} onClick={pop}/>)}
+   </div>
+   <div style={{position:'relative',zIndex:3,pointerEvents:'none'}}>
+    <div className="mr-hero"><Eb ar={ar}>{t.eyebrow}</Eb></div>
+    <h1 className="mr-hero" style={{fontFamily:'var(--font-display)',fontWeight:400,fontSize:ar?'clamp(40px,7vw,84px)':'clamp(40px,7.5vw,92px)',lineHeight:ar?1.3:1.02,letterSpacing:ar?0:'-0.005em',margin:'0 0 28px',minHeight:'3.9em',color:'var(--ink)'}}>{h1}<br/>{h2}<br/><span style={{color:'var(--berry)'}}>{h3}</span>{caret&&<span className="mr-caret" aria-hidden="true"/>}</h1>
+    <p className="mr-hero" style={{animationDelay:'.15s',fontSize:'clamp(18px,2.2vw,22px)',lineHeight:ar?1.8:1.5,maxWidth:'34em',margin:'0 0 36px',color:'var(--ink-2)',background:'rgba(250,247,242,.85)',boxShadow:'var(--shadow-halo)',borderRadius:8,width:'fit-content'}}>{t.heroBody}</p>
+    <div className="mr-hero" style={{animationDelay:'.28s',display:'flex',flexWrap:'wrap',gap:14,pointerEvents:'auto',width:'fit-content'}}><Button href="https://wa.me/9647885514118" target="_blank" rel="noopener noreferrer">{t.cta1}</Button><Button variant="outline" href="#how">{t.cta2}</Button></div>
+    <div className="mr-hero" style={{animationDelay:'.4s',display:'flex',flexWrap:'wrap',gap:'clamp(24px,4vw,48px)',marginTop:40,paddingTop:24,borderTop:'1px solid var(--border-default)',width:'fit-content',background:'rgba(250,247,242,.85)',boxShadow:'var(--shadow-halo)'}}>{t.stats.map(([n,l])=><div key={l} style={{display:'flex',flexDirection:'column',gap:4}}><bdi dir="ltr" style={{fontFamily:"'Cormorant Garamond',serif",fontWeight:500,fontSize:'clamp(36px,4.5vw,52px)',lineHeight:1,color:'var(--berry)'}}>{n}</bdi><span style={{fontSize:15,color:'var(--ink-2)'}}>{l}</span></div>)}</div>
+   </div>
+  </header>
+  <TukkiStory/>
+  <section id="how" style={{...sec,zIndex:3,background:'var(--paper)',maxWidth:'none',margin:0,backgroundImage:'url(../../assets/web/deboss-watermark-1.png)',backgroundRepeat:'no-repeat',backgroundPosition:'right center'}}><div style={{maxWidth:1100,margin:'0 auto'}}><div style={twoCol}>
+   <div style={{position:'sticky',top:110}}><Eb ar={ar}>{t.howEyebrow}</Eb><H2>{t.howTitle}</H2></div>
+   <ol style={{listStyle:'none',margin:0,padding:0,borderTop:'1px solid var(--border-default)'}}>{t.steps.map(([h,d],i)=><li key={h} className="mr-reveal" style={{display:'grid',gridTemplateColumns:'56px 1fr',gap:16,padding:'24px 0',borderBottom:'1px solid var(--border-default)'}}>
+    <span style={{fontFamily:"'Cormorant Garamond',serif",fontSize:40,lineHeight:1,color:'rgba(123,27,51,.35)'}}>{'0'+(i+1)}</span>
+    <div><p style={{fontFamily:'var(--font-display)',fontWeight:500,fontSize:ar?23:22,margin:'0 0 6px',color:'var(--ink)'}}>{h}</p><p style={{...body,fontSize:16}}>{d}</p></div></li>)}</ol>
+  </div></div></section>
+  <section id="why" style={{position:'relative',background:'var(--espresso)',padding:'var(--section-pad-y) var(--section-pad-x)'}}><div style={{position:'relative',zIndex:3,maxWidth:1100,margin:'0 auto'}}>
+   <Eb ar={ar} onDark>{t.whyEyebrow}</Eb><H2 onDark style={{margin:'0 0 48px',maxWidth:'20em'}}>{t.whyTitle}</H2>
+   <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(240px,1fr))',gap:16}}>{t.benefits.map(([n,d])=><div key={n} className="mr-reveal"><ServiceCard name={n} desc={d}/></div>)}</div>
+  </div></section>
+  <section id="pricing" style={{...sec,backgroundImage:'url(../../assets/web/deboss-watermark-2.png)',backgroundRepeat:'no-repeat',backgroundPosition:'left center'}}><div style={twoCol}>
+   <div style={{position:'sticky',top:110}}><Eb ar={ar}>{t.priceEyebrow}</Eb><H2 style={{margin:'0 0 18px',fontWeight:400}}>{t.priceTitle}</H2><p style={{...body,margin:'0 0 28px'}}>{t.priceBody}</p><Button href="#contact">{t.cta1}</Button></div>
+   <div><div className="mr-reveal" style={{borderTop:'1px solid var(--border-default)',margin:'0 0 32px'}}>{t.prices.map(([n,p,d],i)=><div key={n} style={{display:'grid',gridTemplateColumns:'1fr auto',gap:'8px 16px',padding:'20px 0',borderBottom:'1px solid var(--border-default)',alignItems:'baseline'}}>
+     {i===2?<a href="#program" className="tk-plink" style={{fontFamily:'var(--font-display)',fontWeight:500,fontSize:ar?20:18,margin:0,width:'fit-content',display:'inline-flex',alignItems:'baseline',gap:8}}>{n}<span aria-hidden="true" className="tk-parrow" style={{fontFamily:'var(--font-sans)',fontSize:15}}>{ar?'←':'→'}</span></a>:<p style={{fontFamily:'var(--font-display)',fontWeight:500,fontSize:ar?20:18,margin:0}}>{n}</p>}<p style={{fontWeight:600,fontSize:16,color:'var(--berry)',margin:0,whiteSpace:'nowrap'}}>{p}</p><p style={{...body,fontSize:15,gridColumn:'1 / -1'}}>{d}</p></div>)}</div>
+    <p style={{fontFamily:ar?'var(--font-sans)':'var(--font-accent)',fontSize:'clamp(19px,2.3vw,23px)',fontWeight:600,lineHeight:1.4,margin:0}}><Scribble>{t.priceNote}</Scribble></p></div>
+  </div></section>
+  <section id="program" style={{...sec,maxWidth:'none',margin:'0 0 var(--section-pad-y)',background:'var(--oat-1)',borderTop:'1px solid var(--border-default)',borderBottom:'1px solid var(--border-default)',scrollMarginTop:60,backgroundImage:'url(../../assets/web/deboss-watermark-3.png)',backgroundRepeat:'no-repeat',backgroundPosition:'center bottom'}}>
+   <div style={{...twoCol,maxWidth:1100,margin:'0 auto'}}>
+    <div style={{position:'sticky',top:110}}><Eb ar={ar}>{t.programEyebrow}</Eb><H2 style={{margin:'0 0 18px'}}>{t.programTitle}</H2><p style={{...body,margin:'0 0 28px'}}>{t.programBody}</p><a href="#pricing" style={{fontWeight:600,fontSize:15}}>{ar?'→ ':'← '}{t.programBack}</a></div>
+    <ol style={{listStyle:'none',margin:0,padding:0,borderTop:'1px solid var(--border-default)'}}>{t.program.map(([h,d],i)=><li key={h} className="mr-reveal" style={{display:'grid',gridTemplateColumns:'48px 1fr',gap:14,padding:'18px 0',borderBottom:'1px solid var(--border-default)'}}>
+     <bdi dir="ltr" style={{fontFamily:"'Cormorant Garamond',serif",fontSize:30,lineHeight:1.1,color:'rgba(123,27,51,.35)'}}>{String(i+1).padStart(2,'0')}</bdi>
+     <div><p style={{fontFamily:'var(--font-display)',fontWeight:500,fontSize:ar?21:19,margin:'0 0 4px',color:'var(--ink)'}}>{h}</p><p style={{...body,fontSize:15}}>{d}</p></div></li>)}</ol>
+   </div></section>
+  <section style={{...sec,paddingTop:0}}><div className="mr-reveal" style={{maxWidth:760}}>
+   <H2 style={{fontSize:'clamp(26px,3.4vw,36px)',margin:'0 0 22px'}}>{t.quoteTitle}</H2>
+   <blockquote style={{margin:0,paddingInlineStart:22,borderInlineStart:'3px solid var(--berry)'}}><p style={{fontFamily:'var(--font-accent)',fontSize:'clamp(19px,2.4vw,24px)',fontWeight:500,lineHeight:1.6,color:'var(--ink)',margin:'0 0 14px'}}>"{t.quote}"</p><p style={{fontSize:15,color:'var(--ink-5)',margin:0}}>{t.quoteBy}</p></blockquote>
+  </div></section>
+  <section id="faq" style={{...sec,backgroundImage:'url(../../assets/web/deboss-watermark-1.png)',backgroundRepeat:'no-repeat',backgroundPosition:'right top'}}><div style={twoCol}>
+   <div style={{position:'sticky',top:110}}><Eb ar={ar}>{t.faqEyebrow}</Eb><H2>{t.faqTitle}</H2></div>
+   <div style={{borderTop:'1px solid var(--border-default)'}}>{t.faq.map(([q,a],i)=><details key={q} className="tk-faq" open={i===0} style={{borderBottom:'1px solid var(--border-default)',padding:'20px 0'}}>
+    <summary style={{display:'flex',justifyContent:'space-between',alignItems:'center',gap:16,fontFamily:'var(--font-display)',fontWeight:500,fontSize:ar?22:21,color:'var(--ink)'}}>{q}<span className="tk-plus" style={{flex:'none',width:28,height:28,borderRadius:'50%',border:'1.5px solid var(--border-button)',display:'inline-flex',alignItems:'center',justifyContent:'center',fontFamily:'var(--font-sans)',fontSize:18,color:'var(--berry)',transition:'transform .2s ease'}}>+</span></summary>
+    <p style={{...body,fontSize:16,marginTop:12}}>{a}</p></details>)}</div>
+  </div></section>
+  <section id="contact" className="mr-reveal" style={{position:'relative',zIndex:1,padding:'0 var(--section-pad-x) clamp(64px,10vw,120px)'}}>
+   <ContactPanel decorationSide={ar?'start':'end'} decoration={MRres('bushLine','../../assets/web/bush-line.png')} title={t.contactTitle} body={t.contactBody}>
+    <Button variant="inverse" size="lg" href="https://wa.me/9647885514118" target="_blank" rel="noopener noreferrer" iconLeft={<WhatsAppIcon/>}>{t.wa}</Button>
+    <Button variant="outline-inverse" size="lg" href="mailto:info@mulberryandreed.com">info@mulberryandreed.com</Button>
+   </ContactPanel></section>
+  <footer style={{position:'relative',zIndex:1,borderTop:'1px solid rgba(35,27,25,.1)',padding:'28px clamp(20px,5vw,64px)',display:'flex',flexWrap:'wrap',gap:16,alignItems:'center',justifyContent:'space-between',maxWidth:1100,margin:'0 auto',fontSize:14,color:'var(--ink-4)'}}>
+   <Brand t={t} ar={ar}/>
+   <span style={{display:'flex',flexWrap:'wrap',gap:20}}><a href="mailto:info@mulberryandreed.com" dir="ltr" style={{fontWeight:600}}>info@mulberryandreed.com</a><a href="https://wa.me/9647885514118" target="_blank" rel="noopener noreferrer" style={{display:'inline-flex',alignItems:'center',gap:8,fontWeight:600}}><WhatsAppIcon size={16}/>WhatsApp</a></span>
+   <span><bdi>© 2026 Mulberry &amp; Reed.</bdi> {t.rights}</span>
+  </footer>
+ </div>;}
+ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+</script></body></html>

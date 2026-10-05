@@ -1,0 +1,9 @@
+:root{
+--font-display:'Cormorant Garamond',Garamond,'Times New Roman',serif;
+--font-sans:'Inter',system-ui,sans-serif;
+--font-accent:'Bricolage Grotesque','Inter',sans-serif;
+--text-hero:clamp(40px,7.5vw,92px);--text-h2:clamp(28px,4.5vw,52px);--text-h2-panel:clamp(28px,4vw,46px);--text-h3:clamp(21px,2.6vw,26px);--text-card-title:21px;--text-post-title:22px;
+--text-lead:clamp(18px,2.2vw,23px);--text-about:clamp(17px,1.9vw,20px);--text-body-l:17px;--text-body:16px;--text-body-s:15px;--text-eyebrow:14px;--text-meta:13px;
+--leading-hero:1.02;--leading-heading:1.08;--leading-title:1.2;--leading-body:1.65;--leading-card:1.55;
+--tracking-heading:-0.005em;--tracking-eyebrow:0.14em;--tracking-meta:0.08em;
+}

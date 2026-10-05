@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta charset="utf-8">
+<title>Mulberry &amp; Reed</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+html,body{margin:0;padding:0;background:#faf7f2;overflow-x:clip;}
+body{font-family:'Inter',sans-serif;color:#231b19;-webkit-font-smoothing:antialiased;}
+a{color:#7b1b33;text-decoration:none;}
+a:hover{color:#571022;}
+::selection{background:#7b1b33;color:#faf7f2;}
+@keyframes mrHeroIn{from{opacity:0;transform:translateY(26px);}to{opacity:1;transform:none;}}
+@keyframes mrRise{from{opacity:0;transform:translateY(34px);}to{opacity:1;transform:none;}}
+@keyframes mrMarquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+.mr-hero{opacity:0;animation:mrHeroIn .9s cubic-bezier(.22,1,.36,1) forwards;}
+@supports (animation-timeline: view()){
+.mr-reveal{animation:mrRise both;animation-timeline:view();animation-range:entry 5% entry 45%;}
+}
+.mr-card img{transition:transform .7s cubic-bezier(.22,1,.36,1);}
+.mr-card:hover img{transform:scale(1.06);}
+@keyframes mrSwayA{0%,100%{transform:rotate(0deg);}50%{transform:rotate(.5deg);}}
+@keyframes mrSwayB{0%,100%{transform:rotate(0deg);}50%{transform:rotate(-.65deg) translateY(-2px);}}
+@keyframes mrStainIn{from{opacity:0;}to{opacity:1;}}
+@keyframes mrFallDrop{to{transform:translateY(88px) scale(.9,.7);opacity:.85;}}
+@keyframes mrCaretBlink{0%,45%{opacity:1;}50%,100%{opacity:0;}}
+.mr-plant{position:absolute;top:auto;bottom:-500px;right:max(-140px,-8vw);width:min(66vw,940px);aspect-ratio:1100/1005;pointer-events:none;z-index:2;-webkit-mask-image:linear-gradient(to right,rgba(0,0,0,0),#000 38%);mask-image:linear-gradient(to right,rgba(0,0,0,0),#000 38%);}
+@media (min-width:761px) and (max-width:1100px){
+.mr-plant{right:max(-160px,-16vw);width:62vw;top:auto;bottom:-490px;}
+#top p.mr-hero{max-width:26em !important;}
+}
+.mr-plant img{position:absolute;inset:0;width:100%;height:100%;display:block;user-select:none;-webkit-user-drag:none;}
+.mr-lean{position:absolute;inset:0;transition:transform 1.4s cubic-bezier(.33,1,.68,1);}
+.mr-sway-a{position:absolute;inset:0;animation:mrSwayA 9s ease-in-out infinite;transform-origin:50% 96%;}
+.mr-sway-b{position:absolute;inset:0;animation:mrSwayB 6.5s ease-in-out infinite;transform-origin:52% 100%;clip-path:inset(0 0 44% 0);}
+#top:hover .mr-lean-a{transform:rotate(.45deg);}
+#top:hover .mr-lean-b{transform:rotate(-.7deg) translateY(-2px);}
+.mr-berry{position:absolute;width:44px;height:44px;transform:translate(-50%,-50%);background:none;border:none;padding:0;margin:0;cursor:pointer;pointer-events:auto;border-radius:50%;}
+.mr-berry:focus-visible{outline:2px solid #7b1b33;outline-offset:2px;}
+.mr-stain{position:absolute;mix-blend-mode:multiply;pointer-events:none;animation:mrStainIn .5s ease-out both;}
+.mr-fall{position:absolute;width:11px;height:13px;border-radius:45% 55% 50% 50%/40% 40% 60% 60%;background:radial-gradient(circle at 35% 30%,#7b1b33,#2e0511 70%);animation:mrFallDrop .5s cubic-bezier(.55,0,.85,.4) forwards;pointer-events:none;}
+.mr-accent{position:absolute;background-image:url('assets/mulberry-bush.png');background-repeat:no-repeat;pointer-events:none;z-index:-1;animation:mrSwayA 11s ease-in-out infinite;transform-origin:50% 100%;-webkit-mask-image:radial-gradient(75% 75% at 50% 50%,#000 55%,rgba(0,0,0,0) 98%);mask-image:radial-gradient(75% 75% at 50% 50%,#000 55%,rgba(0,0,0,0) 98%);}
+.mr-menu-btn{display:none;}
+.mr-mobile-menu{position:absolute;top:100%;left:0;right:0;background:#faf7f2;border-bottom:1px solid rgba(35,27,25,0.12);display:flex;flex-direction:column;padding:6px 20px 20px;box-shadow:0 18px 30px -18px rgba(35,27,25,0.25);}
+@media (max-width:760px){
+nav{justify-content:space-between !important;padding:10px 16px !important;}
+nav a.mr-brand{position:static !important;padding-top:0 !important;}
+nav a.mr-brand img{height:54px !important;}
+.mr-navlinks{display:none !important;}
+#top p.mr-hero{background:rgba(250,247,242,0.92);border-radius:12px;padding:12px 14px;box-shadow:0 0 18px 10px rgba(250,247,242,0.92);}
+.mr-menu-btn{display:flex;flex-direction:column;gap:5px;background:none;border:none;padding:12px;cursor:pointer;}
+.mr-menu-btn span{width:22px;height:2px;background:#231b19;border-radius:2px;display:block;}
+.mr-plant{top:auto;bottom:-190px;right:-22vw;width:120vw;-webkit-mask-image:linear-gradient(to bottom,rgba(0,0,0,0),#000 16%);mask-image:linear-gradient(to bottom,rgba(0,0,0,0),#000 16%);}
+#top{padding-bottom:min(80vw,320px) !important;}
+.mr-accent{display:none;}
+}
+@media (prefers-reduced-motion:reduce){
+.mr-hero{animation:none;opacity:1;}
+.mr-reveal{animation:none;}
+.mr-marquee{animation:none !important;}
+.mr-sway-a,.mr-sway-b,.mr-accent{animation:none;}
+.mr-lean{transition:none;}
+#top:hover .mr-lean-a,#top:hover .mr-lean-b{transform:none;}
+.mr-stain{animation:none;}
+.mr-fall{display:none;}
+}
+</style>
+</helmet>
+<div style="min-height:100vh;background:#faf7f2;color:#231b19;position:relative;overflow-x:clip;">
+
+  <img src="assets/ink-wash.png" alt="" aria-hidden="true" style="position:absolute;left:0;top:34%;width:100%;height:auto;z-index:0;pointer-events:none;user-select:none;">
+  <div id="mr-stains" aria-hidden="true" style="position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0;">
+    <sc-for list="{{ stains }}" as="st" hint-placeholder-count="1">
+      <div class="mr-stain" style="{{ st.style }}"><div style="{{ st.d1 }}"></div><div style="{{ st.d2 }}"></div></div>
+    </sc-for>
+    <sc-for list="{{ falls }}" as="f" hint-placeholder-count="1">
+      <div class="mr-fall" style="{{ f.style }}"></div>
+    </sc-for>
+  </div>
+
+  <nav style="position: sticky; top: 0; z-index: 50; display: flex; align-items: center; justify-content: center; gap: 24px; padding: 14px clamp(20px,5vw,64px); background: rgba(250,247,242,0.92); backdrop-filter: blur(8px); border-bottom: 1px solid rgba(35,27,25,0.08); border-color: #FAF9F500">
+    <sc-if value="{{ showWordmark }}" hint-placeholder-val="{{ true }}">
+      <a href="#top" class="mr-brand" style="position:absolute;left:clamp(20px,5vw,64px);display:flex;align-items:center;"><img src="assets/wordmark.png" alt="Mulberry and Reed wordmark" style="height:34px;width:auto;display:block;"></a>
+    </sc-if>
+    <div class="mr-navlinks" style="display:flex;align-items:center;gap:clamp(14px,3vw,32px);font-size:15px;font-weight:500;">
+      <a href="#work" style="color:#231b19;" style-hover="color:{{ accent }}">What we do</a>
+      <a href="Mulberry & Reed About.dc.html" style="color:#231b19;" style-hover="color:{{ accent }}">About</a>
+      <a href="Mulberry &amp; Reed Blog.dc.html" style="color:#231b19;" style-hover="color:{{ accent }}">Journal</a>
+      <a href="#contact" style="display:inline-block;padding:10px 20px;border-radius:999px;background:{{ accent }};color:#faf7f2;" style-hover="background:#571022;color:#faf7f2;">Let's connect</a>
+    </div>
+    <button class="mr-menu-btn" aria-label="Open menu" onClick="{{ toggleMenu }}"><span></span><span></span><span></span></button>
+    <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+      <div class="mr-mobile-menu">
+        <a href="#work" onClick="{{ closeMenu }}" style="padding:14px 4px;font-size:17px;font-weight:600;color:#231b19;border-bottom:1px solid rgba(35,27,25,0.08);">What we do</a>
+        <a href="Mulberry & Reed About.dc.html" style="padding:14px 4px;font-size:17px;font-weight:600;color:#231b19;border-bottom:1px solid rgba(35,27,25,0.08);">About</a>
+        <a href="Mulberry &amp; Reed Blog.dc.html" style="padding:14px 4px;font-size:17px;font-weight:600;color:#231b19;border-bottom:1px solid rgba(35,27,25,0.08);">Journal</a>
+        <a href="#contact" onClick="{{ closeMenu }}" style="margin-top:14px;padding:14px 20px;border-radius:999px;background:{{ accent }};color:#faf7f2;font-size:17px;font-weight:600;text-align:center;" style-hover="background:#571022;color:#faf7f2;">Let's connect</a>
+      </div>
+    </sc-if>
+  </nav>
+
+  <header id="top" style="padding:clamp(56px,10vw,120px) clamp(20px,5vw,64px) clamp(48px,8vw,96px);max-width:1100px;margin:0 auto;position:relative;">
+    <div class="mr-plant">
+      <div class="mr-lean mr-lean-a" aria-hidden="true"><div class="mr-sway-a"><img src="assets/mulberry-bush.png" alt="" decoding="async"></div></div>
+      <div class="mr-lean mr-lean-b" aria-hidden="true"><div class="mr-sway-b"><img src="assets/mulberry-bush.png" alt="" decoding="async"></div></div>
+      <sc-for list="{{ berries }}" as="b" hint-placeholder-count="4">
+        <button class="mr-berry" tabindex="-1" aria-hidden="true" style="{{ b.style }}" onClick="{{ b.pop }}"></button>
+      </sc-for>
+    </div>
+    <h1 class="mr-hero" style="position:relative;z-index:3;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(40px,7.5vw,92px);line-height:1.02;letter-spacing:-0.005em;margin:0 0 28px;text-wrap:pretty;min-height:3.06em;">{{ heroLine1 }}<br>{{ heroLine2 }}<br><span style="color:{{ accent }};">{{ heroLine3 }}</span><sc-if value="{{ heroCaret }}" hint-placeholder-val="{{ false }}"><span aria-hidden="true" style="display:inline-block;width:0.045em;height:0.82em;background:{{ accent }};margin-left:0.06em;vertical-align:-0.08em;animation:mrCaretBlink 0.9s steps(1) infinite;"></span></sc-if></h1>
+    <p class="mr-hero" style="position:relative;z-index:3;animation-delay:.15s;font-size:clamp(18px,2.2vw,23px);line-height:1.5;max-width:34em;margin:0 0 36px;color:#4a403c;text-wrap:pretty;background:rgba(250,247,242,0.85);box-shadow:0 0 18px 14px rgba(250,247,242,0.85);border-radius:8px;width:fit-content;">Mulberry &amp; Reed is a growth partner helping build brands people notice, remember and choose. Book your no obligation discovery call now.</p>
+    <div class="mr-hero" style="position:relative;z-index:3;animation-delay:.28s;display:flex;flex-wrap:wrap;gap:14px;">
+      <a href="#contact" style="display:inline-block;padding:14px 28px;border-radius:999px;background:{{ accent }};color:#faf7f2;font-weight:600;font-size:16px;transition:transform .2s ease,background .2s ease;" style-hover="background:#571022;color:#faf7f2;transform:translateY(-2px);" style-active="transform:scale(0.97);">Let's connect</a>
+      <a href="#work" style="display:inline-block;padding:14px 28px;border-radius:999px;border:1.5px solid rgba(35,27,25,0.25);background:#faf7f2;color:#231b19;font-weight:600;font-size:16px;transition:transform .2s ease,border-color .2s ease,color .2s ease;" style-hover="border-color:{{ accent }};color:{{ accent }};background:#faf7f2;transform:translateY(-2px);" style-active="transform:scale(0.97);">What we do</a>
+    </div>
+  </header>
+
+  <sc-if value="{{ showMarquee }}" hint-placeholder-val="{{ true }}">
+  <div aria-hidden="true" style="position:relative;z-index:1;overflow:hidden;border-top:1px solid rgba(35,27,25,0.08);border-bottom:1px solid rgba(35,27,25,0.08);padding:16px 0;">
+    <div class="mr-marquee" style="display:flex;align-items:center;gap:44px;width:max-content;animation:mrMarquee 32s linear infinite;">
+      <sc-for list="{{ marquee }}" as="m" hint-placeholder-count="8">
+        <span style="display:flex;align-items:center;gap:44px;font-family:'Inter',sans-serif;font-weight:500;font-size:14px;letter-spacing:0.14em;text-transform:uppercase;color:#8a7d76;white-space:nowrap;">{{ m.word }} <span style="color:{{ accent }};">·</span></span>
+      </sc-for>
+    </div>
+  </div>
+  </sc-if>
+
+  <section id="work" style="position:relative;background:#231b19;color:#faf7f2;padding:clamp(56px,9vw,110px) clamp(20px,5vw,64px);">
+    <div style="max-width:1100px;margin:0 auto;position:relative;z-index:3;">
+      <p style="font-size:14px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#c98a9b;margin:0 0 16px;">What we do</p>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(28px,4.5vw,52px);letter-spacing:-0.005em;line-height:1.1;margin:0 0 48px;max-width:20em;text-wrap:pretty;text-shadow:0 1px 14px rgba(35,27,25,0.9),0 0 4px rgba(35,27,25,0.7);">Everything a brand needs to be noticed, remembered and chosen.</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;">
+        <sc-for list="{{ services }}" as="s" hint-placeholder-count="6">
+          <div class="mr-reveal" style="background:#2a211e;border:1px solid rgba(250,247,242,0.12);border-radius:16px;padding:28px 26px;transition:background .25s ease;" style-hover="background:#332824;" style-active="background:#332824;">
+            <p style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:21px;margin:0 0 10px;color:#faf7f2;">{{ s.name }}</p>
+            <p style="font-size:15px;line-height:1.55;color:rgba(250,247,242,0.72);margin:0;text-wrap:pretty;">{{ s.desc }}</p>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing" style="position:relative;z-index:1;padding:clamp(56px,9vw,110px) clamp(20px,5vw,64px);max-width:1100px;margin:0 auto;">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(32px,6vw,80px);align-items:start;">
+      <div class="mr-reveal" style="position:sticky;top:110px;align-self:start;">
+        <p style="font-size:14px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:{{ accent }};margin:0 0 16px;">Pricing</p>
+        <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(30px,4.5vw,52px);letter-spacing:-0.005em;line-height:1.08;margin:0 0 18px;">What does it cost?</h2>
+        <p style="font-size:17px;line-height:1.65;color:#4a403c;margin:0 0 10px;">We price work around what you actually need.</p>
+        <p style="font-size:17px;line-height:1.65;color:#4a403c;margin:0 0 10px;">The cost depends on the service, the size of your business, how much work is involved and how much support you need from us.</p>
+        <p style="font-size:17px;line-height:1.65;color:#4a403c;margin:0 0 28px;">Here is a guide so you know what to expect.</p>
+        <a href="#contact" style="display:inline-block;padding:14px 28px;border-radius:999px;background:{{ accent }};color:#faf7f2;font-weight:600;font-size:16px;transition:transform .2s ease,background .2s ease;" style-hover="background:#571022;color:#faf7f2;transform:translateY(-2px);" style-active="transform:scale(0.97);">Book a free discovery call</a>
+      </div>
+      <div>
+        <div class="mr-reveal" style="display:flex;flex-direction:column;border-top:1px solid rgba(35,27,25,0.12);margin:0 0 44px;">
+          <sc-for list="{{ prices }}" as="pr" hint-placeholder-count="5">
+            <div style="display:grid;grid-template-columns:minmax(130px,1fr) minmax(100px,0.9fr);gap:8px 16px;padding:20px 0;border-bottom:1px solid rgba(35,27,25,0.12);align-items:baseline;">
+              <p style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:18px;margin:0;">{{ pr.name }}</p>
+              <p style="font-weight:600;font-size:16px;color:{{ accent }};margin:0;text-align:right;">{{ pr.price }}</p>
+              <p style="font-size:15px;line-height:1.55;color:#4a403c;margin:0;grid-column:1 / -1;">{{ pr.desc }}</p>
+            </div>
+          </sc-for>
+        </div>
+        <div class="mr-reveal">
+          <h3 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(21px,2.6vw,26px);letter-spacing:0;margin:0 0 14px;">Why isn't everything a fixed price?</h3>
+          <p style="font-size:16px;line-height:1.65;color:#4a403c;margin:0 0 12px;">A website for a new business is different from a website for a company with hundreds of products. A research project for one market is different from research across five. The same applies to branding, campaigns, systems and apps.</p>
+          <p style="font-size:16px;line-height:1.65;color:#4a403c;margin:0 0 20px;">So we give you a clear price before any paid work begins, based on what you need, the size of the business, the size of the project and the level of support involved.</p>
+          <p style="font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(19px,2.3vw,23px);font-weight:600;line-height:1.35;margin:0;max-width:20em;">No obligation starts with the discovery call.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" style="position:relative;z-index:1;padding:clamp(56px,9vw,110px) clamp(20px,5vw,64px);max-width:1100px;margin:0 auto;">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(32px,6vw,80px);align-items:start;">
+      <div class="mr-reveal" style="position:sticky;top:110px;align-self:start;">
+        <p style="font-size:14px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:{{ accent }};margin:0 0 16px;">About</p>
+        <h2 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(30px,4.5vw,54px);letter-spacing:-0.005em;line-height:1.08;margin:0;text-wrap:pretty;">People who make things work.</h2>
+      </div>
+      <div style="font-size:clamp(17px,1.9vw,20px);line-height:1.6;color:#4a403c;">
+        <p style="margin:0 0 20px;">We are a team of creatives, marketers and software engineers.</p>
+        <p style="margin:0 0 20px;">Together, we have <strong id="mr-years" style="color:{{ accent }};">{{ years }} years</strong> of experience.</p>
+        <p style="margin:0;">We have worked on brands, websites, apps, campaigns, content, paid ads and growth.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="blog" style="position:relative;z-index:1;padding:clamp(56px,9vw,110px) clamp(20px,5vw,64px);max-width:1100px;margin:0 auto;">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(32px,6vw,80px);align-items:start;">
+    <div class="mr-reveal" style="position:sticky;top:110px;align-self:start;">
+      <p style="font-size:14px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:{{ accent }};margin:0 0 16px;">Journal</p>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(30px,4.5vw,54px);letter-spacing:-0.005em;line-height:1.08;margin:0 0 24px;text-wrap:pretty;">Notes on stories that stick.</h2>
+      <a href="Mulberry & Reed Blog.dc.html" style="font-weight:600;font-size:15px;color:{{ accent }};" style-hover="color:#571022;">All posts →</a>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr;gap:clamp(28px,4vw,44px);">
+      <sc-for list="{{ posts }}" as="p" hint-placeholder-count="3">
+        <a href="{{ p.href }}" class="mr-card mr-reveal" style="display:block;color:#231b19;transition:transform .3s cubic-bezier(.22,1,.36,1);" style-hover="color:#231b19;transform:translateY(-6px);">
+          <div style="aspect-ratio:16/10;border-radius:16px;overflow:hidden;background:repeating-linear-gradient(135deg,#efe8dd,#efe8dd 12px,#e7ddce 12px,#e7ddce 24px);margin:0 0 18px;display:flex;align-items:center;justify-content:center;">
+            <sc-if value="{{ p.hasImage }}" hint-placeholder-val="{{ false }}">{{ p.coverEl }}</sc-if>
+            <sc-if value="{{ p.noImage }}" hint-placeholder-val="{{ true }}"><span style="font-family:monospace;font-size:12px;color:#a2937f;letter-spacing:0.04em;">{{ p.imageNote }}</span></sc-if>
+          </div>
+          <p style="font-size:13px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:{{ accent }};margin:0 0 8px;">{{ p.tag }} · {{ p.date }}</p>
+          <h3 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:22px;line-height:1.2;letter-spacing:0;margin:0 0 8px;text-wrap:pretty;">{{ p.title }}</h3>
+          <p style="font-size:15px;line-height:1.55;color:#6a5f5a;margin:0;text-wrap:pretty;">{{ p.excerpt }}</p>
+        </a>
+      </sc-for>
+    </div>
+    </div>
+  </section>
+
+  <section id="contact" style="position:relative;z-index:1;padding:0 clamp(20px,5vw,64px) clamp(64px,10vw,120px);">
+    <div class="mr-reveal" style="position:relative;overflow:hidden;max-width:1100px;margin:0 auto;background:{{ accent }};color:#faf7f2;border-radius:24px;padding:clamp(44px,7vw,88px) clamp(28px,5vw,72px);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:32px;">
+      <img src="assets/bush-line.png" alt="" aria-hidden="true" style="position:absolute;right:-6%;bottom:-12%;width:min(560px,58%);opacity:0.5;pointer-events:none;user-select:none;">
+      <div style="max-width:26em;position:relative;">
+        <h2 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(28px,4vw,46px);letter-spacing:-0.005em;line-height:1.1;margin:0 0 14px;text-wrap:pretty;">Got a story worth telling?</h2>
+        <p style="font-size:17px;line-height:1.55;margin:0;color:rgba(250,247,242,0.85);">Tell us what you are building. We will tell you how to make it stick.</p>
+      </div>
+      <div style="position:relative;display:flex;flex-direction:column;gap:14px;align-items:stretch;">
+        <a href="mailto:info@mulberryandreed.com" style="display:inline-block;text-align:center;padding:16px 32px;border-radius:999px;background:#faf7f2;color:{{ accent }};font-weight:600;font-size:17px;white-space:nowrap;transition:transform .2s ease;" style-hover="background:#fff;color:#571022;transform:translateY(-2px);" style-active="transform:scale(0.97);">info@mulberryandreed.com</a>
+        <a href="https://wa.me/9647885514118" target="_blank" rel="noopener noreferrer" style="display:flex;align-items:center;justify-content:center;gap:10px;padding:16px 32px;border-radius:999px;border:1.5px solid rgba(250,247,242,0.5);color:#faf7f2;font-weight:600;font-size:17px;white-space:nowrap;transition:transform .2s ease,background .2s ease;" style-hover="background:rgba(250,247,242,0.12);color:#faf7f2;transform:translateY(-2px);" style-active="transform:scale(0.97);"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1-.2-.1-1-.4-2-1.2-.7-.7-1.2-1.5-1.4-1.7-.1-.2 0-.4.1-.5l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.8 2.7 4.3 3.8.6.3 1.1.4 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.2-.5-.3z"></path></svg>Let's connect on WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <footer style="position:relative;z-index:1;border-top:1px solid rgba(35,27,25,0.1);padding:28px clamp(20px,5vw,64px);display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;max-width:1100px;margin:0 auto;font-size:14px;color:#7a6f6a;">
+    <span style="font-family:'Cormorant Garamond',serif;font-weight:500;color:{{ accent }};font-size:16px;">Mulberry &amp; Reed</span>
+    <span style="display:flex;flex-wrap:wrap;align-items:center;gap:20px;">
+      <a href="mailto:info@mulberryandreed.com" style="display:inline-flex;align-items:center;gap:8px;font-weight:600;color:{{ accent }};" style-hover="color:#571022;">info@mulberryandreed.com</a>
+      <a href="https://wa.me/9647885514118" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:8px;font-weight:600;color:{{ accent }};" style-hover="color:#571022;"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1-.2-.1-1-.4-2-1.2-.7-.7-1.2-1.5-1.4-1.7-.1-.2 0-.4.1-.5l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.8 2.7 4.3 3.8.6.3 1.1.4 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.2-.5-.3z"></path></svg>WhatsApp</a>
+    </span>
+    <span>© 2026 Mulberry &amp; Reed. All rights reserved.</span>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;accent&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#5e1226&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[&quot;#7b1b33&quot;,&quot;#8f2340&quot;,&quot;#5e1226&quot;],&quot;section&quot;:&quot;Brand&quot;},&quot;showWordmark&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Hero&quot;},&quot;showMarquee&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Motion&quot;}}">
+class Component extends DCLogic {
+  state = { years: 0, stains: [], falls: [], menuOpen: false, typed: 999, caret: false };
+  heroLines = ['Tell a good story.', 'Make it stick.', 'Leave a mark.'];
+  berryPos = [[48,20],[36,38],[30,52],[15,39],[17,67],[27,78],[50,51],[60,56],[85,54],[79,74],[65,29]];
+
+  pop = (p) => (e) => {
+    const btn = e.currentTarget;
+    const reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!reduce && btn.animate) btn.animate(
+      [{ transform: 'translate(-50%,-50%) scale(1)' }, { transform: 'translate(-50%,-50%) scale(.72,.55)' }, { transform: 'translate(-50%,-50%) scale(1)' }],
+      { duration: 240, easing: 'ease-out' });
+    const layer = document.getElementById('mr-stains');
+    if (!layer) return;
+    const r = layer.getBoundingClientRect();
+    const px = e.clientX - r.left, py = e.clientY - r.top;
+    if (!reduce && Math.random() < 0.3) {
+      const fid = Date.now() + Math.random();
+      this.setState(s => ({ falls: s.falls.concat({ id: fid, style: `left:${px - 5}px;top:${py + 8}px;` }) }));
+      setTimeout(() => {
+        this.setState(s => ({ falls: s.falls.filter(f => f.id !== fid) }));
+        this.addStain(px, py + 98);
+      }, 480);
+    } else { this.addStain(px, py + 4); }
+  };
+
+  addStain(x, y) {
+    const R = (a, b) => a + Math.random() * (b - a);
+    const br = () => Math.round(R(35, 68));
+    const sw = R(36, 84), sh = sw * R(0.75, 1.1);
+    const style = `left:${(x - sw / 2).toFixed(0)}px;top:${(y - sh / 2).toFixed(0)}px;width:${sw.toFixed(0)}px;height:${sh.toFixed(0)}px;` +
+      `border-radius:${br()}% ${br()}% ${br()}% ${br()}% / ${br()}% ${br()}% ${br()}% ${br()}%;` +
+      `background:radial-gradient(58% 54% at ${Math.round(R(38, 62))}% ${Math.round(R(38, 62))}%, rgba(52,7,24,${R(0.5, 0.65).toFixed(2)}), rgba(94,18,38,${R(0.32, 0.44).toFixed(2)}) 55%, rgba(123,27,51,0.16) 78%, rgba(123,27,51,0) 100%);` +
+      `transform:rotate(${Math.round(R(0, 360))}deg);filter:blur(.3px);`;
+    const drop = () => `position:absolute;left:${Math.round(R(-18, 105))}%;top:${Math.round(R(-14, 104))}%;width:${R(3, 7).toFixed(1)}px;height:${R(3, 8).toFixed(1)}px;border-radius:50% 50% 55% 45%/45% 55% 50% 50%;background:rgba(64,10,28,${R(0.3, 0.55).toFixed(2)});filter:blur(.35px);`;
+    this.setState(s => ({ stains: s.stains.concat({ id: Date.now() + Math.random(), style, d1: drop(), d2: drop() }).slice(-6) }));
+  }
+
+  componentDidMount() {
+    this.startTypewriter();
+    const start = () => {
+      if (this._yearsDone) return;
+      this._yearsDone = true;
+      if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) { this.setState({ years: 32 }); return; }
+      const t0 = performance.now(), dur = 1400;
+      const tick = (t) => {
+        const p = Math.min(1, (t - t0) / dur);
+        const e = 1 - Math.pow(1 - p, 3);
+        this.setState({ years: Math.round(32 * e) });
+        if (p < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    };
+    const el = document.getElementById('mr-years');
+    if (el && 'IntersectionObserver' in window) {
+      const io = new IntersectionObserver((es) => { if (es.some(x => x.isIntersecting)) { start(); io.disconnect(); } }, { threshold: 0.5 });
+      io.observe(el);
+    } else { start(); }
+  }
+
+  startTypewriter() {
+    let seen = false;
+    try { seen = !!localStorage.getItem('mr_hero_typed'); } catch (e) {}
+    const reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (seen || reduce) return;
+    try { localStorage.setItem('mr_hero_typed', '1'); } catch (e) {}
+    const total = this.heroLines.join('').length;
+    this.setState({ typed: 0, caret: true });
+    let n = 0;
+    const step = () => {
+      n++;
+      this.setState({ typed: n });
+      if (n < total) {
+        const ch = this.heroLines.join('')[n - 1];
+        this._twTimer = setTimeout(step, ch === '.' ? 340 : 42 + Math.random() * 46);
+      } else {
+        this._twTimer = setTimeout(() => this.setState({ caret: false }), 1600);
+      }
+    };
+    this._twTimer = setTimeout(step, 500);
+  }
+
+  componentWillUnmount() { clearTimeout(this._twTimer); }
+
+  renderVals() {
+    const services = [
+        { name: 'Business strategy', desc: 'Clear direction, sharper positioning and plans that turn goals into growth.' },
+        { name: 'Systems & SOPs', desc: 'The systems, policies and procedures that let your business run and scale without you.' },
+        { name: 'Apps', desc: 'Products designed and engineered to be genuinely useful.' },
+        { name: 'Campaigns', desc: 'Ideas with a point of view, delivered where they land hardest.' },
+        { name: 'Content', desc: 'Stories, words and visuals people actually want to read and share.' },
+        { name: 'Paid ads & growth', desc: 'Measured spend, honest reporting, compounding results.' },
+        { name: 'Brand', desc: 'Naming, identity and voice that people recognise at a glance.' },
+        { name: 'Websites', desc: 'Fast, clear sites that turn visitors into customers.' },
+      ];
+    const [l1, l2, l3] = this.heroLines;
+    const t = this.state.typed;
+    return {
+      heroLine1: l1.slice(0, t),
+      heroLine2: l2.slice(0, Math.max(0, t - l1.length)),
+      heroLine3: l3.slice(0, Math.max(0, t - l1.length - l2.length)),
+      heroCaret: this.state.caret,
+      accent: this.props.accent ?? '#7b1b33',
+      showWordmark: this.props.showWordmark ?? true,
+      showMarquee: this.props.showMarquee ?? true,
+      services,
+      marquee: services.concat(services).map(s => ({ word: s.name })),
+      years: this.state.years + '+',
+      prices: [
+        { name: 'Discovery call', price: 'Free', desc: 'A first conversation to understand your business, what you need and whether we are the right fit.' },
+        { name: 'Consultancy', price: '$350 per session', desc: 'Focused advice on a specific problem, decision, plan or opportunity.' },
+        { name: 'One-off projects', price: 'From $1,500', desc: 'A defined piece of work. Depending on the project, this could include research, strategy, training, implementation or a combination of these.' },
+        { name: 'Individual services', price: 'Quoted separately', desc: 'Websites, apps, branding, campaigns, content, paid ads, systems and other services are priced around the scope of the work.' },
+        { name: 'Ongoing support', price: 'Custom', desc: 'For businesses that need regular support across one or more areas. We agree the scope and cost before we start.' },
+      ],
+      menuOpen: this.state.menuOpen,
+      toggleMenu: () => this.setState(s => ({ menuOpen: !s.menuOpen })),
+      closeMenu: () => this.setState({ menuOpen: false }),
+      berries: this.berryPos.map(p => ({ style: `left:${p[0]}%;top:${p[1]}%;`, pop: this.pop(p) })),
+      stains: this.state.stains,
+      falls: this.state.falls,
+      posts: [
+        { tag: 'Brand', date: 'Sep 2026', title: 'Why memorable beats clever', excerpt: 'The brands people choose are the ones they can recall without trying. Here is how we build for recall.', imageNote: 'post cover', image: 'assets/memorable-beats-clever.png', slug: 'what-makes-people-remember-a-brand' },
+        { tag: 'Growth', date: 'Aug 2026', title: 'Spend less, say more', excerpt: 'A small budget forces sharper choices. A field guide to campaigns that punch above their weight.', imageNote: 'post cover', image: 'assets/spend-less-say-more.png', slug: 'what-should-i-do-first-with-a-small-budget' },
+        { tag: 'Craft', date: 'Aug 2026', title: 'The anatomy of a sticky story', excerpt: 'Every story people repeat shares a shape. We break down the parts and how to reuse them.', imageNote: 'post cover', image: 'assets/sticky-story.png', slug: 'the-anatomy-of-a-sticky-story' },
+      ].map(p => ({
+        ...p,
+        href: 'Mulberry & Reed Blog.dc.html#post=' + p.slug,
+        hasImage: !!p.image,
+        noImage: !p.image,
+        coverEl: p.image ? React.createElement('img', { src: p.image, alt: p.title, style: { width: '100%', height: '100%', objectFit: 'cover', display: 'block' } }) : null,
+      })),
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+:root{
+--radius-pill:999px;--radius-panel:24px;--radius-card:16px;--radius-menu:12px;--radius-soft:8px;--radius-round:50%;
+--shadow-menu:0 18px 30px -18px rgba(35,27,25,.25);
+--shadow-halo:0 0 18px 14px rgba(250,247,242,.85);
+--ease-out:cubic-bezier(.22,1,.36,1);/* @kind other */
+--dur-fast:200ms;/* @kind other */
+--dur-base:250ms;/* @kind other */
+--dur-card:300ms;/* @kind other */
+--dur-zoom:700ms;/* @kind other */
+--dur-hero:900ms;/* @kind other */
+}

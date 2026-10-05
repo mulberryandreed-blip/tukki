@@ -1,0 +1,41 @@
+<!-- @dsCard group="Website" viewport="1280x900" name="About" subtitle="Numbered sections, discretion panel, testimonial" -->
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>About — Mulberry &amp; Reed</title><link rel="stylesheet" href="../../styles.css"><link rel="stylesheet" href="site.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script><script>window.DS=window.MulberryReedDesignSystem_309c80;</script>
+<script src="content.js"></script><script type="text/babel" src="Chrome.jsx"></script>
+</head><body><div id="root"></div>
+<script type="text/babel">
+function App(){const {Button,Eyebrow,NumberedSection,ContactPanel,AccentLine,Testimonial,SiteFooter}=window.DS;
+ const lead={fontSize:'clamp(17px,2vw,21px)',lineHeight:1.55,color:'var(--ink-2)',margin:'0 0 14px',maxWidth:'36em'};
+ const p={fontSize:17,lineHeight:1.65,color:'var(--ink-2)',margin:'0 0 14px',maxWidth:'40em'};const strong={...p,color:'var(--ink)',fontWeight:600,margin:0};
+ const h2={fontFamily:'var(--font-display)',fontWeight:500,fontSize:'clamp(26px,3.4vw,36px)',letterSpacing:'-0.005em',margin:'0 0 18px'};
+ const plain={padding:'clamp(36px,5vw,56px) 0',borderTop:'1px solid rgba(35,27,25,.1)'};
+ return <div style={{minHeight:'100vh',position:'relative',overflowX:'clip'}}>
+  <img src="../../assets/illustrations/ink-wash.png" alt="" aria-hidden="true" style={{position:'absolute',left:0,top:60,width:'100%',zIndex:0,pointerEvents:'none',transform:'scaleX(-1)'}}/>
+  <Nav active="about"/>
+  <header style={{position:'relative',padding:'clamp(56px,9vw,110px) clamp(20px,5vw,64px) clamp(40px,6vw,72px)',maxWidth:860,margin:'0 auto'}}>
+   <Eyebrow>About</Eyebrow>
+   <h1 style={{fontFamily:'var(--font-display)',fontWeight:400,fontSize:'clamp(36px,6vw,68px)',lineHeight:1.04,letterSpacing:'-0.005em',margin:'0 0 24px'}}>Solutions built around your business.</h1>
+   <p style={lead}>Mulberry & Reed helps businesses build stronger brands, reach more people and turn good ideas into work that performs.</p>
+   <p style={{...lead,margin:'0 0 32px'}}>We work across marketing, branding, websites, apps, content, campaigns, paid ads, SEO, GEO and research.</p>
+   <Button href="#contact">Tell us what you're working on</Button>
+  </header>
+  <main style={{position:'relative',maxWidth:860,margin:'0 auto',padding:'0 clamp(20px,5vw,64px)'}}>
+   <NumberedSection number="01" title="What we do" closing="We only recommend work we believe has a reason to exist.">{['Some businesses come to us with a clear brief. Others know something needs to change but are not sure where to start.','We look at the business, the customer and what is already working before recommending what to do next.','That might mean improving a brand, building a website, planning a campaign, fixing how marketing is measured, creating better content or finding new ways to grow.']}</NumberedSection>
+   <NumberedSection number="02" title="Who we work with" closing="We bring the work together and make the next steps clear.">{['We work with businesses that need experienced marketing support without building a large team around every problem.','You might be launching something new, trying to grow, spending money on marketing without knowing what is working, or simply dealing with too many disconnected suppliers, tools and ideas.']}</NumberedSection>
+   <NumberedSection number="03" title="How we work" closing="Fees come after results. If you are not satisfied with the results, you do not pay. Guaranteed.">{['We start by understanding the problem.','Before we talk about campaigns, content or design, we look at what you are trying to achieve, what has already been tried and what is getting in the way.','From there, we agree what needs to be done, who is responsible and how we will know if it worked.','You stay involved where decisions matter without being pulled into every small detail.']}</NumberedSection>
+   <div className="mr-reveal" style={{margin:'clamp(36px,5vw,56px) 0'}}><ContactPanel tone="espresso" maxWidth={860} decoration="../../assets/illustrations/bush-line.png" title="Discretion comes first" style={{padding:'clamp(28px,5vw,52px)',display:'block'}}
+    body={<>{['Some of the most important work we do cannot be shown publicly.','We work with businesses, founders and teams who may be sharing plans, financial information, customer data, new products, internal problems or ideas that have not launched yet.','We treat that information carefully from the first conversation.','We are comfortable working under NDAs and confidentiality agreements. Where appropriate, these can be agreed before detailed information is shared.','We will not use confidential client work in our marketing, portfolio or case studies without permission.'].map(t=><p key={t} style={{margin:'0 0 14px',maxWidth:'40em'}}>{t}</p>)}<AccentLine tone="paper" style={{marginTop:18}}>Good work does not need to become public work.</AccentLine></>}/></div>
+   <section className="mr-reveal" style={plain}><h2 style={h2}>Who's behind Mulberry & Reed?</h2>
+    <p style={p}>A team of marketers, creatives and software engineers with experience across marketing, growth, technology, content, branding and business operations.</p><p style={p}>We created Mulberry & Reed because businesses do not experience these things separately.</p><p style={p}>A website affects marketing. Marketing affects sales. Brand affects trust. Technology affects how quickly everything can happen.</p><p style={strong}>Our job is to understand how those pieces fit together and build what the business actually needs.</p></section>
+   <section className="mr-reveal" style={plain}><h2 style={h2}>Our approach</h2><AccentLine tone="berry" weight={700} style={{fontSize:'clamp(20px,2.6vw,26px)',lineHeight:1.3,margin:'0 0 18px',maxWidth:'none'}}>Tell a good story. Make it stick. Leave a mark.</AccentLine>
+    <p style={p}>Good marketing should be understood by the customer and useful to the business.</p><p style={p}>We care about the idea, but we also care about what happens after it goes live.</p><p style={p}>What did people do? What worked? What did not? What should change next?</p><p style={strong}>That is how the work gets better.</p></section>
+   <section className="mr-reveal" style={plain}><h2 style={{...h2,margin:'0 0 22px'}}>A word from a client</h2><Testimonial quote="They took the time to understand the business before suggesting anything. Communication was clear, the work felt organised, and we always knew what was happening next." attribution="Client details withheld for confidentiality."/></section>
+  </main>
+  <ContactCTA maxWidth={860} titleWeight={400} decoration={false} title="Work with us" primary="Tell us what you're working on" body="Tell us what you are working on, what you are trying to achieve and where you need help." note="If the project involves sensitive information, you do not need to include it in your first message. We can put the right confidentiality arrangements in place before going into detail."/>
+  <SiteFooter/>
+ </div>;}
+ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+</script></body></html>

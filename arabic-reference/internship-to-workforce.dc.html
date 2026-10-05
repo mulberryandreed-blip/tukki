@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>@font-face{font-family:'Thmanyah Serif Text';src:url('../../fonts/thmanyahseriftext-Light.otf') format('opentype');font-weight:100 300;font-display:swap}@font-face{font-family:'Thmanyah Serif Text';src:url('../../fonts/thmanyahseriftext-Regular.otf') format('opentype');font-weight:400;font-display:swap}@font-face{font-family:'Thmanyah Serif Text';src:url('../../fonts/thmanyahseriftext-Medium.otf') format('opentype');font-weight:500;font-display:swap}@font-face{font-family:'Thmanyah Serif Text';src:url('../../fonts/thmanyahseriftext-Bold.otf') format('opentype');font-weight:600 700;font-display:swap}@font-face{font-family:'Thmanyah Serif Text';src:url('../../fonts/thmanyahseriftext-Black.otf') format('opentype');font-weight:800 900;font-display:swap}@font-face{font-family:'Thmanyah Sans';src:url('../../fonts/thmanyahsans-Medium.otf') format('opentype');font-weight:100 500;font-display:swap}@font-face{font-family:'Thmanyah Sans';src:url('../../fonts/thmanyahsans-Bold.otf') format('opentype');font-weight:600 700;font-display:swap}@font-face{font-family:'Thmanyah Sans';src:url('../../fonts/thmanyahsans-Black.otf') format('opentype');font-weight:800 900;font-display:swap}@font-face{font-family:'Thmanyah Serif Display';src:url('../../fonts/thmanyahserifdisplay-Light.otf') format('opentype');font-weight:100 300;font-display:swap}@font-face{font-family:'Thmanyah Serif Display';src:url('../../fonts/thmanyahserifdisplay-Regular.otf') format('opentype');font-weight:400;font-display:swap}@font-face{font-family:'Thmanyah Serif Display';src:url('../../fonts/thmanyahserifdisplay-Medium.otf') format('opentype');font-weight:500;font-display:swap}@font-face{font-family:'Thmanyah Serif Display';src:url('../../fonts/thmanyahserifdisplay-Bold.otf') format('opentype');font-weight:600 900;font-display:swap}html,body{margin:0;background:#231b19}a{color:#7b1b33}a:hover{color:#571022}</style>
+</helmet>
+<x-import component-from-global-scope="deck-stage" from="./deck-stage.js" width="1920" height="1080" hint-size="100%,100%">
+
+<section data-label="01 Title" data-screen-label="01" style="background:#231b19;color:#faf7f2">
+<div style="position:relative;width:100%;height:100%;box-sizing:border-box;direction:rtl;font-family:'Thmanyah Serif Text',serif;padding:110px 120px 130px;display:flex;flex-direction:column;justify-content:flex-end">
+<span style="font-size:30px;font-weight:600;color:#c98a9b">حلّ للتشغيل والمواهب</span>
+<div style="font-family:'Thmanyah Serif Display','Thmanyah Serif Text',serif;font-size:130px;font-weight:700;line-height:1.3;margin-top:24px">برنامج من التدريب<br>إلى التوظيف</div>
+<div style="font-size:40px;font-weight:300;line-height:1.6;color:rgba(250,247,242,0.82);max-width:1300px;margin-top:28px">نظام واضح يحوّل جزءاً مناسباً من عمل أي مؤسسة إلى مواهب شابة مدرَّبة.</div>
+<div style="position:absolute;left:120px;right:120px;bottom:40px;display:flex;justify-content:space-between;font-size:16px;color:#a8998f"><span>لأغراض تعليمية فقط · خاص وسري</span><span dir="ltr">For educational purposes only · Private &amp; Confidential · 01</span></div>
+</div>
+</section>
+
+<section data-label="02 Central message" data-screen-label="02" style="background:#faf7f2;color:#231b19">
+<div style="position:relative;width:100%;height:100%;box-sizing:border-box;direction:rtl;font-family:'Thmanyah Serif Text',serif;padding:96px 120px 130px;display:flex;flex-direction:column;justify-content:center;gap:32px">
+<div style="font-size:52px;color:#8a7d76;line-height:1.5">لا نبدأ بالبحث عن متدرّبين.</div>
+<div style="font-family:'Thmanyah Serif Display','Thmanyah Serif Text',serif;font-size:112px;font-weight:700;line-height:1.3;max-width:1600px">نبدأ بالبحث عن عمل <span style="color:#7b1b33">يستحق أن يُفوَّض.</span></div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:40px">
+<div style="border:2px solid rgba(35,27,25,0.2);border-radius:999px;padding:24px 44px;font-size:32px;color:#4a403c">التدريب <strong style="color:#231b19">ليس</strong> هو المنتج.</div>
+<div style="background:#7b1b33;color:#faf7f2;border-radius:999px;padding:24px 44px;font-size:32px">المنتج: <strong>قدرة عمل إضافية + مصدر مواهب أقل مخاطرة.</strong></div>
+</div>
+<div style="position:absolute;left:120px;right:120px;bottom:40px;display:flex;justify-content:space-between;font-size:16px;color:#8a7d76"><span>لأغراض تعليمية فقط · خاص وسري</span><span dir="ltr">For educational purposes only · Private &amp; Confidential · 02</span></div>
+</div>
+</section>
+
+<section data-label="03 Reframe" data-screen-label="03" style="background:#faf7f2;color:#231b19">
+<div style="position:relative;width:100%;height:100%;box-sizing:border-box;direction:rtl;font-family:'Thmanyah Serif Text',serif;display:grid;grid-template-columns:1fr 1fr">
+<div style="padding:110px 120px 130px 90px;display:flex;flex-direction:column;justify-content:center;gap:28px">
+<span style="font-size:28px;font-weight:600;color:#8a7d76">السؤال المعتاد</span>
+<div style="font-size:76px;font-weight:500;line-height:1.4;color:#8a7d76;text-decoration:line-through;text-decoration-thickness:4px;text-decoration-color:#c98a9b">«أين نضع المتدرّبين؟»</div>
+</div>
+<div style="background:#231b19;color:#faf7f2;padding:110px 90px 130px 120px;display:flex;flex-direction:column;justify-content:center;gap:28px">
+<span style="font-size:28px;font-weight:600;color:#c98a9b">سؤالنا</span>
+<div style="font-family:'Thmanyah Serif Display','Thmanyah Serif Text',serif;font-size:58px;font-weight:700;line-height:1.45">«ما العمل الذي يأخذ وقت المؤسسة، ويمكن تفويضه بأمان لأشخاص أذكياء لا يحتاجون تدريباً طويلاً؟»</div>
+<div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:12px">
+<span style="border:1.5px solid rgba(250,247,242,0.3);border-radius:999px;padding:8px 24px;font-size:26px">عمل متكرر</span><span style="border:1.5px solid rgba(250,247,242,0.3);border-radius:999px;padding:8px 24px;font-size:26px">مراحل إجراءات ثابتة</span><span style="border:1.5px solid rgba(250,247,242,0.3);border-radius:999px;padding:8px 24px;font-size:26px">اختناقات إدارية</span><span style="border:1.5px solid rgba(250,247,242,0.3);border-radius:999px;padding:8px 24px;font-size:26px">بحث</span><span style="border:1.5px solid rgba(250,247,242,0.3);border-radius:999px;padding:8px 24px;font-size:26px">ذروة الحملات</span>
+</div></div>
+<div style="position:absolute;left:120px;right:120px;bottom:40px;display:flex;justify-content:space-between;font-size:16px;color:#a8998f"><span style="color:#8a7d76">لأغراض تعليمية فقط · خاص وسري</span><span dir="ltr">For educational purposes only · Private &amp; Confidential · 03</span></div>
+</div>
+</section>
+
+<section data-label="04 System" data-screen-label="04" style="background:#faf7f2;color:#231b19">
+<div style="position:relative;width:100%;height:100%;box-sizing:border-box;direction:rtl;font-family:'Thmanyah Serif Text',serif;padding:96px 120px 130px;display:flex;flex-direction:column">
+<span style="font-size:28px;font-weight:600;color:#7b1b33">النظام</span>
+<div style="font-family:'Thmanyah Serif Display','Thmanyah Serif Text',serif;font-size:76px;font-weight:700;line-height:1.4;margin-top:12px">تجربة لمدة شهر، مبنية على عمل حقيقي.</div>
+<div style="flex:1;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));grid-template-rows:1fr 1fr;gap:20px;margin-top:40px">
+<div style="background:#f1ebe2;border-radius:24px;padding:26px 28px;display:flex;flex-direction:column;justify-content:space-between"><span style="font-size:28px;font-weight:600;color:#7b1b33">01</span><span style="font-size:30px;font-weight:500;line-height:1.45">نحدد العمل الذي يستحق التفويض</span></div>
+<div style="background:#f1ebe2;border-radius:24px;padding:26px 28px;display:flex;flex-direction:column;justify-content:space-between"><span style="font-size:28px;font-weight:600;color:#7b1b33">02</span><span style="font-size:30px;font-weight:500;line-height:1.45">نحوّله إلى إجراءات وتدريب قصير</span></div>
+<div style="background:#f1ebe2;border-radius:24px;padding:26px 28px;display:flex;flex-direction:column;justify-content:space-between"><span style="font-size:28px;font-weight:600;color:#7b1b33">03</span><span style="font-size:30px;font-weight:500;line-height:1.45">نجذب مرشحين أصحاب إمكانات عالية</span></div>
+<div style="background:#f1ebe2;border-radius:24px;padding:26px 28px;display:flex;flex-direction:column;justify-content:space-between"><span style="font-size:28px;font-weight:600;color:#7b1b33">04</span><span style="font-size:30px;font-weight:500;line-height:1.45">نختار حسب الذكاء وسرعة التعلّم والالتزام</span></div>
+<div style="background:#f1ebe2;border-radius:24px;padding:26px 28px;display:flex;flex-direction:column;justify-content:space-between"><span style="font-size:28px;font-weight:600;color:#7b1b33">05</span><span style="font-size:30px;font-weight:500;line-height:1.45">ندرّبهم بسرعة</span></div>
+<div style="background:#f1ebe2;border-radius:24px;padding:26px 28px;display:flex;flex-direction:column;justify-content:space-between"><span style="font-size:28px;font-weight:600;color:#7b1b33">06</span><span style="font-size:30px;font-weight:500;line-height:1.45">ننقلهم تدريجياً إلى عمل مستقل</span></div>
+<div style="background:#f1ebe2;border-radius:24px;padding:26px 28px;display:flex;flex-direction:column;justify-content:space-between"><span style="font-size:28px;font-weight:600;color:#7b1b33">07</span><span style="font-size:30px;font-weight:500;line-height:1.45">نقيس أداءهم طوال الشهر</span></div>
+<div style="background:#7b1b33;color:#faf7f2;border-radius:24px;padding:26px 28px;display:flex;flex-direction:column;justify-content:space-between"><span style="font-size:28px;font-weight:600;color:#f1d3da">08</span><span style="font-size:30px;font-weight:700;line-height:1.45">نعرض وظائف على الأفضل</span></div>
+<div style="background:#f1ebe2;border-radius:24px;padding:26px 28px;display:flex;flex-direction:column;justify-content:space-between"><span style="font-size:28px;font-weight:600;color:#7b1b33">09</span><span style="font-size:30px;font-weight:500;line-height:1.45">نحسّن البرنامج بعد كل دفعة</span></div>
+<div style="background:#231b19;color:#faf7f2;border-radius:24px;padding:26px 28px;display:flex;flex-direction:column;justify-content:space-between"><span style="font-size:28px;font-weight:600;color:#c98a9b">10 ↺</span><span style="font-size:30px;font-weight:500;line-height:1.45">نكرّر ونتوسّع حيث تثبت القيمة</span></div>
+</div>
+<div style="position:absolute;left:120px;right:120px;bottom:40px;display:flex;justify-content:space-between;font-size:16px;color:#8a7d76"><span>لأغراض تعليمية فقط · خاص وسري</span><span dir="ltr">For educational purposes only · Private &amp; Confidential · 04</span></div>
+</div>
+</section>
+
+<section data-label="05 Results" data-screen-label="05" style="background:#231b19;color:#faf7f2">
+<div style="position:relative;width:100%;height:100%;box-sizing:border-box;direction:rtl;font-family:'Thmanyah Serif Text',serif;padding:96px 120px 130px;display:flex;flex-direction:column">
+<span style="font-size:28px;font-weight:600;color:#c98a9b">النتائج</span>
+<div style="font-family:'Thmanyah Serif Display','Thmanyah Serif Text',serif;font-size:76px;font-weight:700;line-height:1.4;margin-top:12px">إطار مجرَّب، لا فكرة جديدة.</div>
+<div style="display:grid;grid-template-columns:1fr 1fr 1.2fr;gap:24px;margin-top:44px">
+<div style="border:1.5px solid rgba(250,247,242,0.22);border-radius:28px;padding:36px 40px;display:flex;flex-direction:column;gap:8px"><span style="font-family:'Thmanyah Serif Display','Thmanyah Serif Text',serif;font-size:100px;font-weight:700;line-height:1.2">+10</span><span style="font-size:30px;line-height:1.5">سنوات من الاستخدام دولياً</span></div>
+<div style="border:1.5px solid rgba(250,247,242,0.22);border-radius:28px;padding:36px 40px;display:flex;flex-direction:column;gap:8px"><span style="font-family:'Thmanyah Serif Display','Thmanyah Serif Text',serif;font-size:100px;font-weight:700;line-height:1.2">4</span><span style="font-size:30px;line-height:1.5">تطبيقات ناجحة في العراق</span></div>
+<div style="background:#7b1b33;border-radius:28px;padding:36px 40px;display:flex;flex-direction:column;gap:8px"><span dir="ltr" style="font-family:'Thmanyah Serif Display','Thmanyah Serif Text',serif;font-size:100px;font-weight:700;line-height:1.2;text-align:right">20–30%</span><span style="font-size:30px;line-height:1.5">من المتدرّبين ينتقلون إلى وظيفة في الشركة نفسها</span></div>
+</div>
+<div style="flex:1;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;align-items:end">
+<div style="border-top:2px solid #c98a9b;padding-top:22px;display:flex;flex-direction:column;gap:8px"><span style="font-size:34px;font-weight:700">وضوح أسرع</span><span style="font-size:26px;line-height:1.55;color:#d8cdc6">تتضح لدى الفرق خطوات العمل والفجوات والإجراءات بسرعة أكبر.</span></div>
+<div style="border-top:2px solid #c98a9b;padding-top:22px;display:flex;flex-direction:column;gap:8px"><span style="font-size:34px;font-weight:700">كفاءة طبيعية</span><span style="font-size:26px;line-height:1.55;color:#d8cdc6">توثيق العمل وتفويضه يرفع الكفاءة دون مشروع منفصل.</span></div>
+<div style="border-top:2px solid #c98a9b;padding-top:22px;display:flex;flex-direction:column;gap:8px"><span style="font-size:34px;font-weight:700">تحسين مستمر</span><span style="font-size:26px;line-height:1.55;color:#d8cdc6">كل دفعة تكشف ما يجب تحسينه، فيصبح التطوير جزءاً من العمل.</span></div>
+</div>
+<div style="position:absolute;left:120px;right:120px;bottom:40px;display:flex;justify-content:space-between;font-size:16px;color:#a8998f"><span>لأغراض تعليمية فقط · خاص وسري</span><span dir="ltr">For educational purposes only · Private &amp; Confidential · 05</span></div>
+</div>
+</section>
+
+<section data-label="06 Problem" data-screen-label="06" style="background:#faf7f2;color:#231b19">
+<div style="position:relative;width:100%;height:100%;box-sizing:border-box;direction:rtl;font-family:'Thmanyah Serif Text',serif;padding:96px 120px 130px;display:grid;grid-template-columns:680px 1fr;gap:90px">
+<div style="display:flex;flex-direction:column">
+<span style="font-size:28px;font-weight:600;color:#7b1b33">01 — المشكلة</span>
+<div style="font-family:'Thmanyah Serif Display','Thmanyah Serif Text',serif;font-size:72px;font-weight:700;line-height:1.4;margin-top:12px">موظفون ذوو خبرة يقضون وقتهم في عمل لا يحتاج خبرتهم.</div>
+<div style="margin-top:auto;font-size:30px;line-height:1.6;color:#4a403c">كل ساعة هنا هي ساعة ضائعة من التفكير والعملاء والنمو.</div>
+</div>
+<div style="display:flex;flex-wrap:wrap;align-content:center;gap:14px">
+<span style="background:#f1ebe2;border-radius:999px;padding:10px 28px;font-size:28px">البحث</span><span style="background:#f1ebe2;border-radius:999px;padding:10px 28px;font-size:28px">جمع البيانات</span><span style="background:#f1ebe2;border-radius:999px;padding:10px 28px;font-size:28px">تحديث نظام العملاء</span><span style="background:#f1ebe2;border-radius:999px;padding:10px 28px;font-size:28px">تجهيز العملاء المحتملين</span><span style="background:#f1ebe2;border-radius:999px;padding:10px 28px;font-size:28px">متابعة المنافسين</span><span style="background:#f1ebe2;border-radius:999px;padding:10px 28px;font-size:28px">إعداد التقارير</span><span style="background:#f1ebe2;border-radius:999px;padding:10px 28px;font-size:28px">تكييف المحتوى</span><span style="background:#f1ebe2;border-radius:999px;padding:10px 28px;font-size:28px">فحص الجودة</span><span style="background:#f1ebe2;border-radius:999px;padding:10px 28px;font-size:28px">الإدارة</span><span style="background:#f1ebe2;border-radius:999px;padding:10px 28px;font-size:28px">تنظيف قواعد البيانات</span><span style="background:#f1ebe2;border-radius:999px;padding:10px 28px;font-size:28px">تجهيز التواصل</span><span style="background:#f1ebe2;border-radius:999px;padding:10px 28px;font-size:28px">متابعة الحملات</span><span style="background:#f1ebe2;border-radius:999px;padding:10px 28px;font-size:28px">الأرشفة</span><span style="background:#f1ebe2;border-radius:999px;padding:10px 28px;font-size:28px">الفهرسة</span><span style="background:#f1ebe2;border-radius:999px;padding:10px 28px;font-size:28px">التوثيق</span><span style="background:#f1ebe2;border-radius:999px;padding:10px 28px;font-size:28px">متابعة مواقع التواصل</span><span style="background:#f1ebe2;border-radius:999px;padding:10px 28px;font-size:28px">تجهيز الفعاليات</span><span style="background:#f1ebe2;border-radius:999px;padding:10px 28px;font-size:28px">دعم الحملات</span><span style="background:#f1ebe2;border-radius:999px;padding:10px 28px;font-size:28px">رسم خريطة السوق</span><span style="background:#7b1b33;color:#faf7f2;border-radius:999px;padding:10px 28px;font-size:28px">مهام تشغيلية متكررة</span>
+</div>
+<div style="position:absolute;left:120px;right:120px;bottom:40px;display:flex;justify-content:space-between;font-size:16px;color:#8a7d76"><span>لأغراض تعليمية فقط · خاص وسري</span><span dir="ltr">For educational purposes only · Private &amp; Confidential · 06</span></div>
+</div>
+</section>
+
+<section data-label="07 Peaks" data-screen-label="07" style="background:#faf7f2;color:#231b19">
+<div style="position:relative;width:100%;height:100%;box-sizing:border-box;direction:rtl;font-family:'Thmanyah Serif Text',serif;padding:96px 120px 130px;display:flex;flex-direction:column">
+<span style="font-size:28px;font-weight:600;color:#7b1b33">01 — المشكلة</span>
+<div style="font-family:'Thmanyah Serif Display','Thmanyah Serif Text',serif;font-size:76px;font-weight:700;line-height:1.4;margin-top:12px">ثم يرتفع ضغط العمل فجأة.</div>
+<div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:28px">
+<span style="border:1.5px solid rgba(35,27,25,0.25);border-radius:999px;padding:6px 24px;font-size:26px">إطلاق الحملات</span><span style="border:1.5px solid rgba(35,27,25,0.25);border-radius:999px;padding:6px 24px;font-size:26px">الفعاليات</span><span style="border:1.5px solid rgba(35,27,25,0.25);border-radius:999px;padding:6px 24px;font-size:26px">المواسم</span><span style="border:1.5px solid rgba(35,27,25,0.25);border-radius:999px;padding:6px 24px;font-size:26px">إطلاق المنتجات</span><span style="border:1.5px solid rgba(35,27,25,0.25);border-radius:999px;padding:6px 24px;font-size:26px">مشاريع بحث كبيرة</span><span style="border:1.5px solid rgba(35,27,25,0.25);border-radius:999px;padding:6px 24px;font-size:26px">المناقصات</span><span style="border:1.5px solid rgba(35,27,25,0.25);border-radius:999px;padding:6px 24px;font-size:26px">إنتاج المحتوى</span><span style="border:1.5px solid rgba(35,27,25,0.25);border-radius:999px;padding:6px 24px;font-size:26px">نقل البيانات</span><span style="border:1.5px solid rgba(35,27,25,0.25);border-radius:999px;padding:6px 24px;font-size:26px">دخول سوق جديد</span><span style="border:1.5px solid rgba(35,27,25,0.25);border-radius:999px;padding:6px 24px;font-size:26px">حملات تواصل كبيرة</span><span style="border:1.5px solid rgba(35,27,25,0.25);border-radius:999px;padding:6px 24px;font-size:26px">أعمال متراكمة</span>
+</div>
+<div style="flex:1;display:grid;grid-template-columns:repeat(4,minmax(0,1fr)) 1.3fr;gap:20px;margin-top:48px">
+<div style="background:#f1ebe2;border-radius:24px;padding:30px;display:flex;flex-direction:column;justify-content:space-between"><span style="font-size:24px;color:#8a7d76">الرد المعتاد</span><span style="font-size:32px;font-weight:500;line-height:1.45;text-decoration:line-through;text-decoration-color:#c98a9b;text-decoration-thickness:3px">تحميل الموظفين أكثر</span></div>
+<div style="background:#f1ebe2;border-radius:24px;padding:30px;display:flex;flex-direction:column;justify-content:space-between"><span style="font-size:24px;color:#8a7d76">الرد المعتاد</span><span style="font-size:32px;font-weight:500;line-height:1.45;text-decoration:line-through;text-decoration-color:#c98a9b;text-decoration-thickness:3px">التوظيف قبل الأوان</span></div>
+<div style="background:#f1ebe2;border-radius:24px;padding:30px;display:flex;flex-direction:column;justify-content:space-between"><span style="font-size:24px;color:#8a7d76">الرد المعتاد</span><span style="font-size:32px;font-weight:500;line-height:1.45;text-decoration:line-through;text-decoration-color:#c98a9b;text-decoration-thickness:3px">مستقلون بتكلفة عالية</span></div>
+<div style="background:#f1ebe2;border-radius:24px;padding:30px;display:flex;flex-direction:column;justify-content:space-between"><span style="font-size:24px;color:#8a7d76">الرد المعتاد</span><span style="font-size:32px;font-weight:500;line-height:1.45;text-decoration:line-through;text-decoration-color:#c98a9b;text-decoration-thickness:3px">ترك العمل دون إنجاز</span></div>
+<div style="background:#7b1b33;color:#faf7f2;border-radius:24px;padding:30px;display:flex;flex-direction:column;justify-content:space-between"><span style="font-size:24px;color:#f1d3da">خيار آخر</span><span style="font-size:38px;font-weight:700;line-height:1.45">بناء طبقة مرنة من الكفاءات الشابة المدرَّبة.</span></div>
+</div>
+<div style="position:absolute;left:120px;right:120px;bottom:40px;display:flex;justify-content:space-between;font-size:16px;color:#8a7d76"><span>لأغراض تعليمية فقط · خاص وسري</span><span dir="ltr">For educational purposes only · Private &amp; Confidential · 07</span></div>
+</div>
+</section>
+
+<section data-label="08 Value" data-screen-label="08" style="background:#faf7f2;color:#231b19">
+<div style="position:relative;width:100%;height:100%;box-sizing:border-box;direction:rtl;font-family:'Thmanyah Serif Text',serif;padding:96px 120px 130px;display:flex;flex-direction:column">
+<span style="font-size:28px;font-weight:600;color:#7b1b33">02 — القيمة</span>
+<div style="font-family:'Thmanyah Serif Display','Thmanyah Serif Text',serif;font-size:76px;font-weight:700;line-height:1.4;margin-top:12px">ثلاثة أطراف تربح، وإلا فالبرنامج لا ينجح.</div>
+<div style="flex:1;display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:24px;margin-top:36px">
+<div style="background:#231b19;color:#faf7f2;border-radius:28px;padding:36px 44px;display:flex;flex-direction:column;gap:10px"><span style="font-size:28px;font-weight:700;color:#c98a9b">للمؤسسة</span>
+<span style="font-size:26px;line-height:1.5">تحرير الموظفين ذوي الخبرة من العمل الأقل قيمة</span><span style="font-size:26px;line-height:1.5">قدرة إضافية دون توظيف دائم فوراً</span><span style="font-size:26px;line-height:1.5">اختبار المرشحين من خلال عمل حقيقي</span><span style="font-size:26px;line-height:1.5">قدرة إضافية في مواسم الذروة</span><span style="font-size:26px;line-height:1.5">العمل غير الموثّق يصبح إجراءات مكتوبة</span><span style="font-size:26px;line-height:1.5">اكتشاف مهام يمكن أتمتتها لاحقاً</span><span style="font-size:26px;line-height:1.5;color:#c98a9b;font-weight:700">مصدر متكرر للمواهب الشابة</span></div>
+<div style="background:#f1ebe2;border-radius:28px;padding:36px 44px;display:flex;flex-direction:column;gap:10px"><span style="font-size:28px;font-weight:700;color:#7b1b33">للمتدرّب</span>
+<span style="font-size:26px;line-height:1.5">خبرة عمل حقيقية</span><span style="font-size:26px;line-height:1.5">تدريب منظّم</span><span style="font-size:26px;line-height:1.5">مسؤوليات واضحة</span><span style="font-size:26px;line-height:1.5">تطور قابل للقياس وملاحظات</span><span style="font-size:26px;line-height:1.5">أعمال لملف الإنجازات عند الإمكان</span><span style="font-size:26px;line-height:1.5;font-weight:700;color:#7b1b33">طريق واضح إلى عرض عمل</span>
+<span style="margin-top:auto;font-size:24px;color:#4a403c;border-top:1px solid rgba(35,27,25,0.15);padding-top:14px">ليس عمالة رخيصة، بل فرصة تُكتسب.</span></div>
+<div style="background:#f1ebe2;border-radius:28px;padding:36px 44px;display:flex;flex-direction:column;gap:10px"><span style="font-size:28px;font-weight:700;color:#7b1b33">للإدارة</span>
+<span style="font-size:26px;line-height:1.5">مواد التدريب تُصنع مرة وتُستخدم دائماً</span><span style="font-size:26px;line-height:1.5">الإجراءات تتحسن بعد كل دفعة</span><span style="font-size:26px;line-height:1.5">الأسئلة والأخطاء تُحسّن النظام</span>
+<span style="margin-top:auto;font-size:24px;color:#4a403c;border-top:1px solid rgba(35,27,25,0.15);padding-top:14px">عبء الإدارة يجب أن يقلّ مع الوقت، لا أن يزيد.</span></div>
+</div>
+<div style="position:absolute;left:120px;right:120px;bottom:40px;display:flex;justify-content:space-between;font-size:16px;color:#8a7d76"><span>لأغراض تعليمية فقط · خاص وسري</span><span dir="ltr">For educational purposes only · Private &amp; Confidential · 08</span></div>
+</div>
+</section>
+
+<section data-label="09 Aim" data-screen-label="09" style="background:#faf7f2;color:#231b19">
+<div style="position:relative;width:100%;height:100%;box-sizing:border-box;direction:rtl;font-family:'Thmanyah Serif Text',serif;padding:96px 120px 130px;display:flex;flex-direction:column">
+<span style="font-size:28px;font-weight:600;color:#7b1b33">03 — الهدف</span>
+<div style="display:flex;justify-content:space-between;align-items:flex-end;gap:60px;margin-top:12px"><div style="font-family:'Thmanyah Serif Display','Thmanyah Serif Text',serif;font-size:76px;font-weight:700;line-height:1.4">النجاح يعني أربع نتائج.</div><span style="font-size:28px;color:#8a7d76;text-decoration:line-through;text-decoration-color:#c98a9b;text-decoration-thickness:3px;padding-bottom:16px">«عدد المتدرّبين»</span></div>
+<div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;margin-top:32px">
+<div style="background:#7b1b33;color:#faf7f2;border-radius:24px;padding:30px"><div style="font-family:'Thmanyah Serif Display','Thmanyah Serif Text',serif;font-size:44px;font-weight:700">القدرة</div><div style="font-size:26px;line-height:1.5;margin-top:6px;color:#f1d3da">كم ساعة عمل مفيدة أضفنا؟</div></div>
+<div style="background:#a3485f;color:#faf7f2;border-radius:24px;padding:30px"><div style="font-family:'Thmanyah Serif Display','Thmanyah Serif Text',serif;font-size:44px;font-weight:700">الاستقلالية</div><div style="font-size:26px;line-height:1.5;margin-top:6px;color:#faeef1">كم من العمل يُنجز دون تدخل الإدارة؟</div></div>
+<div style="background:#d9b8bd;border-radius:24px;padding:30px"><div style="font-family:'Thmanyah Serif Display','Thmanyah Serif Text',serif;font-size:44px;font-weight:700">الجودة</div><div style="font-size:26px;line-height:1.5;margin-top:6px;color:#4a403c">هل النتيجة بالمستوى المطلوب؟</div></div>
+<div style="background:#231b19;color:#faf7f2;border-radius:24px;padding:30px"><div style="font-family:'Thmanyah Serif Display','Thmanyah Serif Text',serif;font-size:44px;font-weight:700">المواهب</div><div style="font-size:26px;line-height:1.5;margin-top:6px;color:#d8cdc6">من يستحق التوظيف؟</div></div>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;justify-content:flex-end">
+<span style="font-size:26px;font-weight:600;color:#8a7d76;margin-bottom:10px">مقاييس أفضل</span>
+<div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));column-gap:40px;font-size:26px">
+<span style="border-top:1px solid rgba(35,27,25,0.15);padding:10px 0">ساعات الخبراء التي تحررت</span><span style="border-top:1px solid rgba(35,27,25,0.15);padding:10px 0">نسبة العمل المستقل</span><span style="border-top:1px solid rgba(35,27,25,0.15);padding:10px 0">نسبة الدقة</span><span style="border-top:1px solid rgba(35,27,25,0.15);padding:10px 0">مرشحون جاهزون للعمل</span>
+<span style="border-top:1px solid rgba(35,27,25,0.15);padding:10px 0">المهام المنجزة</span><span style="border-top:1px solid rgba(35,27,25,0.15);padding:10px 0">وقت الإدارة المطلوب</span><span style="border-top:1px solid rgba(35,27,25,0.15);padding:10px 0">الالتزام بالإجراءات</span><span style="border-top:1px solid rgba(35,27,25,0.15);padding:10px 0">التوظيفات الناجحة</span>
+<span style="border-top:1px solid rgba(35,27,25,0.15);padding:10px 0">قدرة الحملات المضافة</span><span style="border-top:1px solid rgba(35,27,25,0.15);padding:10px 0">سرعة التعلّم</span><span style="border-top:1px solid rgba(35,27,25,0.15);padding:10px 0">تكلفة الساعة المنتجة</span><span style="border-top:1px solid rgba(35,27,25,0.15);padding:10px 0">البقاء بعد التوظيف</span>
+</div></div>
+<div style="position:absolute;left:120px;right:120px;bottom:40px;display:flex;justify-content:space-between;font-size:16px;color:#8a7d76"><span>لأغراض تعليمية فقط · خاص وسري</span><span dir="ltr">For educational purposes only · Private &amp; Confidential · 09</span></div>
+</div>
+</section>
+
+<section data-label="10 Workload audit" data-screen-label="10" style="background:#faf7f2;color:#231b19">
+<div style="position:relative;width:100%;height:100%;box-sizing:border-box;direction:rtl;font-family:'Thmanyah Serif Text',serif;padding:96px 120px 130px;display:flex;flex-direction:column">
+<span style="font-size:28px;font-weight:600;color:#7b1b33">04 — اكتشاف ضغط العمل</span>
+<div style="font-family:'Thmanyah Serif Display','Thmanyah Serif Text',serif;font-size:76px;font-weight:700;line-height:1.4;margin-top:12px">قبل التوظيف: نراجع العمل.</div>
+<div style="flex:1;display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:36px">
+<div style="background:#f1ebe2;border-radius:28px;padding:36px 44px;display:flex;flex-direction:column">
+<span style="font-family:'Thmanyah Serif Display','Thmanyah Serif Text',serif;font-size:40px;font-weight:700">العمل المتكرر</span><span style="font-size:26px;color:#4a403c">الحِمل الثابت</span>
+<div style="flex:1;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;align-items:end;margin-top:24px">
+<div style="display:flex;flex-direction:column;gap:10px"><div style="height:220px;background:#7b1b33;border-radius:16px"></div><span style="font-size:26px;font-weight:500">يومي</span></div>
+<div style="display:flex;flex-direction:column;gap:10px"><div style="height:170px;background:#a3485f;border-radius:16px"></div><span style="font-size:26px;font-weight:500">أسبوعي</span></div>
+<div style="display:flex;flex-direction:column;gap:10px"><div style="height:120px;background:#c98a9b;border-radius:16px"></div><span style="font-size:26px;font-weight:500">شهري</span></div>
+<div style="display:flex;flex-direction:column;gap:10px"><div style="height:80px;background:#d9b8bd;border-radius:16px"></div><span style="font-size:26px;font-weight:500">فصلي</span></div>
+</div></div>
+<div style="background:#231b19;color:#faf7f2;border-radius:28px;padding:36px 44px;display:flex;flex-direction:column">
+<span style="font-family:'Thmanyah Serif Display','Thmanyah Serif Text',serif;font-size:40px;font-weight:700">عمل الذروة</span><span style="font-size:26px;color:#d8cdc6">الارتفاعات المتوقعة</span>
+<div style="flex:1;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px;align-items:end;margin-top:24px">
+<div style="display:flex;flex-direction:column;gap:10px"><div style="height:70px;background:#c98a9b;border-radius:14px"></div><span style="font-size:24px">حملات</span></div>
+<div style="display:flex;flex-direction:column;gap:10px"><div style="height:220px;background:#c98a9b;border-radius:14px"></div><span style="font-size:24px">فعاليات</span></div>
+<div style="display:flex;flex-direction:column;gap:10px"><div style="height:110px;background:#c98a9b;border-radius:14px"></div><span style="font-size:24px">مواسم</span></div>
+<div style="display:flex;flex-direction:column;gap:10px"><div style="height:190px;background:#c98a9b;border-radius:14px"></div><span style="font-size:24px">إطلاقات</span></div>
+<div style="display:flex;flex-direction:column;gap:10px"><div style="height:90px;background:#c98a9b;border-radius:14px"></div><span style="font-size:24px">مواعيد</span></div>
+<div style="display:flex;flex-direction:column;gap:10px"><div style="height:160px;background:#c98a9b;border-radius:14px"></div><span style="font-size:24px">مشاريع</span></div>
+</div></div>
+</div>
+<div style="position:absolute;left:120px;right:120px;bottom:40px;display:flex;justify-content:space-between;font-size:16px;color:#8a7d76"><span>لأغراض تعليمية فقط · خاص وسري</span><span dir="ltr">For educational purposes only · Private &amp; Confidential · 10</span></div>
+</div>
+</section>
+
+<section data-label="11 Audit questions" data-screen-label="11" style="background:#f1ebe2;color:#231b19">
+<div style="position:relative;width:100%;height:100%;box-sizing:border-box;direction:rtl;font-family:'Thmanyah Serif Text',serif;padding:96px 120px 130px;display:grid;grid-template-columns:560px 1fr;gap:90px">
+<div style="display:flex;flex-direction:column">
+<span style="font-size:28px;font-weight:600;color:#7b1b33">04 — اكتشاف ضغط العمل</span>
+<div style="font-family:'Thmanyah Serif Display','Thmanyah Serif Text',serif;font-size:76px;font-weight:700;line-height:1.4;margin-top:12px">تسعة أسئلة لكل قسم.</div>
+</div>
+<div style="display:flex;flex-direction:column;justify-content:center">
+<div style="display:grid;grid-template-columns:60px 1fr;padding:12px 0;border-top:1px solid rgba(35,27,25,0.18);font-size:30px"><span style="color:#7b1b33;font-weight:600">1</span>ما الذي يأخذ وقتاً كبيراً؟</div>
+<div style="display:grid;grid-template-columns:60px 1fr;padding:12px 0;border-top:1px solid rgba(35,27,25,0.18);font-size:30px"><span style="color:#7b1b33;font-weight:600">2</span>ما الذي يتأجّل دائماً؟</div>
+<div style="display:grid;grid-template-columns:60px 1fr;padding:12px 0;border-top:1px solid rgba(35,27,25,0.18);font-size:30px"><span style="color:#7b1b33;font-weight:600">3</span>ما العمل المتكرر؟</div>
+<div style="display:grid;grid-template-columns:60px 1fr;padding:12px 0;border-top:1px solid rgba(35,27,25,0.18);font-size:30px"><span style="color:#7b1b33;font-weight:600">4</span>ما العمل الذي له خطوات واضحة أصلاً؟</div>
+<div style="display:grid;grid-template-columns:60px 1fr;padding:12px 0;border-top:1px solid rgba(35,27,25,0.18);font-size:30px"><span style="color:#7b1b33;font-weight:600">5</span>ما الذي يحتاج ذكاءً لكن تدريباً قليلاً؟</div>
+<div style="display:grid;grid-template-columns:60px 1fr;padding:12px 0;border-top:1px solid rgba(35,27,25,0.18);font-size:30px"><span style="color:#7b1b33;font-weight:600">6</span>ما الذي يمكن تجهيزه قبل أن يراجعه شخص خبير؟</div>
+<div style="display:grid;grid-template-columns:60px 1fr;padding:12px 0;border-top:1px solid rgba(35,27,25,0.18);font-size:30px"><span style="color:#7b1b33;font-weight:600">7</span>ما الذي يصبح مرهقاً في أوقات الضغط؟</div>
+<div style="display:grid;grid-template-columns:60px 1fr;padding:12px 0;border-top:1px solid rgba(35,27,25,0.18);font-size:30px"><span style="color:#7b1b33;font-weight:600">8</span>ما المهام التي يقوم بها موظفون مكلفون ولا تحتاج خبرتهم؟</div>
+<div style="display:grid;grid-template-columns:60px 1fr;padding:12px 0;border-top:1px solid rgba(35,27,25,0.18);border-bottom:1px solid rgba(35,27,25,0.18);font-size:30px;font-weight:700;color:#7b1b33"><span>9</span>ماذا سنفعل أكثر لو كان لدينا أشخاص إضافيون؟</div>
+</div>
+<div style="position:absolute;left:120px;right:120px;bottom:40px;display:flex;justify-content:space-between;font-size:16px;color:#8a7d76"><span>لأغراض تعليمية فقط · خاص وسري</span><span dir="ltr">For educational purposes only · Private &amp; Confidential · 11</span></div>
+</div>
+</section>
+
+<section data-label="12 Delegation test" data-screen-label="12" style="background:#faf7f2;color:#231b19">
+<div style="position:relative;width:100%;height:100%;box-sizing:border-box;direction:rtl;font-family:'Thmanyah Serif Text',serif;padding:96px 120px 130px;display:flex;flex-direction:column">
+<span style="font-size:28px;font-weight:600;color:#7b1b33">05 — اختبار التفويض</span>
+<div style="font-family:'Thmanyah Serif Display','Thmanyah Serif Text',serif;font-size:76px;font-weight:700;line-height:1.4;margin-top:12px">خمسة أسئلة لكل مهمة.</div>
+<div style="flex:1;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:20px;margin-top:44px">
+<div style="border:2px solid rgba(35,27,25,0.15);border-radius:200px 200px 28px 28px;padding:90px 28px 36px;display:flex;flex-direction:column;gap:14px;text-align:center"><span style="font-size:38px;font-weight:700">تدريب قليل</span><span style="font-size:26px;line-height:1.5;color:#4a403c">هل يتعلّمها شخص ذكي في ساعات أو أيام؟</span></div>
+<div style="border:2px solid rgba(35,27,25,0.15);border-radius:200px 200px 28px 28px;padding:90px 28px 36px;display:flex;flex-direction:column;gap:14px;text-align:center"><span style="font-size:38px;font-weight:700">نتيجة واضحة</span><span style="font-size:26px;line-height:1.5;color:#4a403c">هل نستطيع أن نُري شكل العمل الجيد؟</span></div>
+<div style="border:2px solid rgba(35,27,25,0.15);border-radius:200px 200px 28px 28px;padding:90px 28px 36px;display:flex;flex-direction:column;gap:14px;text-align:center"><span style="font-size:38px;font-weight:700">متكررة</span><span style="font-size:26px;line-height:1.5;color:#4a403c">هل التكرار يحسّن السرعة والجودة؟</span></div>
+<div style="border:2px solid rgba(35,27,25,0.15);border-radius:200px 200px 28px 28px;padding:90px 28px 36px;display:flex;flex-direction:column;gap:14px;text-align:center"><span style="font-size:38px;font-weight:700">مخاطر قليلة</span><span style="font-size:26px;line-height:1.5;color:#4a403c">هل نكتشف الخطأ قبل أن يسبب ضرراً؟</span></div>
+<div style="background:#7b1b33;color:#faf7f2;border-radius:200px 200px 28px 28px;padding:90px 28px 36px;display:flex;flex-direction:column;gap:14px;text-align:center"><span style="font-size:38px;font-weight:700">قابلة للقياس</span><span style="font-size:26px;line-height:1.5;color:#f1d3da">هل نقيّم النتيجة بشكل موضوعي؟</span></div>
+</div>
+<div style="position:absolute;left:120px;right:120px;bottom:40px;display:flex;justify-content:space-between;font-size:16px;color:#8a7d76"><span>لأغراض تعليمية فقط · خاص وسري</span><span dir="ltr">For educational purposes only · Private &amp; Confidential · 12</span></div>
+</div>
+</section>
+
+<section data-label="13 Delegation matrix" data-screen-label="13" style="background:#faf7f2;color:#231b19">
+<div style="position:relative;width:100%;height:100%;box-sizing:border-box;direction:rtl;font-family:'Thmanyah Serif Text',serif;padding:96px 120px 130px;display:grid;grid-template-columns:1fr 820px;gap:90px">
+<div style="display:flex;flex-direction:column">
+<span style="font-size:28px;font-weight:600;color:#7b1b33">05 — مصفوفة التفويض</span>
+<div style="font-family:'Thmanyah Serif Display','Thmanyah Serif Text',serif;font-size:76px;font-weight:700;line-height:1.4;margin-top:12px">فوّض. ساعد. احتفظ.</div>
+<div style="margin-top:auto;display:flex;flex-direction:column;gap:22px">
+<div style="display:grid;grid-template-columns:28px 1fr;gap:20px;align-items:start"><span style="width:28px;height:28px;border-radius:999px;background:#5f7a5a;margin-top:12px"></span><div><div style="font-size:34px;font-weight:700">أخضر — فوّض</div><div style="font-size:26px;color:#4a403c">يمكن أن تصبح مستقلة بالكامل.</div></div></div>
+<div style="display:grid;grid-template-columns:28px 1fr;gap:20px;align-items:start"><span style="width:28px;height:28px;border-radius:999px;background:#c7913f;margin-top:12px"></span><div><div style="font-size:34px;font-weight:700">برتقالي — ساعد</div><div style="font-size:26px;color:#4a403c">المتدرّب يجهّز، والموظف الخبير يراجع ويوافق.</div></div></div>
+<div style="display:grid;grid-template-columns:28px 1fr;gap:20px;align-items:start"><span style="width:28px;height:28px;border-radius:999px;background:#7b1b33;margin-top:12px"></span><div><div style="font-size:34px;font-weight:700">أحمر — احتفظ</div><div style="font-size:26px;color:#4a403c">تحتاج خبرة أو صلاحية أو وصولاً حساساً أو تخصصاً.</div></div></div>
+</div></div>
+<div style="display:grid;grid-template-columns:60px 1fr;grid-template-rows:1fr 60px;gap:10px">
+<div style="display:flex;align-items:center;justify-content:center"><span style="transform:rotate(90deg);white-space:nowrap;font-size:24px;color:#8a7d76">خطر الخطأ ←</span></div>
+<div dir="ltr" style="display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(3,1fr);gap:10px">
+<div style="background:#c7913f;border-radius:18px;padding:18px;color:#231b19;font-size:26px;font-weight:700;display:flex;align-items:flex-end;justify-content:flex-end">ساعد</div>
+<div style="background:#7b1b33;border-radius:18px;padding:18px;color:#faf7f2;font-size:26px;font-weight:700;display:flex;align-items:flex-end;justify-content:flex-end">احتفظ</div>
+<div style="background:#7b1b33;border-radius:18px;padding:18px;color:#faf7f2;font-size:26px;font-weight:700;display:flex;align-items:flex-end;justify-content:flex-end">احتفظ</div>
+<div style="background:#5f7a5a;border-radius:18px;padding:18px;color:#faf7f2;font-size:26px;font-weight:700;display:flex;align-items:flex-end;justify-content:flex-end">فوّض</div>
+<div style="background:#c7913f;border-radius:18px;padding:18px;color:#231b19;font-size:26px;font-weight:700;display:flex;align-items:flex-end;justify-content:flex-end">ساعد</div>
+<div style="background:#7b1b33;border-radius:18px;padding:18px;color:#faf7f2;font-size:26px;font-weight:700;display:flex;align-items:flex-end;justify-content:flex-end">احتفظ</div>
+<div dir="rtl" style="background:#5f7a5a;border-radius:18px;padding:18px;color:#faf7f2;font-size:26px;font-weight:700;display:flex;flex-direction:column;justify-content:flex-end"><span style="font-size:22px;font-weight:400">تحديث البيانات وتنظيفها</span>فوّض</div>
+<div dir="rtl" style="background:#5f7a5a;border-radius:18px;padding:18px;color:#faf7f2;font-size:26px;font-weight:700;display:flex;flex-direction:column;justify-content:flex-end"><span style="font-size:22px;font-weight:400">خريطة السوق</span>فوّض</div>
+<div dir="rtl" style="background:#c7913f;border-radius:18px;padding:18px;color:#231b19;font-size:26px;font-weight:700;display:flex;flex-direction:column;justify-content:flex-end"><span style="font-size:22px;font-weight:400">مسودات التقارير</span>ساعد</div>
+</div>
+<span></span><div style="display:flex;align-items:center;justify-content:center;font-size:24px;color:#8a7d76">الخبرة المطلوبة →</div>
+</div>
+<div style="position:absolute;left:120px;right:120px;bottom:40px;display:flex;justify-content:space-between;font-size:16px;color:#8a7d76"><span>لأغراض تعليمية فقط · خاص وسري</span><span dir="ltr">For educational purposes only · Private &amp; Confidential · 13</span></div>
+</div>
+</section>
+
+<section data-label="14 Micro-SOPs" data-screen-label="14" style="background:#faf7f2;color:#231b19">
+<div style="position:relative;width:100%;height:100%;box-sizing:border-box;direction:rtl;font-family:'Thmanyah Serif Text',serif;padding:96px 120px 130px;display:grid;grid-template-columns:600px 1fr;gap:90px">
+<div style="display:flex;flex-direction:column">
+<span style="font-size:28px;font-weight:600;color:#7b1b33">06 — إجراءات مصغّرة</span>
+<div style="font-family:'Thmanyah Serif Display','Thmanyah Serif Text',serif;font-size:76px;font-weight:700;line-height:1.4;margin-top:12px">لا أدلة ضخمة. صفحة واحدة لكل مهمة.</div>
+<div style="margin-top:auto;font-size:30px;line-height:1.6;color:#4a403c">الإجراءات المكتوبة تعلّم العمل الروتيني.<br><strong style="color:#7b1b33">والمدراء يتعاملون مع القرارات والاستثناءات.</strong></div>
+</div>
+<div style="background:#fff;border:2px solid rgba(35,27,25,0.12);border-radius:28px;padding:32px 44px;display:grid;grid-template-columns:1fr 1fr;column-gap:40px;align-content:center;box-shadow:0 30px 60px -30px rgba(35,27,25,0.25)">
+<div style="grid-column:1 / -1;display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid #231b19;padding-bottom:14px;margin-bottom:6px"><span style="font-size:30px;font-weight:700">إجراء مصغّر · [اسم المهمة]</span><span style="background:#5f7a5a;color:#faf7f2;border-radius:999px;padding:4px 20px;font-size:22px">أخضر</span></div>
+<div style="padding:10px 0;border-bottom:1px solid rgba(35,27,25,0.1)"><div style="font-size:26px;font-weight:700;color:#7b1b33">الغرض</div><div style="font-size:24px;color:#4a403c">لماذا توجد المهمة؟</div></div>
+<div style="padding:10px 0;border-bottom:1px solid rgba(35,27,25,0.1)"><div style="font-size:26px;font-weight:700;color:#7b1b33">المُدخلات</div><div style="font-size:24px;color:#4a403c">ما المعلومات المتوفرة؟</div></div>
+<div style="padding:10px 0;border-bottom:1px solid rgba(35,27,25,0.1)"><div style="font-size:26px;font-weight:700;color:#7b1b33">الخطوات</div><div style="font-size:24px;color:#4a403c">ما الذي يجب فعله بالضبط؟</div></div>
+<div style="padding:10px 0;border-bottom:1px solid rgba(35,27,25,0.1)"><div style="font-size:26px;font-weight:700;color:#7b1b33">الأدوات</div><div style="font-size:24px;color:#4a403c">الأدوات المعتمدة فقط</div></div>
+<div style="padding:10px 0;border-bottom:1px solid rgba(35,27,25,0.1)"><div style="font-size:26px;font-weight:700;color:#7b1b33">مثال جيد</div><div style="font-size:24px;color:#4a403c">عمل منجز بجودة عالية</div></div>
+<div style="padding:10px 0;border-bottom:1px solid rgba(35,27,25,0.1)"><div style="font-size:26px;font-weight:700;color:#7b1b33">فحص الجودة</div><div style="font-size:24px;color:#4a403c">كيف تراجع عملك بنفسك</div></div>
+<div style="padding:10px 0;border-bottom:1px solid rgba(35,27,25,0.1)"><div style="font-size:26px;font-weight:700;color:#7b1b33">أخطاء شائعة</div><div style="font-size:24px;color:#4a403c">ما الذي يخطئ عادةً</div></div>
+<div style="padding:10px 0;border-bottom:1px solid rgba(35,27,25,0.1)"><div style="font-size:26px;font-weight:700;color:#7b1b33">متى تسأل</div><div style="font-size:24px;color:#4a403c">متى تتوقف وتطلب المساعدة</div></div>
+<div style="padding:10px 0"><div style="font-size:26px;font-weight:700;color:#7b1b33">التسليم</div><div style="font-size:24px;color:#4a403c">أين يذهب العمل المنجز</div></div>
+<div style="padding:10px 0"><div style="font-size:26px;font-weight:700;color:#7b1b33">الموافقة</div><div style="font-size:24px;color:#4a403c">من يوافق عليه، إن لزم</div></div>
+</div>
+<div style="position:absolute;left:120px;right:120px;bottom:40px;display:flex;justify-content:space-between;font-size:16px;color:#8a7d76"><span>لأغراض تعليمية فقط · خاص وسري</span><span dir="ltr">For educational purposes only · Private &amp; Confidential · 14</span></div>
+</div>
+</section>
+
+<section data-label="15 Training library" data-screen-label="15" style="background:#faf7f2;color:#231b19">
+<div style="position:relative;width:100%;height:100%;box-sizing:border-box;direction:rtl;font-family:'Thmanyah Serif Text',serif;padding:96px 120px 130px;display:flex;flex-direction:column">
+<span style="font-size:28px;font-weight:600;color:#7b1b33">07 — مكتبة التدريب</span>
+<div style="font-family:'Thmanyah Serif Display','Thmanyah Serif Text',serif;font-size:76px;font-weight:700;line-height:1.4;margin-top:12px">وحدات صغيرة. مفيدة من اليوم الأول.</div>
+<div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:32px;font-size:28px">
+<span style="background:#f1ebe2;border-radius:999px;padding:10px 26px">شرح في 5 دقائق</span><span style="color:#8a7d76">+</span><span style="background:#f1ebe2;border-radius:999px;padding:10px 26px">إجراء مكتوب</span><span style="color:#8a7d76">+</span><span style="background:#f1ebe2;border-radius:999px;padding:10px 26px">تسجيل شاشة</span><span style="color:#8a7d76">+</span><span style="background:#f1ebe2;border-radius:999px;padding:10px 26px">مثال ممتاز</span><span style="color:#8a7d76">+</span><span style="background:#f1ebe2;border-radius:999px;padding:10px 26px">مهمة تدريبية</span><span style="color:#8a7d76">+</span><span style="background:#f1ebe2;border-radius:999px;padding:10px 26px">مهمة حقيقية</span><span style="color:#8a7d76">+</span><span style="background:#f1ebe2;border-radius:999px;padding:10px 26px">قائمة فحص ذاتي</span>
+</div>
+<div style="flex:1;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:14px;align-items:end;margin-top:36px">
+<div style="height:30%;background:#ead9d4;border-radius:24px 24px 0 0;padding:22px;box-sizing:border-box;font-size:36px;font-weight:700">تعلّم</div>
+<div style="height:42%;background:#d9b8bd;border-radius:24px 24px 0 0;padding:22px;box-sizing:border-box;font-size:36px;font-weight:700">شاهد</div>
+<div style="height:54%;background:#c98a9b;border-radius:24px 24px 0 0;padding:22px;box-sizing:border-box;font-size:36px;font-weight:700">جرّب</div>
+<div style="height:66%;background:#a3485f;color:#faf7f2;border-radius:24px 24px 0 0;padding:22px;box-sizing:border-box;font-size:36px;font-weight:700">راجع</div>
+<div style="height:80%;background:#7b1b33;color:#faf7f2;border-radius:24px 24px 0 0;padding:22px;box-sizing:border-box;font-size:36px;font-weight:700">كرّر</div>
+<div style="height:100%;background:#231b19;color:#faf7f2;border-radius:24px 24px 0 0;padding:22px;box-sizing:border-box;font-size:36px;font-weight:700">امتلك المهمة</div>
+</div>
+<div style="position:absolute;left:120px;right:120px;bottom:40px;display:flex;justify-content:space-between;font-size:16px;color:#8a7d76"><span>لأغراض تعليمية فقط · خاص وسري</span><span dir="ltr">For educational purposes only · Private &amp; Confidential · 15</span></div>
+</div>
+</section>
+
+<section data-label="16 Recruitment" data-screen-label="16" style="background:#231b19;color:#faf7f2">
+<div style="position:relative;width:100%;height:100%;box-sizing:border-box;direction:rtl;font-family:'Thmanyah Serif Text',serif;padding:96px 120px 130px;display:grid;grid-template-columns:1fr 560px;gap:90px">
+<div style="display:flex;flex-direction:column">
+<span style="font-size:28px;font-weight:600;color:#c98a9b">08 — حملة التوظيف</span>
+<span style="font-size:32px;color:#a8998f;text-decoration:line-through;text-decoration-color:#c98a9b;text-decoration-thickness:3px;margin-top:28px">«مطلوب متدرّب لمساعدة الفريق.»</span>
+<div style="font-family:'Thmanyah Serif Display','Thmanyah Serif Text',serif;font-size:88px;font-weight:700;line-height:1.35;margin-top:20px">عمل حقيقي.<br>مسؤولية حقيقية.<br>تعلّم سريع.<br><span style="color:#c98a9b">فرصة لتكسب وظيفة.</span></div>
+<div style="margin-top:auto;font-size:26px;color:#d8cdc6">النبرة: طموحة · موثوقة · شابة · مهنية · انتقائية · محفّزة</div>
+</div>
+<div style="display:flex;flex-direction:column;justify-content:center;gap:12px">
+<span style="font-size:28px;color:#d8cdc6;margin-bottom:8px">المرشح لا يأتي ليتفرّج. سوف:</span>
+<span style="border:1.5px solid rgba(250,247,242,0.25);border-radius:999px;padding:12px 32px;font-size:32px">يتعلّم</span>
+<span style="border:1.5px solid rgba(250,247,242,0.25);border-radius:999px;padding:12px 32px;font-size:32px">يعمل</span>
+<span style="border:1.5px solid rgba(250,247,242,0.25);border-radius:999px;padding:12px 32px;font-size:32px">يُنتج</span>
+<span style="border:1.5px solid rgba(250,247,242,0.25);border-radius:999px;padding:12px 32px;font-size:32px">يتلقّى ملاحظات</span>
+<span style="border:1.5px solid rgba(250,247,242,0.25);border-radius:999px;padding:12px 32px;font-size:32px">يتحمّل المسؤولية</span>
+<span style="background:#7b1b33;border-radius:999px;padding:12px 32px;font-size:32px;font-weight:700">وقد يكسب وظيفة دائمة</span>
+</div>
+<div style="position:absolute;left:120px;right:120px;bottom:40px;display:flex;justify-content:space-between;font-size:16px;color:#a8998f"><span>لأغراض تعليمية فقط · خاص وسري</span><span dir="ltr">For educational purposes only · Private &amp; Confidential · 16</span></div>
+</div>
+</section>
+
+<section data-label="17 Application" data-screen-label="17" style="background:#faf7f2;color:#231b19">
+<div style="position:relative;width:100%;height:100%;box-sizing:border-box;direction:rtl;font-family:'Thmanyah Serif Text',serif;padding:96px 120px 130px;display:flex;flex-direction:column">
+<span style="font-size:28px;font-weight:600;color:#7b1b33">09 — التقديم</span>
+<div style="font-family:'Thmanyah Serif Display','Thmanyah Serif Text',serif;font-size:76px;font-weight:700;line-height:1.4;margin-top:12px">تقديم بسيط. والسيرة الذاتية ليست كل شيء.</div>
+<div style="font-size:30px;line-height:1.5;color:#4a403c;margin-top:4px">أولاً نفرز السير الذاتية، ولا يدخل السباق إلا المرشحون المناسبون.</div>
+<div style="flex:1;display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;margin-top:32px">
+<div style="background:#f1ebe2;border-radius:28px;padding:34px 40px;display:flex;flex-direction:column;gap:10px"><span style="font-size:24px;font-weight:600;color:#8a7d76">الخطوة 1</span><span style="font-size:36px;font-weight:700">المعلومات الأساسية</span>
+<div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:10px"><span style="background:#faf7f2;border-radius:999px;padding:6px 18px;font-size:24px">الاسم</span><span style="background:#faf7f2;border-radius:999px;padding:6px 18px;font-size:24px">التواصل</span><span style="background:#faf7f2;border-radius:999px;padding:6px 18px;font-size:24px">الدراسة</span><span style="background:#faf7f2;border-radius:999px;padding:6px 18px;font-size:24px">الأوقات المتاحة</span><span style="background:#faf7f2;border-radius:999px;padding:6px 18px;font-size:24px">المهارات</span><span style="background:#faf7f2;border-radius:999px;padding:6px 18px;font-size:24px">اللغات</span><span style="background:#faf7f2;border-radius:999px;padding:6px 18px;font-size:24px">البرامج</span><span style="background:#faf7f2;border-radius:999px;padding:6px 18px;font-size:24px">الخبرة</span><span style="background:#faf7f2;border-radius:999px;padding:6px 18px;font-size:24px">الاهتمامات</span></div>
+<div style="margin-top:auto;display:flex;align-items:center;gap:18px;border-top:1px solid rgba(35,27,25,0.15);padding-top:22px"><span style="background:#7b1b33;color:#faf7f2;border-radius:999px;padding:8px 22px;font-size:28px;font-weight:700;white-space:nowrap">10 دقائق</span><span style="font-size:28px;line-height:1.45;font-weight:600">مكالمة فرز هاتفية</span></div></div>
+<div style="background:#f1ebe2;border-radius:28px;padding:34px 40px;display:flex;flex-direction:column;gap:10px"><span style="font-size:24px;font-weight:600;color:#8a7d76">الخطوة 2</span><span style="font-size:36px;font-weight:700">أسئلة قصيرة تكشف</span>
+<span style="font-size:28px;line-height:1.5">طريقة التفكير</span><span style="font-size:28px;line-height:1.5">الفضول</span><span style="font-size:28px;line-height:1.5">التواصل</span><span style="font-size:28px;line-height:1.5">الانتباه للتفاصيل</span><span style="font-size:28px;line-height:1.5">حل المشكلات</span><span style="font-size:28px;line-height:1.5">سرعة التعلّم</span></div>
+<div style="background:#7b1b33;color:#faf7f2;border-radius:28px;padding:34px 40px;display:flex;flex-direction:column;gap:10px"><span style="font-size:24px;font-weight:600;color:#f1d3da">الخطوة 3</span><span style="font-size:36px;font-weight:700">تحدٍّ عملي صغير</span>
+<span style="font-size:28px;line-height:1.55;color:#faeef1">مهمة قصيرة تشبه العمل الحقيقي، عند الحاجة. تُظهر كيف يعمل المرشح، لا ما كتبه عن نفسه.</span></div>
+</div>
+<div style="position:absolute;left:120px;right:120px;bottom:40px;display:flex;justify-content:space-between;font-size:16px;color:#8a7d76"><span>لأغراض تعليمية فقط · خاص وسري</span><span dir="ltr">For educational purposes only · Private &amp; Confidential · 17</span></div>
+</div>
+</section>
+
+<section data-label="18 Selection" data-screen-label="18" style="background:#faf7f2;color:#231b19">
+<div style="position:relative;width:100%;height:100%;box-sizing:border-box;direction:rtl;font-family:'Thmanyah Serif Text',serif;padding:96px 120px 130px;display:grid;grid-template-columns:1fr 640px;gap:90px">
+<div style="display:flex;flex-direction:column">
+<span style="font-size:28px;font-weight:600;color:#7b1b33">10 — الاختيار</span>
+<div style="font-family:'Thmanyah Serif Display','Thmanyah Serif Text',serif;font-size:72px;font-weight:700;line-height:1.4;margin-top:12px">مسار اختيار سريع.</div>
+<div style="flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:10px;margin-top:20px">
+<div style="width:100%;background:#ead9d4;border-radius:999px;padding:14px;text-align:center;font-size:32px;font-weight:600">التقديم</div>
+<div style="width:86%;background:#d9b8bd;border-radius:999px;padding:14px;text-align:center;font-size:32px;font-weight:600">فرز السير الذاتية + مكالمة 10 دقائق</div>
+<div style="width:72%;background:#c98a9b;border-radius:999px;padding:14px;text-align:center;font-size:32px;font-weight:600">مهمة صغيرة</div>
+<div style="width:58%;background:#a3485f;color:#faf7f2;border-radius:999px;padding:14px;text-align:center;font-size:32px;font-weight:600">مقابلة قصيرة</div>
+<div style="width:44%;background:#7b1b33;color:#faf7f2;border-radius:999px;padding:14px;text-align:center;font-size:32px;font-weight:700">الدفعة</div>
+</div></div>
+<div style="display:flex;flex-direction:column;justify-content:center;gap:10px">
+<span style="font-size:28px;font-weight:600;color:#8a7d76;margin-bottom:6px">ماذا نقيّم؟</span>
+<div style="display:flex;flex-wrap:wrap;gap:10px">
+<span style="background:#f1ebe2;border-radius:999px;padding:8px 24px;font-size:28px">الذكاء</span><span style="background:#f1ebe2;border-radius:999px;padding:8px 24px;font-size:28px">سرعة التعلّم</span><span style="background:#f1ebe2;border-radius:999px;padding:8px 24px;font-size:28px">الدقة</span><span style="background:#f1ebe2;border-radius:999px;padding:8px 24px;font-size:28px">التواصل</span><span style="background:#f1ebe2;border-radius:999px;padding:8px 24px;font-size:28px">الالتزام</span><span style="background:#f1ebe2;border-radius:999px;padding:8px 24px;font-size:28px">الانتباه للتفاصيل</span><span style="background:#f1ebe2;border-radius:999px;padding:8px 24px;font-size:28px">المبادرة</span><span style="background:#f1ebe2;border-radius:999px;padding:8px 24px;font-size:28px">اتباع الأنظمة</span><span style="background:#f1ebe2;border-radius:999px;padding:8px 24px;font-size:28px">معرفة متى يطلب المساعدة</span>
+</div>
+<div style="margin-top:36px;background:#231b19;color:#faf7f2;border-radius:24px;padding:28px 34px;font-size:28px;line-height:1.55">لا نختار حسب الخبرة السابقة فقط. البرنامج مصمَّم لاكتشاف <strong style="color:#c98a9b">إمكانات عالية بخبرة قليلة.</strong></div>
+</div>
+<div style="position:absolute;left:120px;right:120px;bottom:40px;display:flex;justify-content:space-between;font-size:16px;color:#8a7d76"><span>لأغراض تعليمية فقط · خاص وسري</span><span dir="ltr">For educational purposes only · Private &amp; Confidential · 18</span></div>
+</div>
+</section>
+
+<section data-label="19 Pilot principle" data-screen-label="19" style="background:#231b19;color:#faf7f2">
+<div style="position:relative;width:100%;height:100%;box-sizing:border-box;direction:rtl;font-family:'Thmanyah Serif Text',serif;padding:96px 120px 130px;display:flex;flex-direction:column">
+<span style="font-size:28px;font-weight:600;color:#c98a9b">11 — تجربة الشهر الواحد</span>
+<div style="font-family:'Thmanyah Serif Display','Thmanyah Serif Text',serif;font-size:76px;font-weight:700;line-height:1.4;margin-top:12px">4 أسابيع. مبدأ واحد.</div>
+<div style="display:flex;gap:40px;margin-top:16px;font-size:34px;font-weight:600"><span style="color:#c98a9b">الاعتماد على الإدارة ↓</span><span>الاستقلالية المنتجة ↑</span></div>
+<div style="flex:1;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;align-items:end;margin-top:36px">
+<div style="display:flex;flex-direction:column;gap:12px;height:100%;justify-content:flex-end"><div style="display:flex;flex-direction:column;height:80%;border-radius:20px;overflow:hidden"><div style="flex:50;background:rgba(250,247,242,0.14);display:flex;align-items:center;justify-content:center;font-size:26px;color:#d8cdc6">تدريب 50%</div><div style="flex:50;background:#c98a9b;color:#231b19;display:flex;align-items:center;justify-content:center;font-size:30px;font-weight:700">مستقل 50%</div></div><span style="font-size:30px;font-weight:700">الأسبوع 1 · بداية سريعة</span></div>
+<div style="display:flex;flex-direction:column;gap:12px;height:100%;justify-content:flex-end"><div style="display:flex;flex-direction:column;height:86%;border-radius:20px;overflow:hidden"><div style="flex:35;background:rgba(250,247,242,0.14);display:flex;align-items:center;justify-content:center;font-size:26px;color:#d8cdc6">30–40%</div><div style="flex:65;background:#a3485f;display:flex;align-items:center;justify-content:center;font-size:30px;font-weight:700">60–70%</div></div><span style="font-size:30px;font-weight:700">الأسبوع 2 · البناء</span></div>
+<div style="display:flex;flex-direction:column;gap:12px;height:100%;justify-content:flex-end"><div style="display:flex;flex-direction:column;height:93%;border-radius:20px;overflow:hidden"><div style="flex:25;background:rgba(250,247,242,0.14);display:flex;align-items:center;justify-content:center;font-size:26px;color:#d8cdc6">20–30%</div><div style="flex:75;background:#7b1b33;display:flex;align-items:center;justify-content:center;font-size:30px;font-weight:700">70–80%</div></div><span style="font-size:30px;font-weight:700">الأسبوع 3 · الملكية</span></div>
+<div style="display:flex;flex-direction:column;gap:12px;height:100%;justify-content:flex-end"><div style="display:flex;flex-direction:column;height:100%;border-radius:20px;overflow:hidden"><div style="flex:15;background:rgba(250,247,242,0.14);display:flex;align-items:center;justify-content:center;font-size:26px;color:#d8cdc6">10–20%</div><div style="flex:85;background:#faf7f2;color:#231b19;display:flex;align-items:center;justify-content:center;font-size:30px;font-weight:700">80–90%</div></div><span style="font-size:30px;font-weight:700">الأسبوع 4 · الإثبات</span></div>
+</div>
+<div style="position:absolute;left:120px;right:120px;bottom:40px;display:flex;justify-content:space-between;font-size:16px;color:#a8998f"><span>لأغراض تعليمية فقط · خاص وسري</span><span dir="ltr">For educational purposes only · Private &amp; Confidential · 19</span></div>
+</div>
+</section>
+
+<section data-label="20 Weeks" data-screen-label="20" style="background:#faf7f2;color:#231b19">
+<div style="position:relative;width:100%;height:100%;box-sizing:border-box;direction:rtl;font-family:'Thmanyah Serif Text',serif;padding:96px 120px 130px;display:flex;flex-direction:column">
+<span style="font-size:28px;font-weight:600;color:#7b1b33">11 — الأسابيع الأربعة</span>
+<div style="font-family:'Thmanyah Serif Display','Thmanyah Serif Text',serif;font-size:72px;font-weight:700;line-height:1.4;margin-top:12px">من أول يوم إلى عمل يشبه الوظيفة.</div>
+<div style="flex:1;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;margin-top:36px">
+<div style="background:#f1ebe2;border-radius:28px;padding:30px 32px;display:flex;flex-direction:column;gap:12px"><span style="font-size:26px;font-weight:600;color:#7b1b33">الأسبوع 1</span><span style="font-family:'Thmanyah Serif Display','Thmanyah Serif Text',serif;font-size:40px;font-weight:700">بداية سريعة</span><span style="font-size:26px;line-height:1.5;color:#4a403c">مهام منتجة بسيطة من اليوم الأول.</span><span style="font-size:24px;line-height:1.5;color:#4a403c">للمهام الجديدة: تعلّم ← شاهد ← نفّذ معنا ← نفّذ وحدك ← راجع</span><span style="margin-top:auto;font-size:24px;color:#8a7d76">لا أيام طويلة من الدروس.</span></div>
+<div style="background:#ead9d4;border-radius:28px;padding:30px 32px;display:flex;flex-direction:column;gap:12px"><span style="font-size:26px;font-weight:600;color:#7b1b33">الأسبوع 2</span><span style="font-family:'Thmanyah Serif Display','Thmanyah Serif Text',serif;font-size:40px;font-weight:700">البناء</span><span style="font-size:26px;line-height:1.5;color:#4a403c">المهام الحالية تصبح روتيناً.</span><span style="font-size:26px;line-height:1.5;color:#4a403c">نضيف مسؤوليات جديدة.</span></div>
+<div style="background:#a3485f;color:#faf7f2;border-radius:28px;padding:30px 32px;display:flex;flex-direction:column;gap:12px"><span style="font-size:26px;font-weight:600;color:#faeef1">الأسبوع 3</span><span style="font-family:'Thmanyah Serif Display','Thmanyah Serif Text',serif;font-size:40px;font-weight:700">الملكية</span><span style="font-size:26px;line-height:1.5">كل مرشح يملك مجموعة مهام محددة.</span><span style="font-size:26px;line-height:1.5">الإدارة تتعامل مع الاستثناءات والجودة والملاحظات فقط.</span><span style="margin-top:auto;font-size:24px;color:#faeef1">الأقوى يبدأ مهاماً «برتقالية».</span></div>
+<div style="background:#231b19;color:#faf7f2;border-radius:28px;padding:30px 32px;display:flex;flex-direction:column;gap:12px"><span style="font-size:26px;font-weight:600;color:#c98a9b">الأسبوع 4</span><span style="font-family:'Thmanyah Serif Display','Thmanyah Serif Text',serif;font-size:40px;font-weight:700">الإثبات</span><span style="font-size:26px;line-height:1.5">الأسبوع الأخير يشبه الوظيفة المحتملة.</span><span style="margin-top:auto;font-size:28px;line-height:1.5;font-weight:600;color:#c98a9b">«لو وظّفنا هذا الشخص الشهر القادم، ما العمل الذي يمكن أن يملكه بثقة؟»</span></div>
+</div>
+<div style="position:absolute;left:120px;right:120px;bottom:40px;display:flex;justify-content:space-between;font-size:16px;color:#8a7d76"><span>لأغراض تعليمية فقط · خاص وسري</span><span dir="ltr">For educational purposes only · Private &amp; Confidential · 20</span></div>
+</div>
+</section>
+
+<section data-label="21 Daily model" data-screen-label="21" style="background:#faf7f2;color:#231b19">
+<div style="position:relative;width:100%;height:100%;box-sizing:border-box;direction:rtl;font-family:'Thmanyah Serif Text',serif;padding:96px 120px 130px;display:flex;flex-direction:column">
+<span style="font-size:28px;font-weight:600;color:#7b1b33">12 — اليوم الواحد</span>
+<div style="font-family:'Thmanyah Serif Display','Thmanyah Serif Text',serif;font-size:72px;font-weight:700;line-height:1.4;margin-top:12px">نصف اليوم الثاني يصبح منتجاً أيضاً.</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:24px;font-size:26px">
+<div style="display:flex;gap:14px;align-items:center"><span style="width:26px;height:26px;border-radius:999px;background:#7b1b33;flex:none"></span><span><strong>النصف الأول:</strong> عمل مستقل منتج. المهام جاهزة مسبقاً.</span></div>
+<div style="display:flex;gap:14px;align-items:center"><span style="width:26px;height:26px;border-radius:999px;background:#d9b8bd;flex:none"></span><span><strong>النصف الثاني:</strong> تدريب، مرافقة، تطبيق موجَّه، ملاحظات.</span></div>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:20px">
+<div style="display:grid;grid-template-columns:180px 1fr 140px;gap:24px;align-items:center"><span style="font-size:30px;font-weight:600">الأسبوع 1</span><div style="display:flex;height:64px;border-radius:999px;overflow:hidden"><div style="width:50%;background:#7b1b33"></div><div style="flex:1;background:#d9b8bd"></div></div><span style="font-size:32px;font-weight:700;color:#7b1b33">50%</span></div>
+<div style="display:grid;grid-template-columns:180px 1fr 140px;gap:24px;align-items:center"><span style="font-size:30px;font-weight:600">الأسبوع 2</span><div style="display:flex;height:64px;border-radius:999px;overflow:hidden"><div style="width:65%;background:#7b1b33"></div><div style="flex:1;background:#d9b8bd"></div></div><span style="font-size:32px;font-weight:700;color:#7b1b33">60–70%</span></div>
+<div style="display:grid;grid-template-columns:180px 1fr 140px;gap:24px;align-items:center"><span style="font-size:30px;font-weight:600">الأسبوع 3</span><div style="display:flex;height:64px;border-radius:999px;overflow:hidden"><div style="width:75%;background:#7b1b33"></div><div style="flex:1;background:#d9b8bd"></div></div><span style="font-size:32px;font-weight:700;color:#7b1b33">70–80%</span></div>
+<div style="display:grid;grid-template-columns:180px 1fr 140px;gap:24px;align-items:center"><span style="font-size:30px;font-weight:600">الأسبوع 4</span><div style="display:flex;height:64px;border-radius:999px;overflow:hidden"><div style="width:85%;background:#7b1b33"></div><div style="flex:1;background:#d9b8bd"></div></div><span style="font-size:32px;font-weight:700;color:#7b1b33">80–90%</span></div>
+</div>
+<div style="font-size:26px;color:#4a403c">لا يجب أن يخترع المدير عملاً كل صباح.</div>
+<div style="position:absolute;left:120px;right:120px;bottom:40px;display:flex;justify-content:space-between;font-size:16px;color:#8a7d76"><span>لأغراض تعليمية فقط · خاص وسري</span><span dir="ltr">For educational purposes only · Private &amp; Confidential · 21</span></div>
+</div>
+</section>
+
+<section data-label="22 Shadowing" data-screen-label="22" style="background:#f1ebe2;color:#231b19">
+<div style="position:relative;width:100%;height:100%;box-sizing:border-box;direction:rtl;font-family:'Thmanyah Serif Text',serif;padding:96px 120px 130px;display:flex;flex-direction:column">
+<span style="font-size:28px;font-weight:600;color:#7b1b33">13 — المرافقة السريعة</span>
+<div style="font-family:'Thmanyah Serif Display','Thmanyah Serif Text',serif;font-size:72px;font-weight:700;line-height:1.4;margin-top:12px">المرافقة ليست مشاهدة فقط.</div>
+<div style="flex:1;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px;align-items:center;padding:0 80px">
+<div style="aspect-ratio:1;border-radius:999px;background:#faf7f2;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;text-align:center"><span style="font-size:30px;color:#8a7d76">1</span><span style="font-family:'Thmanyah Serif Display','Thmanyah Serif Text',serif;font-size:48px;font-weight:700">شاهد مرة</span></div>
+<div style="aspect-ratio:1;border-radius:999px;background:#c98a9b;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;text-align:center"><span style="font-size:30px;color:#571022">2</span><span style="font-family:'Thmanyah Serif Display','Thmanyah Serif Text',serif;font-size:48px;font-weight:700">نفّذ معنا مرة</span></div>
+<div style="aspect-ratio:1;border-radius:999px;background:#7b1b33;color:#faf7f2;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;text-align:center"><span style="font-size:30px;color:#f1d3da">3</span><span style="font-family:'Thmanyah Serif Display','Thmanyah Serif Text',serif;font-size:48px;font-weight:700">نفّذ وحدك</span></div>
+</div>
+<div style="display:flex;justify-content:space-between;align-items:center;gap:40px;border-top:1px solid rgba(35,27,25,0.18);padding-top:22px;font-size:30px"><span>إذا كانت المهمة تُتعلَّم في ساعة، لا نصنع لها تدريباً لثلاثة أيام.</span><span style="font-weight:700;color:#7b1b33;white-space:nowrap">نقدّر سرعة التعلّم.</span></div>
+<div style="position:absolute;left:120px;right:120px;bottom:40px;display:flex;justify-content:space-between;font-size:16px;color:#8a7d76"><span>لأغراض تعليمية فقط · خاص وسري</span><span dir="ltr">For educational purposes only · Private &amp; Confidential · 22</span></div>
+</div>
+</section>
+
+<section data-label="23 Management model" data-screen-label="23" style="background:#faf7f2;color:#231b19">
+<div style="position:relative;width:100%;height:100%;box-sizing:border-box;direction:rtl;font-family:'Thmanyah Serif Text',serif;padding:96px 120px 130px;display:grid;grid-template-columns:1fr 620px;gap:90px">
+<div style="display:flex;flex-direction:column">
+<span style="font-size:28px;font-weight:600;color:#7b1b33">14 — نموذج الإدارة</span>
+<div style="font-family:'Thmanyah Serif Display','Thmanyah Serif Text',serif;font-size:66px;font-weight:700;line-height:1.4;margin-top:12px">لا نريد خمسة متدرّبين يراسلون المدراء طوال اليوم.</div>
+<div style="margin-top:auto;display:flex;flex-direction:column;gap:12px">
+<span style="font-size:26px;color:#8a7d76">نجمع الأسئلة بدل مقاطعة المدراء باستمرار:</span>
+<div style="display:flex;flex-wrap:wrap;gap:10px"><span style="background:#f1ebe2;border-radius:999px;padding:8px 22px;font-size:26px">ساعات مكتبية</span><span style="background:#f1ebe2;border-radius:999px;padding:8px 22px;font-size:26px">مواعيد متابعة</span><span style="background:#f1ebe2;border-radius:999px;padding:8px 22px;font-size:26px">أسئلة شائعة</span><span style="background:#f1ebe2;border-radius:999px;padding:8px 22px;font-size:26px">تحديث الإجراءات</span><span style="background:#f1ebe2;border-radius:999px;padding:8px 22px;font-size:26px">نقاط فحص الجودة</span><span style="background:#f1ebe2;border-radius:999px;padding:8px 22px;font-size:26px">دعم الزملاء</span><span style="background:#f1ebe2;border-radius:999px;padding:8px 22px;font-size:26px">لوحة المهام</span></div>
+</div></div>
+<div style="display:flex;flex-direction:column;justify-content:center;gap:8px">
+<div style="background:#7b1b33;color:#faf7f2;border-radius:999px;padding:18px 36px;font-size:32px;font-weight:700;text-align:center">مسؤول البرنامج</div><span style="text-align:center;color:#8a7d76;font-size:26px">↓</span>
+<div style="background:#a3485f;color:#faf7f2;border-radius:999px;padding:18px 36px;font-size:32px;font-weight:600;text-align:center">الدفعة</div><span style="text-align:center;color:#8a7d76;font-size:26px">↓</span>
+<div style="background:#c98a9b;border-radius:999px;padding:18px 36px;font-size:32px;font-weight:600;text-align:center">نظام المهام</div><span style="text-align:center;color:#8a7d76;font-size:26px">↓</span>
+<div style="background:#d9b8bd;border-radius:999px;padding:18px 36px;font-size:32px;font-weight:600;text-align:center">مكتبة الإجراءات</div><span style="text-align:center;color:#8a7d76;font-size:26px">↓</span>
+<div style="background:#ead9d4;border-radius:999px;padding:18px 36px;font-size:32px;font-weight:600;text-align:center">متابعة مجدولة</div><span style="text-align:center;color:#8a7d76;font-size:26px">↓</span>
+<div style="border:2px solid #231b19;border-radius:999px;padding:16px 36px;font-size:32px;font-weight:600;text-align:center">قناة التصعيد</div>
+</div>
+<div style="position:absolute;left:120px;right:120px;bottom:40px;display:flex;justify-content:space-between;font-size:16px;color:#8a7d76"><span>لأغراض تعليمية فقط · خاص وسري</span><span dir="ltr">For educational purposes only · Private &amp; Confidential · 23</span></div>
+</div>
+</section>
+
+<section data-label="24 Scorecard" data-screen-label="24" style="background:#faf7f2;color:#231b19">
+<div style="position:relative;width:100%;height:100%;box-sizing:border-box;direction:rtl;font-family:'Thmanyah Serif Text',serif;padding:96px 120px 130px;display:grid;grid-template-columns:620px 1fr;gap:80px">
+<div style="display:flex;flex-direction:column">
+<span style="font-size:28px;font-weight:600;color:#7b1b33">15 — بطاقة الأداء</span>
+<div style="font-family:'Thmanyah Serif Display','Thmanyah Serif Text',serif;font-size:66px;font-weight:700;line-height:1.4;margin-top:12px">نقيس كل مرشح طوال الشهر.</div>
+<div style="flex:1;display:grid;grid-template-columns:1fr 1fr;column-gap:30px;align-content:center;font-size:28px">
+<span style="border-top:1px solid rgba(35,27,25,0.15);padding:12px 0">الدقة</span><span style="border-top:1px solid rgba(35,27,25,0.15);padding:12px 0">السرعة</span><span style="border-top:1px solid rgba(35,27,25,0.15);padding:12px 0">الاستقلالية</span><span style="border-top:1px solid rgba(35,27,25,0.15);padding:12px 0;font-weight:700;color:#7b1b33">سرعة التعلّم</span><span style="border-top:1px solid rgba(35,27,25,0.15);padding:12px 0">حسن التقدير</span><span style="border-top:1px solid rgba(35,27,25,0.15);padding:12px 0">الالتزام</span><span style="border-top:1px solid rgba(35,27,25,0.15);padding:12px 0">التواصل</span><span style="border-top:1px solid rgba(35,27,25,0.15);padding:12px 0">المبادرة</span><span style="border-top:1px solid rgba(35,27,25,0.15);border-bottom:1px solid rgba(35,27,25,0.15);padding:12px 0">اتباع الإجراءات</span><span style="border-top:1px solid rgba(35,27,25,0.15);border-bottom:1px solid rgba(35,27,25,0.15);padding:12px 0">تحسّن الجودة</span>
+</div></div>
+<div style="background:#231b19;color:#faf7f2;border-radius:28px;padding:40px 44px;display:flex;flex-direction:column">
+<span style="font-size:34px;font-weight:700">سرعة التعلّم</span>
+<span style="font-size:26px;color:#d8cdc6;margin-top:4px">نسبة العمل المستقل مع الوقت</span>
+<div dir="ltr" style="flex:1;position:relative;margin:28px 0 10px;border-left:1px solid rgba(250,247,242,0.25);border-bottom:1px solid rgba(250,247,242,0.25)">
+<div style="position:absolute;left:4%;bottom:50%;width:18px;height:18px;border-radius:999px;background:#c98a9b;transform:translate(-50%,50%)"></div>
+<div style="position:absolute;left:36%;bottom:70%;width:18px;height:18px;border-radius:999px;background:#c98a9b;transform:translate(-50%,50%)"></div>
+<div style="position:absolute;left:92%;bottom:95%;width:22px;height:22px;border-radius:999px;background:#faf7f2;transform:translate(-50%,50%)"></div>
+<div style="position:absolute;left:4%;bottom:50%;width:34%;height:3px;background:#c98a9b;transform-origin:left center;transform:rotate(-31deg)"></div>
+<div style="position:absolute;left:36%;bottom:70%;width:58%;height:3px;background:#c98a9b;transform-origin:left center;transform:rotate(-14deg)"></div>
+<div style="position:absolute;left:4%;bottom:62%;width:88%;height:0;border-top:3px dashed rgba(250,247,242,0.35)"></div>
+<span style="position:absolute;left:5%;bottom:52%;font-size:24px;color:#c98a9b">50%</span>
+<span style="position:absolute;left:37%;bottom:73%;font-size:24px;color:#c98a9b">70%</span>
+<span style="position:absolute;right:2%;top:-6%;font-size:28px;font-weight:700">95%</span>
+<span dir="rtl" style="position:absolute;right:2%;bottom:52%;font-size:22px;color:#a8998f">بداية أقوى، ثم توقّف</span>
+</div>
+<div dir="ltr" style="display:flex;justify-content:space-between;font-size:24px;color:#d8cdc6"><span>اليوم 1</span><span>اليوم 10</span><span>اليوم 25</span></div>
+<span style="font-size:26px;line-height:1.55;margin-top:20px;color:#faf7f2">هذا المسار قد يكون أهم من شخص بدأ أقوى ثم توقف عن التحسّن.</span>
+</div>
+<div style="position:absolute;left:120px;right:120px;bottom:40px;display:flex;justify-content:space-between;font-size:16px;color:#8a7d76"><span>لأغراض تعليمية فقط · خاص وسري</span><span dir="ltr">For educational purposes only · Private &amp; Confidential · 24</span></div>
+</div>
+</section>
+
+<section data-label="25 End-of-pilot decision" data-screen-label="25" style="background:#faf7f2;color:#231b19">
+<div style="position:relative;width:100%;height:100%;box-sizing:border-box;direction:rtl;font-family:'Thmanyah Serif Text',serif;padding:96px 120px 130px;display:flex;flex-direction:column">
+<span style="font-size:28px;font-weight:600;color:#7b1b33">16 — قرار نهاية التجربة</span>
+<div style="font-family:'Thmanyah Serif Display','Thmanyah Serif Text',serif;font-size:72px;font-weight:700;line-height:1.4;margin-top:12px">ثلاث نتائج. واحترام في كل حالة.</div>
+<div style="flex:1;display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:24px;margin-top:40px">
+<div style="background:#7b1b33;color:#faf7f2;border-radius:200px 200px 28px 28px;padding:100px 44px 40px;display:flex;flex-direction:column;gap:14px"><span style="font-family:'Thmanyah Serif Display','Thmanyah Serif Text',serif;font-size:60px;font-weight:700">توظيف</span><span style="font-size:28px;line-height:1.5">أداء قوي. يملك عملاً مفيداً باستقلالية.</span><span style="margin-top:auto;background:#faf7f2;color:#7b1b33;border-radius:999px;padding:10px 26px;font-size:28px;font-weight:700;align-self:flex-start">عرض عمل</span></div>
+<div style="background:#f1ebe2;border-radius:200px 200px 28px 28px;padding:100px 44px 40px;display:flex;flex-direction:column;gap:14px"><span style="font-family:'Thmanyah Serif Display','Thmanyah Serif Text',serif;font-size:52px;font-weight:700">تمديد / مخزون المواهب</span><span style="font-size:28px;line-height:1.5;color:#4a403c">إمكانات قوية لكنه غير جاهز بعد. فترة تطوير أخرى أو فرصة لاحقة.</span></div>
+<div style="border:2px solid rgba(35,27,25,0.15);border-radius:200px 200px 28px 28px;padding:100px 44px 40px;display:flex;flex-direction:column;gap:14px"><span style="font-family:'Thmanyah Serif Display','Thmanyah Serif Text',serif;font-size:52px;font-weight:700">إتمام</span><span style="font-size:28px;line-height:1.5;color:#4a403c">ينتهي البرنامج بملاحظات واضحة وشهادة أو تقدير مناسب.</span></div>
+</div>
+<div style="position:absolute;left:120px;right:120px;bottom:40px;display:flex;justify-content:space-between;font-size:16px;color:#8a7d76"><span>لأغراض تعليمية فقط · خاص وسري</span><span dir="ltr">For educational purposes only · Private &amp; Confidential · 25</span></div>
+</div>
+</section>
+
+<section data-label="26 Job offer" data-screen-label="26" style="background:#faf7f2;color:#231b19">
+<div style="position:relative;width:100%;height:100%;box-sizing:border-box;direction:rtl;font-family:'Thmanyah Serif Text',serif;padding:96px 120px 130px;display:grid;grid-template-columns:1fr 1fr;gap:80px">
+<div style="display:flex;flex-direction:column">
+<span style="font-size:28px;font-weight:600;color:#7b1b33">17 — عرض العمل</span>
+<div style="font-family:'Thmanyah Serif Display','Thmanyah Serif Text',serif;font-size:66px;font-weight:700;line-height:1.4;margin-top:12px">الطرفان يعرفان بعضهما مسبقاً.</div>
+<span style="font-size:26px;color:#8a7d76;margin-top:36px">نحدد في العرض:</span>
+<div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:12px"><span style="background:#f1ebe2;border-radius:999px;padding:8px 24px;font-size:28px">الدور</span><span style="background:#f1ebe2;border-radius:999px;padding:8px 24px;font-size:28px">الراتب</span><span style="background:#f1ebe2;border-radius:999px;padding:8px 24px;font-size:28px">المسؤوليات</span><span style="background:#f1ebe2;border-radius:999px;padding:8px 24px;font-size:28px">المدير</span><span style="background:#f1ebe2;border-radius:999px;padding:8px 24px;font-size:28px">مؤشرات الأداء</span><span style="background:#f1ebe2;border-radius:999px;padding:8px 24px;font-size:28px">فترة التجربة</span><span style="background:#f1ebe2;border-radius:999px;padding:8px 24px;font-size:28px">خطة التطوير</span></div>
+<div style="margin-top:auto;font-size:24px;color:#8a7d76;line-height:1.55">البرنامج لا يضمن توظيفاً أفضل، لكنه يعطي معلومات أكثر بكثير قبل القرار.</div>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+<div style="background:#f1ebe2;border-radius:28px;padding:32px;display:flex;flex-direction:column;gap:14px"><span style="font-size:26px;font-weight:600;color:#8a7d76">سيرة ذاتية + مقابلة</span><span style="font-size:28px">السيرة الذاتية</span><span style="font-size:28px">مقابلة لساعة</span><span style="font-size:28px">مراجع</span></div>
+<div style="background:#231b19;color:#faf7f2;border-radius:28px;padding:32px;display:flex;flex-direction:column;gap:10px"><span style="font-size:26px;font-weight:600;color:#c98a9b">شهر من الملاحظة</span><span style="font-size:28px">عمل حقيقي</span><span style="font-size:28px">مواعيد تسليم</span><span style="font-size:28px">تواصل</span><span style="font-size:28px">سرعة تعلّم</span><span style="font-size:28px">أخطاء وتصحيح</span><span style="font-size:28px">تقبّل الملاحظات</span><span style="font-size:28px">الالتزام</span><span style="font-size:28px">الاستقلالية</span></div>
+</div>
+<div style="position:absolute;left:120px;right:120px;bottom:40px;display:flex;justify-content:space-between;font-size:16px;color:#8a7d76"><span>لأغراض تعليمية فقط · خاص وسري</span><span dir="ltr">For educational purposes only · Private &amp; Confidential · 26</span></div>
+</div>
+</section>
+
+<section data-label="27 Programme close" data-screen-label="27" style="background:#f1ebe2;color:#231b19">
+<div style="position:relative;width:100%;height:100%;box-sizing:border-box;direction:rtl;font-family:'Thmanyah Serif Text',serif;padding:96px 120px 130px;display:grid;grid-template-columns:1fr 520px;gap:80px">
+<div style="display:flex;flex-direction:column">
+<span style="font-size:28px;font-weight:600;color:#7b1b33">18 — إغلاق الدفعة</span>
+<div style="font-family:'Thmanyah Serif Display','Thmanyah Serif Text',serif;font-size:66px;font-weight:700;line-height:1.4;margin-top:12px">مراجعة بعد كل دفعة.</div>
+<div style="flex:1;display:grid;grid-template-columns:1fr 1fr;column-gap:36px;align-content:center;font-size:26px">
+<span style="border-top:1px solid rgba(35,27,25,0.15);padding:11px 0">أي المهام نجحت؟</span><span style="border-top:1px solid rgba(35,27,25,0.15);padding:11px 0">أيها لم ينجح؟</span>
+<span style="border-top:1px solid rgba(35,27,25,0.15);padding:11px 0">أي الإجراءات أثارت أسئلة؟</span><span style="border-top:1px solid rgba(35,27,25,0.15);padding:11px 0">أين تكررت الأخطاء؟</span>
+<span style="border-top:1px solid rgba(35,27,25,0.15);padding:11px 0">أين بقيت الإدارة ضرورية؟</span><span style="border-top:1px solid rgba(35,27,25,0.15);padding:11px 0">أي تدريب يمكن اختصاره؟</span>
+<span style="border-top:1px solid rgba(35,27,25,0.15);padding:11px 0">ما المهام الجديدة للتفويض؟</span><span style="border-top:1px solid rgba(35,27,25,0.15);padding:11px 0">ما الذي يعود للخبراء؟</span>
+<span style="border-top:1px solid rgba(35,27,25,0.15);border-bottom:1px solid rgba(35,27,25,0.15);padding:11px 0">ما الذي يمكن أتمتته بالكامل؟</span><span style="border-top:1px solid rgba(35,27,25,0.15);border-bottom:1px solid rgba(35,27,25,0.15);padding:11px 0">أي صفات ارتبطت بالنجاح؟</span>
+</div></div>
+<div style="background:#231b19;color:#faf7f2;border-radius:28px;padding:40px 44px;display:flex;flex-direction:column;gap:12px;justify-content:center">
+<span style="font-size:30px;font-weight:700;color:#c98a9b;margin-bottom:8px">ثم نحدّث:</span>
+<span style="font-size:32px">الإجراءات</span><span style="font-size:32px">التدريب</span><span style="font-size:32px">اختبارات الاختيار</span><span style="font-size:32px">الوصف الوظيفي</span><span style="font-size:32px">فحص الجودة</span><span style="font-size:32px">هيكل الإدارة</span><span style="font-size:32px">مكتبة المهام</span>
+</div>
+<div style="position:absolute;left:120px;right:120px;bottom:40px;display:flex;justify-content:space-between;font-size:16px;color:#8a7d76"><span>لأغراض تعليمية فقط · خاص وسري</span><span dir="ltr">For educational purposes only · Private &amp; Confidential · 27</span></div>
+</div>
+</section>
+
+<section data-label="28 Iteration" data-screen-label="28" style="background:#faf7f2;color:#231b19">
+<div style="position:relative;width:100%;height:100%;box-sizing:border-box;direction:rtl;font-family:'Thmanyah Serif Text',serif;padding:96px 120px 130px;display:flex;flex-direction:column">
+<span style="font-size:28px;font-weight:600;color:#7b1b33">19 — التكرار</span>
+<div style="font-family:'Thmanyah Serif Display','Thmanyah Serif Text',serif;font-size:72px;font-weight:700;line-height:1.4;margin-top:12px">كل دفعة تبني على التي قبلها.</div>
+<div style="flex:1;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px;align-items:end;margin-top:28px">
+<div style="height:34%;background:#ead9d4;border-radius:24px 24px 0 0;padding:24px;box-sizing:border-box;display:flex;flex-direction:column;gap:6px"><span style="font-size:24px;font-weight:600;color:#7b1b33">الدفعة 01</span><span style="font-size:30px;font-weight:700;line-height:1.4">نكتشف النظام</span></div>
+<div style="height:48%;background:#d9b8bd;border-radius:24px 24px 0 0;padding:24px;box-sizing:border-box;display:flex;flex-direction:column;gap:6px"><span style="font-size:24px;font-weight:600;color:#7b1b33">الدفعة 02</span><span style="font-size:30px;font-weight:700;line-height:1.4">نحسّن النظام</span></div>
+<div style="height:62%;background:#c98a9b;border-radius:24px 24px 0 0;padding:24px;box-sizing:border-box;display:flex;flex-direction:column;gap:6px"><span style="font-size:24px;font-weight:600;color:#571022">الدفعة 03</span><span style="font-size:30px;font-weight:700;line-height:1.4">نرفع الاستقلالية</span></div>
+<div style="height:78%;background:#a3485f;color:#faf7f2;border-radius:24px 24px 0 0;padding:24px;box-sizing:border-box;display:flex;flex-direction:column;gap:6px"><span style="font-size:24px;font-weight:600">الدفعة 04</span><span style="font-size:30px;font-weight:700;line-height:1.4">نرفع مستوى التعقيد</span></div>
+<div style="height:100%;background:#7b1b33;color:#faf7f2;border-radius:24px 24px 0 0;padding:24px;box-sizing:border-box;display:flex;flex-direction:column;gap:6px"><span style="font-size:24px;font-weight:600;color:#f1d3da">الدفعة 05+</span><span style="font-size:30px;font-weight:700;line-height:1.4">محرّك مواهب متكرر</span></div>
+</div>
+<div style="display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:24px;font-size:26px"><span style="color:#8a7d76;margin-left:8px">كل دورة تترك:</span><span style="background:#f1ebe2;border-radius:999px;padding:6px 20px">إجراءات أفضل</span><span style="color:#8a7d76">+</span><span style="background:#f1ebe2;border-radius:999px;padding:6px 20px">تدريب أفضل</span><span style="color:#8a7d76">+</span><span style="background:#f1ebe2;border-radius:999px;padding:6px 20px">اختيار أفضل</span><span style="color:#8a7d76">+</span><span style="background:#f1ebe2;border-radius:999px;padding:6px 20px">إدارة أفضل</span><span style="color:#8a7d76">+</span><span style="background:#f1ebe2;border-radius:999px;padding:6px 20px">بيانات أفضل</span><span style="color:#8a7d76">+</span><span style="background:#231b19;color:#faf7f2;border-radius:999px;padding:6px 20px">قدرة أكبر للتفويض</span></div>
+<div style="position:absolute;left:120px;right:120px;bottom:40px;display:flex;justify-content:space-between;font-size:16px;color:#8a7d76"><span>لأغراض تعليمية فقط · خاص وسري</span><span dir="ltr">For educational purposes only · Private &amp; Confidential · 28</span></div>
+</div>
+</section>
+
+<section data-label="29 Scale" data-screen-label="29" style="background:#faf7f2;color:#231b19">
+<div style="position:relative;width:100%;height:100%;box-sizing:border-box;direction:rtl;font-family:'Thmanyah Serif Text',serif;padding:96px 120px 130px;display:flex;flex-direction:column">
+<span style="font-size:28px;font-weight:600;color:#7b1b33">20 — التوسّع</span>
+<div style="font-family:'Thmanyah Serif Display','Thmanyah Serif Text',serif;font-size:72px;font-weight:700;line-height:1.4;margin-top:12px">ابدأ صغيراً. توسّع حيث تثبت القيمة.</div>
+<div style="flex:1;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px;margin-top:32px">
+<div style="background:#f1ebe2;border-radius:24px;padding:26px;display:flex;flex-direction:column;gap:10px"><span style="font-size:24px;font-weight:600;color:#7b1b33">المستوى 1</span><span style="font-size:34px;font-weight:700">تجربة</span><span style="font-size:24px;line-height:1.5;color:#4a403c">3–5 متدرّبين<br>قسم واحد<br>شهر واحد<br>مكتبة مهام صغيرة</span></div>
+<div style="background:#ead9d4;border-radius:24px;padding:26px;display:flex;flex-direction:column;gap:10px"><span style="font-size:24px;font-weight:600;color:#7b1b33">المستوى 2</span><span style="font-size:34px;font-weight:700">برنامج قسم</span><span style="font-size:24px;line-height:1.5;color:#4a403c">5–15 مشاركاً<br>مجموعات مهام متعددة<br>دفعات فصلية<br>مسار توظيف منظّم</span></div>
+<div style="background:#d9b8bd;border-radius:24px;padding:26px;display:flex;flex-direction:column;gap:10px"><span style="font-size:24px;font-weight:600;color:#571022">المستوى 3</span><span style="font-size:34px;font-weight:700">المؤسسة كلها</span><span style="font-size:24px;line-height:1.5;color:#4a403c">أقسام متعددة<br>مكتبة تدريب مركزية<br>إجراءات لكل قسم<br>دفعات مستمرة</span></div>
+<div style="background:#a3485f;color:#faf7f2;border-radius:24px;padding:26px;display:flex;flex-direction:column;gap:10px"><span style="font-size:24px;font-weight:600">المستوى 4</span><span style="font-size:34px;font-weight:700">محرّك الذروة</span><span style="font-size:24px;line-height:1.5">دفعات حول مواسم متوقعة: رمضان، الصيف، الفعاليات، الحملات، التقارير السنوية، الإطلاقات</span></div>
+<div style="background:#7b1b33;color:#faf7f2;border-radius:24px;padding:26px;display:flex;flex-direction:column;gap:10px"><span style="font-size:24px;font-weight:600;color:#f1d3da">المستوى 5</span><span style="font-size:34px;font-weight:700">أكاديمية المواهب</span><span style="font-size:24px;line-height:1.5">مدخل رسمي للشركة<br>شراكات جامعية<br>شبكة خرّيجين<br>قناة توظيف دائمة</span></div>
+</div>
+<div style="font-size:24px;line-height:1.55;color:#8a7d76;margin-top:22px">يمكن أن يدعم النظام عشرات المشاركين أو أكثر، حسب توفر المهام والبنية الإدارية ومتطلبات العمل القانونية وحجم المؤسسة.</div>
+<div style="position:absolute;left:120px;right:120px;bottom:40px;display:flex;justify-content:space-between;font-size:16px;color:#8a7d76"><span>لأغراض تعليمية فقط · خاص وسري</span><span dir="ltr">For educational purposes only · Private &amp; Confidential · 29</span></div>
+</div>
+</section>
+
+<section data-label="30 Business value" data-screen-label="30" style="background:#231b19;color:#faf7f2">
+<div style="position:relative;width:100%;height:100%;box-sizing:border-box;direction:rtl;font-family:'Thmanyah Serif Text',serif;padding:96px 120px 130px;display:flex;flex-direction:column">
+<span style="font-size:28px;font-weight:600;color:#c98a9b">21 — نموذج القيمة</span>
+<div style="font-family:'Thmanyah Serif Display','Thmanyah Serif Text',serif;font-size:72px;font-weight:700;line-height:1.4;margin-top:12px">قابل للقياس تشغيلياً ومالياً.</div>
+<div style="display:flex;align-items:center;gap:18px;margin-top:40px;font-size:34px;font-weight:600">
+<span style="border:1.5px solid rgba(250,247,242,0.3);border-radius:999px;padding:16px 32px">عدد المتدرّبين</span><span style="color:#c98a9b">×</span><span style="border:1.5px solid rgba(250,247,242,0.3);border-radius:999px;padding:16px 32px">ساعات العمل المستقل</span><span style="color:#c98a9b">×</span><span style="border:1.5px solid rgba(250,247,242,0.3);border-radius:999px;padding:16px 32px">مدة البرنامج</span><span style="color:#c98a9b">=</span><span style="background:#7b1b33;border-radius:999px;padding:16px 32px;font-weight:700">القدرة المضافة</span>
+</div>
+<div style="display:flex;align-items:center;gap:14px;margin-top:28px;font-size:28px;color:#d8cdc6"><span>مقارنةً بـ:</span><span style="background:rgba(250,247,242,0.08);border-radius:999px;padding:8px 22px">ساعات الإدارة</span><span style="background:rgba(250,247,242,0.08);border-radius:999px;padding:8px 22px">تجهيز التدريب</span><span style="background:rgba(250,247,242,0.08);border-radius:999px;padding:8px 22px">تكلفة البرنامج</span><span style="background:rgba(250,247,242,0.08);border-radius:999px;padding:8px 22px">تكلفة التوظيف</span></div>
+<div style="flex:1;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;align-items:end">
+<div style="border-top:2px solid #c98a9b;padding-top:20px"><div style="font-size:38px;font-weight:700">ساعات الخبراء المحرَّرة</div><div style="font-size:26px;color:#d8cdc6;margin-top:6px">وقت عاد إلى العمل الأعلى قيمة</div></div>
+<div style="border-top:2px solid #c98a9b;padding-top:20px"><div style="font-size:38px;font-weight:700">تكلفة الساعة المنتجة</div><div style="font-size:26px;color:#d8cdc6;margin-top:6px">التكلفة الكلية ÷ الساعات المنتجة</div></div>
+<div style="border-top:2px solid #faf7f2;padding-top:20px"><div style="font-size:38px;font-weight:700">تكلفة التوظيف الناجح</div><div style="font-size:26px;color:#d8cdc6;margin-top:6px">مع تكرار الدفعات</div></div>
+</div>
+<div style="position:absolute;left:120px;right:120px;bottom:40px;display:flex;justify-content:space-between;font-size:16px;color:#a8998f"><span>لأغراض تعليمية فقط · خاص وسري</span><span dir="ltr">For educational purposes only · Private &amp; Confidential · 30</span></div>
+</div>
+</section>
+
+<section data-label="31 Delivery model" data-screen-label="31" style="background:#faf7f2;color:#231b19">
+<div style="position:relative;width:100%;height:100%;box-sizing:border-box;direction:rtl;font-family:'Thmanyah Serif Text',serif;padding:96px 120px 130px;display:flex;flex-direction:column">
+<span style="font-size:28px;font-weight:600;color:#7b1b33">22 — ما نقدّمه</span>
+<div style="font-family:'Thmanyah Serif Display','Thmanyah Serif Text',serif;font-size:72px;font-weight:700;line-height:1.4;margin-top:12px">ست مراحل. نسلّم في كل واحدة.</div>
+<div style="flex:1;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:14px;margin-top:32px">
+<div style="background:#f1ebe2;border-radius:24px;padding:24px;display:flex;flex-direction:column;gap:8px"><span style="font-size:26px;font-weight:600;color:#7b1b33">01</span><span style="font-size:32px;font-weight:700">الاكتشاف</span><span style="font-size:24px;line-height:1.5;color:#4a403c">مراجعة ضغط العمل والقدرة</span></div>
+<div style="background:#f1ebe2;border-radius:24px;padding:24px;display:flex;flex-direction:column;gap:8px"><span style="font-size:26px;font-weight:600;color:#7b1b33">02</span><span style="font-size:32px;font-weight:700">التصميم</span><span style="font-size:24px;line-height:1.5;color:#4a403c">مصفوفة التفويض، المهام، الإجراءات، هيكل البرنامج</span></div>
+<div style="background:#f1ebe2;border-radius:24px;padding:24px;display:flex;flex-direction:column;gap:8px"><span style="font-size:26px;font-weight:600;color:#7b1b33">03</span><span style="font-size:32px;font-weight:700">الجذب</span><span style="font-size:24px;line-height:1.5;color:#4a403c">فكرة الحملة، الإعلانات، مسار التقديم</span></div>
+<div style="background:#f1ebe2;border-radius:24px;padding:24px;display:flex;flex-direction:column;gap:8px"><span style="font-size:26px;font-weight:600;color:#7b1b33">04</span><span style="font-size:32px;font-weight:700">الاختيار</span><span style="font-size:24px;line-height:1.5;color:#4a403c">الفرز، المهام الصغيرة، المقابلات، اختيار الدفعة</span></div>
+<div style="background:#f1ebe2;border-radius:24px;padding:24px;display:flex;flex-direction:column;gap:8px"><span style="font-size:26px;font-weight:600;color:#7b1b33">05</span><span style="font-size:32px;font-weight:700">التشغيل</span><span style="font-size:24px;line-height:1.5;color:#4a403c">البدء، التدريب، المرافقة، إدارة المهام، الجودة، متابعة الأداء</span></div>
+<div style="background:#7b1b33;color:#faf7f2;border-radius:24px;padding:24px;display:flex;flex-direction:column;gap:8px"><span style="font-size:26px;font-weight:600;color:#f1d3da">06</span><span style="font-size:32px;font-weight:700">التوظيف والتحسين</span><span style="font-size:24px;line-height:1.5">التقييم النهائي، عروض العمل، المراجعة، تحسين الدفعة القادمة</span></div>
+</div>
+<div style="position:absolute;left:120px;right:120px;bottom:40px;display:flex;justify-content:space-between;font-size:16px;color:#8a7d76"><span>لأغراض تعليمية فقط · خاص وسري</span><span dir="ltr">For educational purposes only · Private &amp; Confidential · 31</span></div>
+</div>
+</section>
+
+<section data-label="32 Timeline" data-screen-label="32" style="background:#faf7f2;color:#231b19">
+<div style="position:relative;width:100%;height:100%;box-sizing:border-box;direction:rtl;font-family:'Thmanyah Serif Text',serif;padding:96px 120px 130px;display:flex;flex-direction:column">
+<span style="font-size:28px;font-weight:600;color:#7b1b33">23 — الرحلة كاملة</span>
+<div style="font-family:'Thmanyah Serif Display','Thmanyah Serif Text',serif;font-size:72px;font-weight:700;line-height:1.4;margin-top:12px">من المراجعة إلى دفعة أفضل.</div>
+<div style="flex:1;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin-top:32px">
+<div style="display:flex;flex-direction:column;gap:10px"><span style="font-size:26px;font-weight:700;color:#7b1b33;border-bottom:3px solid #7b1b33;padding-bottom:8px">التحضير</span><span style="background:#f1ebe2;border-radius:999px;padding:8px 22px;font-size:26px">مراجعة ضغط العمل</span><span style="background:#f1ebe2;border-radius:999px;padding:8px 22px;font-size:26px">رسم التفويض</span><span style="background:#f1ebe2;border-radius:999px;padding:8px 22px;font-size:26px">كتابة الإجراءات</span><span style="background:#f1ebe2;border-radius:999px;padding:8px 22px;font-size:26px">مكتبة التدريب</span></div>
+<div style="display:flex;flex-direction:column;gap:10px"><span style="font-size:26px;font-weight:700;color:#a3485f;border-bottom:3px solid #a3485f;padding-bottom:8px">الاستقطاب</span><span style="background:#ead9d4;border-radius:999px;padding:8px 22px;font-size:26px">حملة التوظيف</span><span style="background:#ead9d4;border-radius:999px;padding:8px 22px;font-size:26px">التقديم</span><span style="background:#ead9d4;border-radius:999px;padding:8px 22px;font-size:26px">الفرز</span><span style="background:#ead9d4;border-radius:999px;padding:8px 22px;font-size:26px">الاختيار</span><span style="background:#ead9d4;border-radius:999px;padding:8px 22px;font-size:26px">البدء</span></div>
+<div style="display:flex;flex-direction:column;gap:10px"><span style="font-size:26px;font-weight:700;color:#231b19;border-bottom:3px solid #231b19;padding-bottom:8px">الشهر</span><span style="background:#d9b8bd;border-radius:999px;padding:8px 22px;font-size:26px">الأسبوع 1</span><span style="background:#c98a9b;border-radius:999px;padding:8px 22px;font-size:26px">الأسبوع 2</span><span style="background:#a3485f;color:#faf7f2;border-radius:999px;padding:8px 22px;font-size:26px">الأسبوع 3</span><span style="background:#7b1b33;color:#faf7f2;border-radius:999px;padding:8px 22px;font-size:26px">الأسبوع 4</span></div>
+<div style="display:flex;flex-direction:column;gap:10px"><span style="font-size:26px;font-weight:700;color:#7b1b33;border-bottom:3px solid #7b1b33;padding-bottom:8px">التحويل</span><span style="background:#f1ebe2;border-radius:999px;padding:8px 22px;font-size:26px">التقييم</span><span style="background:#f1ebe2;border-radius:999px;padding:8px 22px;font-size:26px">عروض العمل</span><span style="background:#f1ebe2;border-radius:999px;padding:8px 22px;font-size:26px">إغلاق البرنامج</span><span style="background:#f1ebe2;border-radius:999px;padding:8px 22px;font-size:26px">المراجعة</span><span style="background:#231b19;color:#faf7f2;border-radius:999px;padding:8px 22px;font-size:26px;font-weight:700">دفعة قادمة أفضل ↺</span></div>
+</div>
+<div style="position:absolute;left:120px;right:120px;bottom:40px;display:flex;justify-content:space-between;font-size:16px;color:#8a7d76"><span>لأغراض تعليمية فقط · خاص وسري</span><span dir="ltr">For educational purposes only · Private &amp; Confidential · 32</span></div>
+</div>
+</section>
+
+<section data-label="33 Governance" data-screen-label="33" style="background:#faf7f2;color:#231b19">
+<div style="position:relative;width:100%;height:100%;box-sizing:border-box;direction:rtl;font-family:'Thmanyah Serif Text',serif;padding:96px 120px 130px;display:grid;grid-template-columns:1fr 1fr;gap:70px">
+<div style="display:flex;flex-direction:column">
+<span style="font-size:28px;font-weight:600;color:#7b1b33">24 — الحوكمة</span>
+<div style="font-family:'Thmanyah Serif Display','Thmanyah Serif Text',serif;font-size:66px;font-weight:700;line-height:1.4;margin-top:12px">الصلاحيات تتبع المهمة فقط.</div>
+<div style="margin-top:28px;background:#231b19;color:#faf7f2;border-radius:28px;padding:30px 36px;display:flex;flex-direction:column;gap:10px">
+<span style="font-size:26px;color:#c98a9b;font-weight:600">لا يحصل المتدرّب تلقائياً على:</span>
+<span style="font-size:26px">✕ بيانات عملاء حساسة</span><span style="font-size:26px">✕ صلاحيات مالية</span><span style="font-size:26px">✕ وصول مفتوح للأنظمة</span><span style="font-size:26px">✕ معلومات موارد بشرية سرّية</span><span style="font-size:26px">✕ صلاحية نشر حرجة</span><span style="font-size:26px">✕ صلاحية الموافقة النهائية</span>
+</div></div>
+<div style="display:flex;flex-direction:column;justify-content:center">
+<div style="display:flex;flex-wrap:wrap;gap:10px">
+<span style="background:#f1ebe2;border-radius:999px;padding:8px 22px;font-size:26px">السرّية</span><span style="background:#f1ebe2;border-radius:999px;padding:8px 22px;font-size:26px">حماية البيانات</span><span style="background:#f1ebe2;border-radius:999px;padding:8px 22px;font-size:26px">صلاحيات الوصول</span><span style="background:#f1ebe2;border-radius:999px;padding:8px 22px;font-size:26px">الإشراف</span><span style="background:#f1ebe2;border-radius:999px;padding:8px 22px;font-size:26px">قواعد التصعيد</span><span style="background:#f1ebe2;border-radius:999px;padding:8px 22px;font-size:26px">ضبط الجودة</span><span style="background:#f1ebe2;border-radius:999px;padding:8px 22px;font-size:26px">ساعات العمل</span><span style="background:#f1ebe2;border-radius:999px;padding:8px 22px;font-size:26px">المكافأة أو المصاريف عند الحاجة</span><span style="background:#f1ebe2;border-radius:999px;padding:8px 22px;font-size:26px">قوانين العمل والتدريب المحلية</span><span style="background:#f1ebe2;border-radius:999px;padding:8px 22px;font-size:26px">الصحة والسلامة</span><span style="background:#f1ebe2;border-radius:999px;padding:8px 22px;font-size:26px">تكافؤ الفرص</span>
+</div>
+<div style="margin-top:32px;border-top:2px solid #7b1b33;padding-top:20px;font-size:28px;line-height:1.55"><strong style="color:#7b1b33">مهم:</strong> يجب تكييف هيكل البرنامج مع قوانين العمل والتدريب في البلد المعني.</div>
+</div>
+<div style="position:absolute;left:120px;right:120px;bottom:40px;display:flex;justify-content:space-between;font-size:16px;color:#8a7d76"><span>لأغراض تعليمية فقط · خاص وسري</span><span dir="ltr">For educational purposes only · Private &amp; Confidential · 33</span></div>
+</div>
+</section>
+
+<section data-label="34 Final positioning" data-screen-label="34" style="background:#f1ebe2;color:#231b19">
+<div style="position:relative;width:100%;height:100%;box-sizing:border-box;direction:rtl;font-family:'Thmanyah Serif Text',serif;padding:96px 120px 130px;display:grid;grid-template-columns:680px 1fr;gap:80px">
+<div style="display:flex;flex-direction:column">
+<span style="font-size:28px;font-weight:600;color:#7b1b33">25 — الخلاصة</span>
+<div style="font-family:'Thmanyah Serif Display','Thmanyah Serif Text',serif;font-size:62px;font-weight:700;line-height:1.4;margin-top:12px">البرنامج ليس لإبقاء الناس متدرّبين.</div>
+<div style="margin-top:auto;font-size:32px;line-height:1.6;color:#4a403c">بل لاكتشاف الإمكانات، وتسريع التعلّم، وتحويل الأفضل إلى <strong style="color:#7b1b33">مواهب مفيدة على المدى الطويل.</strong></div>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;align-content:center">
+<div style="background:#faf7f2;border-radius:999px;padding:16px 30px;font-size:28px;font-weight:600;display:flex;gap:14px"><span style="color:#7b1b33">1</span>جد عملاً يستحق التفويض</div>
+<div style="background:#faf7f2;border-radius:999px;padding:16px 30px;font-size:28px;font-weight:600;display:flex;gap:14px"><span style="color:#7b1b33">2</span>جد أشخاصاً لديهم إمكانات</div>
+<div style="background:#faf7f2;border-radius:999px;padding:16px 30px;font-size:28px;font-weight:600;display:flex;gap:14px"><span style="color:#7b1b33">3</span>درّب بسرعة</div>
+<div style="background:#faf7f2;border-radius:999px;padding:16px 30px;font-size:28px;font-weight:600;display:flex;gap:14px"><span style="color:#7b1b33">4</span>ابنِ الاستقلالية</div>
+<div style="background:#faf7f2;border-radius:999px;padding:16px 30px;font-size:28px;font-weight:600;display:flex;gap:14px"><span style="color:#7b1b33">5</span>قِس العمل الحقيقي</div>
+<div style="background:#7b1b33;color:#faf7f2;border-radius:999px;padding:16px 30px;font-size:28px;font-weight:700;display:flex;gap:14px"><span style="color:#f1d3da">6</span>وظّف الأفضل</div>
+<div style="background:#faf7f2;border-radius:999px;padding:16px 30px;font-size:28px;font-weight:600;display:flex;gap:14px"><span style="color:#7b1b33">7</span>حسّن النظام</div>
+<div style="background:#231b19;color:#faf7f2;border-radius:999px;padding:16px 30px;font-size:28px;font-weight:600;display:flex;gap:14px"><span style="color:#c98a9b">8</span>كرّر ↺</div>
+</div>
+<div style="position:absolute;left:120px;right:120px;bottom:40px;display:flex;justify-content:space-between;font-size:16px;color:#8a7d76"><span>لأغراض تعليمية فقط · خاص وسري</span><span dir="ltr">For educational purposes only · Private &amp; Confidential · 34</span></div>
+</div>
+</section>
+
+<section data-label="35 Closing" data-screen-label="35" style="background:#231b19;color:#faf7f2">
+<div style="position:relative;width:100%;height:100%;box-sizing:border-box;direction:rtl;font-family:'Thmanyah Serif Text',serif;padding:96px 120px 130px;display:flex;flex-direction:column;justify-content:center;gap:10px">
+<div style="font-family:'Thmanyah Serif Display','Thmanyah Serif Text',serif;font-size:130px;font-weight:700;line-height:1.35">ابنِ القدرة.</div>
+<div style="font-family:'Thmanyah Serif Display','Thmanyah Serif Text',serif;font-size:130px;font-weight:700;line-height:1.35">اكتشف المواهب.</div>
+<div style="font-family:'Thmanyah Serif Display','Thmanyah Serif Text',serif;font-size:130px;font-weight:700;line-height:1.35;color:#c98a9b">احتفظ بالأفضل.</div>
+<div style="position:absolute;left:120px;right:120px;bottom:40px;display:flex;justify-content:space-between;font-size:16px;color:#a8998f"><span>لأغراض تعليمية فقط · خاص وسري</span><span dir="ltr">For educational purposes only · Private &amp; Confidential · 35</span></div>
+</div>
+</section>
+
+<section data-label="36 Appendix" data-screen-label="36" style="background:#7b1b33;color:#faf7f2">
+<div style="position:relative;width:100%;height:100%;box-sizing:border-box;direction:rtl;font-family:'Thmanyah Serif Text',serif;padding:96px 120px 130px;display:flex;flex-direction:column;justify-content:flex-end">
+<span style="font-size:30px;font-weight:600;color:#f1d3da">ملحق</span>
+<div style="font-family:'Thmanyah Serif Display','Thmanyah Serif Text',serif;font-size:120px;font-weight:700;line-height:1.35;margin-top:10px">مواد حملة التوظيف</div>
+<div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:30px"><span style="border:1.5px solid rgba(250,247,242,0.4);border-radius:999px;padding:8px 24px;font-size:26px">الإعلان الرئيسي</span><span style="border:1.5px solid rgba(250,247,242,0.4);border-radius:999px;padding:8px 24px;font-size:26px">منشور إنستغرام / لينكدإن</span><span style="border:1.5px solid rgba(250,247,242,0.4);border-radius:999px;padding:8px 24px;font-size:26px">نصوص قصيرة</span><span style="border:1.5px solid rgba(250,247,242,0.4);border-radius:999px;padding:8px 24px;font-size:26px">الوصف الوظيفي</span><span style="border:1.5px solid rgba(250,247,242,0.4);border-radius:999px;padding:8px 24px;font-size:26px">صفحة التقديم</span><span style="border:1.5px solid rgba(250,247,242,0.4);border-radius:999px;padding:8px 24px;font-size:26px">أسئلة المرشحين</span></div>
+<div style="position:absolute;left:120px;right:120px;bottom:40px;display:flex;justify-content:space-between;font-size:16px;color:#f1d3da"><span>لأغراض تعليمية فقط · خاص وسري</span><span dir="ltr">For educational purposes only · Private &amp; Confidential · 36</span></div>
+</div>
+</section>
+
+<section data-label="37 A1 Hero ad" data-screen-label="37" style="background:#f1ebe2;color:#231b19">
+<div style="position:relative;width:100%;height:100%;box-sizing:border-box;direction:rtl;font-family:'Thmanyah Serif Text',serif;padding:80px 120px 110px;display:grid;grid-template-columns:1fr 560px;gap:80px">
+<div style="background:#231b19;color:#faf7f2;border-radius:32px;padding:64px 72px;display:flex;flex-direction:column;box-shadow:0 40px 80px -40px rgba(35,27,25,0.5)">
+<span style="font-size:26px;font-weight:600;color:#c98a9b">برنامج الشهر الواحد · الدفعة 01</span>
+<div style="font-family:'Thmanyah Serif Display','Thmanyah Serif Text',serif;font-size:86px;font-weight:700;line-height:1.35;margin-top:24px">لا ترِنا سيرتك الذاتية.<br><span style="color:#c98a9b">أرِنا كم تتعلّم بسرعة.</span></div>
+<div style="font-size:32px;line-height:1.6;color:#d8cdc6;margin-top:24px">شهر واحد. عمل حقيقي. فرصة لتكسب وظيفة.</div>
+<div style="margin-top:auto;display:flex;justify-content:space-between;align-items:center"><span style="background:#7b1b33;border-radius:999px;padding:16px 40px;font-size:30px;font-weight:700">قدّم الآن</span><span style="font-size:26px;color:#a8998f">آخر موعد: [التاريخ]</span></div>
+</div>
+<div style="display:flex;flex-direction:column;justify-content:center;gap:18px">
+<span style="font-size:28px;font-weight:600;color:#7b1b33">A1 — الإعلان الرئيسي</span>
+<span style="font-size:30px;line-height:1.55">عنوان يتحدى المرشح بدل أن يطلب منه.</span>
+<span style="font-size:26px;line-height:1.55;color:#4a403c">عناوين بديلة:</span>
+<span style="background:#faf7f2;border-radius:18px;padding:14px 22px;font-size:28px;font-weight:600">شهر واحد. عمل حقيقي. أثبت ما تستطيع.</span>
+<span style="background:#faf7f2;border-radius:18px;padding:14px 22px;font-size:28px;font-weight:600">30 يوماً تحوّل إمكاناتك إلى خبرة.</span>
+</div>
+<div style="position:absolute;left:120px;right:120px;bottom:36px;display:flex;justify-content:space-between;font-size:16px;color:#8a7d76"><span>لأغراض تعليمية فقط · خاص وسري</span><span dir="ltr">For educational purposes only · Private &amp; Confidential · 37</span></div>
+</div>
+</section>
+
+<section data-label="38 A2 Social post" data-screen-label="38" style="background:#f1ebe2;color:#231b19">
+<div style="position:relative;width:100%;height:100%;box-sizing:border-box;direction:rtl;font-family:'Thmanyah Serif Text',serif;padding:80px 120px 110px;display:grid;grid-template-columns:780px 1fr;gap:80px;align-items:center">
+<div style="aspect-ratio:1;background:#7b1b33;color:#faf7f2;border-radius:32px;padding:60px;box-sizing:border-box;display:flex;flex-direction:column;box-shadow:0 40px 80px -40px rgba(35,27,25,0.5)">
+<span style="font-size:24px;font-weight:600;color:#f1d3da">نبحث عن الدفعة الأولى</span>
+<div style="font-family:'Thmanyah Serif Display','Thmanyah Serif Text',serif;font-size:100px;font-weight:700;line-height:1.3;margin-top:auto">30 يوماً.</div>
+<div style="font-family:'Thmanyah Serif Display','Thmanyah Serif Text',serif;font-size:52px;font-weight:700;line-height:1.4">تحوّل إمكاناتك إلى خبرة.</div>
+<div style="display:flex;gap:10px;margin-top:30px"><span style="background:#faf7f2;color:#7b1b33;border-radius:999px;padding:8px 22px;font-size:24px;font-weight:700">عمل حقيقي</span><span style="border:1.5px solid rgba(250,247,242,0.5);border-radius:999px;padding:8px 22px;font-size:24px">تدريب سريع</span><span style="border:1.5px solid rgba(250,247,242,0.5);border-radius:999px;padding:8px 22px;font-size:24px">فرصة وظيفة</span></div>
+</div>
+<div style="display:flex;flex-direction:column;gap:16px">
+<span style="font-size:28px;font-weight:600;color:#7b1b33">A2 — منشور إنستغرام / لينكدإن</span>
+<span style="font-size:26px;color:#8a7d76">نص المنشور</span>
+<div style="background:#faf7f2;border-radius:24px;padding:28px 32px;font-size:28px;line-height:1.65">لسنا نبحث عن متدرّبين يتفرّجون.<br>نبحث عن أشخاص يتعلّمون بسرعة، ويعملون بدقة، ويتحمّلون المسؤولية.<br>شهر واحد من العمل الحقيقي، مع تدريب وملاحظات أسبوعية.<br><strong style="color:#7b1b33">والأفضل يحصلون على عرض عمل.</strong><br>التقديم عبر الرابط.</div>
+</div>
+<div style="position:absolute;left:120px;right:120px;bottom:36px;display:flex;justify-content:space-between;font-size:16px;color:#8a7d76"><span>لأغراض تعليمية فقط · خاص وسري</span><span dir="ltr">For educational purposes only · Private &amp; Confidential · 38</span></div>
+</div>
+</section>
+
+<section data-label="39 A3 Short copy" data-screen-label="39" style="background:#faf7f2;color:#231b19">
+<div style="position:relative;width:100%;height:100%;box-sizing:border-box;direction:rtl;font-family:'Thmanyah Serif Text',serif;padding:96px 120px 130px;display:flex;flex-direction:column">
+<span style="font-size:28px;font-weight:600;color:#7b1b33">A3 — نصوص قصيرة للتواصل الاجتماعي</span>
+<div style="font-family:'Thmanyah Serif Display','Thmanyah Serif Text',serif;font-size:66px;font-weight:700;line-height:1.4;margin-top:12px">جمل قصيرة. لكل منصة.</div>
+<div style="flex:1;display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:32px">
+<div style="background:#f1ebe2;border-radius:24px;padding:28px 34px;font-size:34px;font-weight:600;line-height:1.5;display:flex;align-items:center">لا نبحث عن خبرة. نبحث عن سرعة تعلّم.</div>
+<div style="background:#f1ebe2;border-radius:24px;padding:28px 34px;font-size:34px;font-weight:600;line-height:1.5;display:flex;align-items:center">أول يوم؟ عمل حقيقي.</div>
+<div style="background:#f1ebe2;border-radius:24px;padding:28px 34px;font-size:34px;font-weight:600;line-height:1.5;display:flex;align-items:center">أربعة أسابيع. ملاحظات كل أسبوع. قرار في النهاية.</div>
+<div style="background:#f1ebe2;border-radius:24px;padding:28px 34px;font-size:34px;font-weight:600;line-height:1.5;display:flex;align-items:center">الأماكن محدودة. والاختيار دقيق.</div>
+<div style="background:#231b19;color:#faf7f2;border-radius:24px;padding:28px 34px;font-size:34px;font-weight:600;line-height:1.5;display:flex;align-items:center">لا تنتظر فرصة. اكسبها.</div>
+<div style="background:#7b1b33;color:#faf7f2;border-radius:24px;padding:28px 34px;font-size:34px;font-weight:600;line-height:1.5;display:flex;align-items:center">أثبت ما تستطيع خلال 30 يوماً.</div>
+</div>
+<div style="position:absolute;left:120px;right:120px;bottom:40px;display:flex;justify-content:space-between;font-size:16px;color:#8a7d76"><span>لأغراض تعليمية فقط · خاص وسري</span><span dir="ltr">For educational purposes only · Private &amp; Confidential · 39</span></div>
+</div>
+</section>
+
+<section data-label="40 A4 Job description" data-screen-label="40" style="background:#faf7f2;color:#231b19">
+<div style="position:relative;width:100%;height:100%;box-sizing:border-box;direction:rtl;font-family:'Thmanyah Serif Text',serif;padding:80px 120px 110px;display:grid;grid-template-columns:520px 1fr;gap:70px">
+<div style="display:flex;flex-direction:column">
+<span style="font-size:28px;font-weight:600;color:#7b1b33">A4 — الوصف الوظيفي</span>
+<div style="font-family:'Thmanyah Serif Display','Thmanyah Serif Text',serif;font-size:58px;font-weight:700;line-height:1.4;margin-top:12px">مشارك في برنامج الشهر الواحد</div>
+<div style="display:flex;flex-direction:column;gap:10px;margin-top:28px;font-size:26px">
+<div style="display:flex;justify-content:space-between;border-top:1px solid rgba(35,27,25,0.15);padding-top:10px"><span style="color:#8a7d76">المدة</span><span style="font-weight:600">4 أسابيع</span></div>
+<div style="display:flex;justify-content:space-between;border-top:1px solid rgba(35,27,25,0.15);padding-top:10px"><span style="color:#8a7d76">القسم</span><span style="font-weight:600">[القسم]</span></div>
+<div style="display:flex;justify-content:space-between;border-top:1px solid rgba(35,27,25,0.15);padding-top:10px"><span style="color:#8a7d76">المكان</span><span style="font-weight:600">[المدينة / عن بُعد]</span></div>
+<div style="display:flex;justify-content:space-between;border-top:1px solid rgba(35,27,25,0.15);padding-top:10px"><span style="color:#8a7d76">المكافأة</span><span style="font-weight:600">[حسب القانون المحلي]</span></div>
+<div style="display:flex;justify-content:space-between;border-top:1px solid rgba(35,27,25,0.15);border-bottom:1px solid rgba(35,27,25,0.15);padding:10px 0"><span style="color:#8a7d76">بعد البرنامج</span><span style="font-weight:600;color:#7b1b33">عرض عمل للأفضل</span></div>
+</div></div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:18px">
+<div style="background:#f1ebe2;border-radius:24px;padding:26px 30px;display:flex;flex-direction:column;gap:8px"><span style="font-size:28px;font-weight:700;color:#7b1b33">ماذا ستفعل</span><span style="font-size:24px;line-height:1.5">مهام حقيقية من اليوم الأول: بحث، بيانات، تقارير، دعم حملات.</span><span style="font-size:24px;line-height:1.5">تملك مجموعة مهام بحلول الأسبوع الثالث.</span></div>
+<div style="background:#f1ebe2;border-radius:24px;padding:26px 30px;display:flex;flex-direction:column;gap:8px"><span style="font-size:28px;font-weight:700;color:#7b1b33">ماذا ستتعلّم</span><span style="font-size:24px;line-height:1.5">طريقة عمل مهنية، أدوات الشركة، وكيف تراجع عملك بنفسك.</span></div>
+<div style="background:#f1ebe2;border-radius:24px;padding:26px 30px;display:flex;flex-direction:column;gap:8px"><span style="font-size:28px;font-weight:700;color:#7b1b33">من نبحث عنه</span><span style="font-size:24px;line-height:1.5">سريع التعلّم، دقيق، ملتزم، يعرف متى يسأل. الخبرة ليست شرطاً.</span></div>
+<div style="background:#231b19;color:#faf7f2;border-radius:24px;padding:26px 30px;display:flex;flex-direction:column;gap:8px"><span style="font-size:28px;font-weight:700;color:#c98a9b">كيف نقيّم</span><span style="font-size:24px;line-height:1.5">بطاقة أداء أسبوعية: الدقة، السرعة، الاستقلالية، سرعة التعلّم.</span></div>
+</div>
+<div style="position:absolute;left:120px;right:120px;bottom:36px;display:flex;justify-content:space-between;font-size:16px;color:#8a7d76"><span>لأغراض تعليمية فقط · خاص وسري</span><span dir="ltr">For educational purposes only · Private &amp; Confidential · 40</span></div>
+</div>
+</section>
+
+<section data-label="41 A5 Application page" data-screen-label="41" style="background:#f1ebe2;color:#231b19">
+<div style="position:relative;width:100%;height:100%;box-sizing:border-box;direction:rtl;font-family:'Thmanyah Serif Text',serif;padding:80px 120px 110px;display:grid;grid-template-columns:1fr 760px;gap:80px">
+<div style="display:flex;flex-direction:column">
+<span style="font-size:28px;font-weight:600;color:#7b1b33">A5 — هيكل صفحة التقديم</span>
+<div style="font-family:'Thmanyah Serif Display','Thmanyah Serif Text',serif;font-size:62px;font-weight:700;line-height:1.4;margin-top:12px">صفحة واحدة. عشر دقائق.</div>
+<div style="margin-top:auto;display:flex;flex-direction:column;gap:12px;font-size:28px">
+<div style="display:flex;gap:16px"><span style="color:#7b1b33;font-weight:700">1</span>عنوان وفكرة البرنامج</div>
+<div style="display:flex;gap:16px"><span style="color:#7b1b33;font-weight:700">2</span>ماذا ستفعل وكيف نختار</div>
+<div style="display:flex;gap:16px"><span style="color:#7b1b33;font-weight:700">3</span>نموذج قصير</div>
+<div style="display:flex;gap:16px"><span style="color:#7b1b33;font-weight:700">4</span>ثلاثة أسئلة قصيرة</div>
+<div style="display:flex;gap:16px"><span style="color:#7b1b33;font-weight:700">5</span>أسئلة شائعة + زر التقديم</div>
+</div></div>
+<div style="background:#faf7f2;border-radius:28px;padding:34px 40px;display:flex;flex-direction:column;gap:14px;box-shadow:0 40px 80px -40px rgba(35,27,25,0.4)">
+<div style="background:#231b19;color:#faf7f2;border-radius:18px;padding:22px 26px"><div style="font-size:32px;font-weight:700">أرِنا كم تتعلّم بسرعة.</div><div style="font-size:22px;color:#d8cdc6">4 أسابيع · عمل حقيقي · فرصة وظيفة</div></div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px"><div style="border:1.5px solid rgba(35,27,25,0.2);border-radius:999px;padding:10px 20px;font-size:22px;color:#8a7d76">الاسم</div><div style="border:1.5px solid rgba(35,27,25,0.2);border-radius:999px;padding:10px 20px;font-size:22px;color:#8a7d76">الهاتف / البريد</div><div style="border:1.5px solid rgba(35,27,25,0.2);border-radius:999px;padding:10px 20px;font-size:22px;color:#8a7d76">الدراسة</div><div style="border:1.5px solid rgba(35,27,25,0.2);border-radius:999px;padding:10px 20px;font-size:22px;color:#8a7d76">الأوقات المتاحة</div></div>
+<div style="border:1.5px solid rgba(35,27,25,0.2);border-radius:18px;padding:12px 20px;font-size:22px;color:#4a403c">شيء تعلّمته بنفسك مؤخراً. كيف تعلّمته؟</div>
+<div style="border:1.5px solid rgba(35,27,25,0.2);border-radius:18px;padding:12px 20px;font-size:22px;color:#4a403c">اكتشفت خطأً في عملك بعد تسليمه. ماذا تفعل؟</div>
+<div style="border:1.5px solid rgba(35,27,25,0.2);border-radius:18px;padding:12px 20px;font-size:22px;color:#4a403c">لخّص هذا النص في ثلاث جمل. [نص قصير]</div>
+<span style="background:#7b1b33;color:#faf7f2;border-radius:999px;padding:12px 30px;font-size:26px;font-weight:700;align-self:flex-start">أرسل الطلب</span>
+</div>
+<div style="position:absolute;left:120px;right:120px;bottom:36px;display:flex;justify-content:space-between;font-size:16px;color:#8a7d76"><span>لأغراض تعليمية فقط · خاص وسري</span><span dir="ltr">For educational purposes only · Private &amp; Confidential · 41</span></div>
+</div>
+</section>
+
+<section data-label="42 A6 Candidate FAQ" data-screen-label="42" style="background:#faf7f2;color:#231b19">
+<div style="position:relative;width:100%;height:100%;box-sizing:border-box;direction:rtl;font-family:'Thmanyah Serif Text',serif;padding:80px 120px 110px;display:flex;flex-direction:column">
+<span style="font-size:28px;font-weight:600;color:#7b1b33">A6 — أسئلة المرشحين</span>
+<div style="font-family:'Thmanyah Serif Display','Thmanyah Serif Text',serif;font-size:62px;font-weight:700;line-height:1.4;margin-top:12px">أسئلة شائعة.</div>
+<div style="flex:1;display:grid;grid-template-columns:1fr 1fr;gap:16px 40px;margin-top:24px;align-content:center">
+<div style="border-top:1px solid rgba(35,27,25,0.15);padding-top:14px"><div style="font-size:28px;font-weight:700">هل أحتاج خبرة سابقة؟</div><div style="font-size:24px;line-height:1.5;color:#4a403c">لا. نختار حسب سرعة التعلّم والدقة والالتزام.</div></div>
+<div style="border-top:1px solid rgba(35,27,25,0.15);padding-top:14px"><div style="font-size:28px;font-weight:700">هل هو عمل حقيقي؟</div><div style="font-size:24px;line-height:1.5;color:#4a403c">نعم. تبدأ بمهام منتجة من اليوم الأول.</div></div>
+<div style="border-top:1px solid rgba(35,27,25,0.15);padding-top:14px"><div style="font-size:28px;font-weight:700">هل هناك وظيفة في النهاية؟</div><div style="font-size:24px;line-height:1.5;color:#4a403c">الأفضل أداءً قد يحصلون على عرض عمل. لا نضمنها للجميع.</div></div>
+<div style="border-top:1px solid rgba(35,27,25,0.15);padding-top:14px"><div style="font-size:28px;font-weight:700">كم ساعة في اليوم؟</div><div style="font-size:24px;line-height:1.5;color:#4a403c">[عدد الساعات] يومياً، حسب هيكل البرنامج.</div></div>
+<div style="border-top:1px solid rgba(35,27,25,0.15);padding-top:14px"><div style="font-size:28px;font-weight:700">هل البرنامج مدفوع؟</div><div style="font-size:24px;line-height:1.5;color:#4a403c">[المكافأة أو المصاريف] حسب القوانين المحلية.</div></div>
+<div style="border-top:1px solid rgba(35,27,25,0.15);padding-top:14px"><div style="font-size:28px;font-weight:700">ماذا لو لم أُختر للوظيفة؟</div><div style="font-size:24px;line-height:1.5;color:#4a403c">تحصل على ملاحظات واضحة وشهادة، وقد تدخل مخزون المواهب لفرص لاحقة.</div></div>
+</div>
+<div style="position:absolute;left:120px;right:120px;bottom:36px;display:flex;justify-content:space-between;font-size:16px;color:#8a7d76"><span>لأغراض تعليمية فقط · خاص وسري</span><span dir="ltr">For educational purposes only · Private &amp; Confidential · 42</span></div>
+</div>
+</section>
+
+</x-import>
+</x-dc>
+</body>
+</html>

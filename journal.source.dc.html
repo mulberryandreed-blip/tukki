@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta charset="utf-8">
+<title>Useful things we've learned — Mulberry &amp; Reed</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+html,body{margin:0;padding:0;background:#faf7f2;}
+body{font-family:'Inter',sans-serif;color:#231b19;-webkit-font-smoothing:antialiased;}
+a{color:#5e1226;text-decoration:none;}
+a:hover{color:#3f0b18;}
+::selection{background:#5e1226;color:#faf7f2;}
+input{font-family:inherit;}
+.mr-scroll::-webkit-scrollbar{display:none;}
+.mr-scroll{-ms-overflow-style:none;scrollbar-width:none;}
+</style>
+</helmet>
+<div style="min-height:100vh;background:#faf7f2;color:#231b19;position:relative;overflow-x:clip;">
+  <img src="assets/ink-wash.png" alt="" aria-hidden="true" style="position:absolute;left:0;bottom:4%;width:100%;height:auto;z-index:0;pointer-events:none;user-select:none;transform:rotate(180deg);">
+
+  <nav style="position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:center;gap:24px;padding:14px clamp(20px,5vw,64px);background:rgba(250,247,242,0.92);backdrop-filter:blur(8px);">
+    <a href="Mulberry & Reed Site.dc.html" style="position:absolute;left:clamp(20px,5vw,64px);display:flex;align-items:center;"><img src="assets/wordmark.png" alt="Mulberry and Reed wordmark" style="height:34px;width:auto;display:block;"></a>
+    <div style="display:flex;align-items:center;gap:clamp(14px,3vw,32px);font-size:15px;font-weight:500;">
+      <a href="Mulberry & Reed Site.dc.html#work" style="color:#231b19;" style-hover="color:#5e1226">What we do</a>
+      <a href="Mulberry & Reed Site.dc.html#about" style="color:#231b19;" style-hover="color:#5e1226">About</a>
+      <a href="Mulberry & Reed Blog.dc.html" style="color:#5e1226;font-weight:600;">Journal</a>
+      <a href="Mulberry & Reed Site.dc.html#contact" style="display:inline-block;padding:10px 20px;border-radius:999px;background:#5e1226;color:#faf7f2;" style-hover="background:#3f0b18;color:#faf7f2;">Let's connect</a>
+    </div>
+  </nav>
+
+  <!-- ============ LIST VIEW ============ -->
+  <sc-if value="{{ isList }}" hint-placeholder-val="{{ true }}">
+  <div style="max-width:760px;margin:0 auto;padding:clamp(40px,8vw,88px) 22px 96px;">
+
+    <header style="margin:0 0 clamp(32px,6vw,52px);">
+      <p style="font-size:13px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#5e1226;margin:0 0 18px;">Mulberry &amp; Reed · Journal</p>
+      <h1 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(34px,7vw,56px);line-height:1.03;letter-spacing:-0.005em;margin:0 0 24px;text-wrap:pretty;">Useful things we've learned.</h1>
+      <div style="font-size:clamp(17px,2.2vw,20px);line-height:1.5;color:#4a403c;max-width:34em;">
+        <p style="margin:0 0 14px;">50 short guides. 14 years of lessons. Free to use.</p>
+        <p style="margin:0;">No long reports. No big words. No email needed. Just useful advice you can use.</p>
+      </div>
+    </header>
+
+    <div style="display:flex;gap:8px;margin:0 0 26px;border-bottom:1px solid rgba(35,27,25,0.1);">
+      <button onClick="{{ showGuides }}" style="{{ tabGuidesStyle }}">Guides</button>
+      <button onClick="{{ showResources }}" style="{{ tabResourcesStyle }}">Free tools</button>
+    </div>
+
+    <sc-if value="{{ isResources }}" hint-placeholder-val="{{ false }}">
+      <div style="margin:0 0 18px;">
+        <p style="font-size:16px;line-height:1.55;color:#4a403c;margin:0 0 18px;max-width:34em;">Practical tools from the Mulberry &amp; Reed business library. Free PDFs. No email needed.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;">
+          <sc-for list="{{ resCatPills }}" as="p" hint-placeholder-count="3">
+            <button onClick="{{ p.onClick }}" style="{{ p.style }}">{{ p.label }}</button>
+          </sc-for>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:18px;padding-top:8px;">
+        <sc-for list="{{ visibleResources }}" as="r" hint-placeholder-count="2">
+          <article style="border:1.5px solid rgba(35,27,25,0.14);border-radius:16px;padding:clamp(20px,4vw,30px);background:#fff;">
+            <div style="display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin:0 0 14px;">
+              <span style="font-size:11px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:#5e1226;border:1px solid rgba(94,18,38,0.35);border-radius:999px;padding:4px 10px;">Free tool</span>
+              <span style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(26px,5vw,34px);line-height:1;color:rgba(94,18,38,0.25);letter-spacing:-0.02em;">{{ r.number }}</span>
+            </div>
+            <p style="font-size:12px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#8a7d76;margin:0 0 8px;">{{ r.category }}</p>
+            <h2 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(21px,3.6vw,26px);line-height:1.15;letter-spacing:0;margin:0 0 8px;text-wrap:pretty;">{{ r.title }}</h2>
+            <p style="font-size:16px;line-height:1.55;color:#4a403c;margin:0 0 16px;max-width:38em;text-wrap:pretty;">{{ r.description }}</p>
+            <div style="display:flex;flex-wrap:wrap;gap:8px 18px;margin:0 0 18px;font-size:14px;color:#6a5f5a;">
+              <span><strong style="color:#231b19;">Includes:</strong> {{ r.includes }}</span>
+              <span>{{ r.pageCount }}</span>
+            </div>
+            <a href="{{ r.file }}" download style="display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:999px;background:#5e1226;color:#faf7f2;font-size:15px;font-weight:600;" style-hover="background:#3f0b18;color:#faf7f2;">Download PDF <span aria-hidden="true">→</span></a>
+          </article>
+        </sc-for>
+      </div>
+      <p style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(18px,3vw,22px);color:#5e1226;margin:64px 0 0;text-align:center;letter-spacing:0;">Tell a good story. Make it stick. Leave a mark.</p>
+    </sc-if>
+
+    <sc-if value="{{ isGuides }}" hint-placeholder-val="{{ true }}">
+    <div style="position:relative;margin:0 0 26px;">
+      <input type="search" placeholder="What do you need help with?" aria-label="Search articles" onInput="{{ onSearch }}" value="{{ query }}" style="width:100%;box-sizing:border-box;padding:16px 18px;font-size:17px;color:#231b19;background:#fff;border:1.5px solid rgba(35,27,25,0.14);border-radius:12px;outline:none;" style-focus="border-color:#5e1226">
+    </div>
+
+    <div class="mr-scroll" style="display:flex;gap:8px;overflow-x:auto;padding:2px 2px 4px;margin:0 -2px 12px;">
+      <sc-for list="{{ catPills }}" as="p" hint-placeholder-count="8">
+        <button onClick="{{ p.onClick }}" style="{{ p.style }}">{{ p.label }}</button>
+      </sc-for>
+    </div>
+
+    <div style="margin:0 0 18px;">
+      <p style="font-size:13px;font-weight:600;color:#8a7d76;margin:0 0 8px;">What do you need help with?</p>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;">
+        <sc-for list="{{ needPills }}" as="p" hint-placeholder-count="8">
+          <button onClick="{{ p.onClick }}" style="{{ p.style }}">{{ p.label }}</button>
+        </sc-for>
+      </div>
+    </div>
+
+    <p style="font-size:14px;color:#8a7d76;margin:0 0 6px;border-top:1px solid rgba(35,27,25,0.1);padding-top:22px;">{{ resultLabel }}</p>
+
+    <div>
+      <sc-for list="{{ visible }}" as="a" hint-placeholder-count="8">
+        <a href="#" onClick="{{ a.open }}" style="display:block;padding:22px 14px;margin:0 -14px;border-bottom:1px solid rgba(35,27,25,0.1);border-radius:10px;color:#231b19;transition:background .15s ease,transform .15s ease;" style-hover="background:#f2ece1;color:#231b19">
+          <p style="font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#5e1226;margin:0 0 8px;">{{ a.category }}</p>
+          <h2 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(20px,3.5vw,25px);line-height:1.2;letter-spacing:0;margin:0 0 6px;text-wrap:pretty;">{{ a.title }}</h2>
+          <p style="font-size:16px;line-height:1.5;color:#6a5f5a;margin:0 0 12px;text-wrap:pretty;">{{ a.summary }}</p>
+          <span style="display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:#8a7d76;">{{ a.readingTime }} <span style="color:#5e1226;">→</span></span>
+        </a>
+      </sc-for>
+    </div>
+
+    <sc-if value="{{ noResults }}" hint-placeholder-val="{{ false }}">
+      <div style="padding:48px 0;text-align:center;color:#8a7d76;">
+        <p style="font-size:18px;margin:0 0 12px;">No guides match that yet.</p>
+        <button onClick="{{ clearAll }}" style="font-family:inherit;font-size:15px;font-weight:600;color:#5e1226;background:none;border:none;cursor:pointer;padding:0;">Clear filters</button>
+      </div>
+    </sc-if>
+
+    <p style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(18px,3vw,22px);color:#5e1226;margin:64px 0 0;text-align:center;letter-spacing:0;">Tell a good story. Make it stick. Leave a mark.</p>
+    </sc-if>
+  </div>
+  </sc-if>
+
+  <!-- ============ ARTICLE VIEW ============ -->
+  <sc-if value="{{ isArticle }}" hint-placeholder-val="{{ false }}">
+  <div style="max-width:680px;margin:0 auto;padding:clamp(28px,6vw,56px) 22px 96px;">
+    <button onClick="{{ back }}" style="font-family:inherit;font-size:15px;font-weight:600;color:#5e1226;background:none;border:none;cursor:pointer;padding:0;margin:0 0 clamp(28px,5vw,44px);display:inline-flex;align-items:center;gap:8px;">← All guides</button>
+
+    <article>
+      <p style="font-size:13px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#5e1226;margin:0 0 14px;">{{ article.category }}</p>
+      <h1 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(30px,6vw,46px);line-height:1.06;letter-spacing:-0.005em;margin:0 0 18px;text-wrap:pretty;">{{ article.title }}</h1>
+      <p style="font-size:clamp(18px,2.6vw,21px);line-height:1.5;color:#4a403c;margin:0 0 14px;text-wrap:pretty;">{{ article.summary }}</p>
+      <p style="font-size:14px;font-weight:600;color:#8a7d76;margin:0 0 clamp(32px,5vw,44px);">{{ article.readingTime }}</p>
+
+      <sc-if value="{{ hasPhoto }}" hint-placeholder-val="{{ false }}">
+        <div style="margin:0 0 36px;">{{ photoEl }}</div>
+      </sc-if>
+
+      <section style="background:#fff;border:1.5px solid rgba(94,18,38,0.18);border-radius:14px;padding:24px 24px;margin:0 0 36px;">
+        <p style="font-size:12px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#5e1226;margin:0 0 10px;">The short version</p>
+        <p style="font-size:18px;line-height:1.55;color:#231b19;margin:0;text-wrap:pretty;">{{ article.content.short }}</p>
+      </section>
+
+      <section style="margin:0 0 36px;">
+        <h2 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:13px;letter-spacing:0.12em;text-transform:uppercase;color:#8a7d76;margin:0 0 12px;">What I've learned</h2>
+        <p style="font-size:17px;line-height:1.65;color:#3a312e;margin:0;text-wrap:pretty;">{{ article.content.learned }}</p>
+      </section>
+
+      <section style="margin:0 0 36px;">
+        <h2 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:13px;letter-spacing:0.12em;text-transform:uppercase;color:#8a7d76;margin:0 0 14px;">What to do</h2>
+        <ol style="margin:0;padding:0;list-style:none;counter-reset:step;">
+          <sc-for list="{{ steps }}" as="s" hint-placeholder-count="4">
+            <li style="counter-increment:step;position:relative;padding:0 0 14px 40px;font-size:17px;line-height:1.55;color:#3a312e;text-wrap:pretty;">
+              <span style="position:absolute;left:0;top:0;width:26px;height:26px;border-radius:50%;background:#5e1226;color:#faf7f2;font-size:14px;font-weight:700;display:flex;align-items:center;justify-content:center;">{{ s.num }}</span>
+              {{ s.text }}
+            </li>
+          </sc-for>
+        </ol>
+      </section>
+
+      <sc-if value="{{ hasExample }}" hint-placeholder-val="{{ false }}">
+        <section style="background:#f2ece1;border-radius:14px;padding:22px 24px;margin:0 0 36px;">
+          <div style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(20px,3.5vw,26px);line-height:1.35;color:#231b19;margin:0 0 12px;">
+            <sc-for list="{{ exampleLines }}" as="l" hint-placeholder-count="3">
+              <div>{{ l.text }}</div>
+            </sc-for>
+          </div>
+          <p style="font-size:15px;line-height:1.55;color:#6a5f5a;margin:0;">{{ exampleNote }}</p>
+        </section>
+      </sc-if>
+
+      <section style="margin:0 0 36px;">
+        <h2 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:13px;letter-spacing:0.12em;text-transform:uppercase;color:#8a7d76;margin:0 0 12px;">Why it works</h2>
+        <p style="font-size:17px;line-height:1.65;color:#3a312e;margin:0;text-wrap:pretty;">{{ article.content.why }}</p>
+      </section>
+
+      <section style="border-top:2px solid #5e1226;border-bottom:2px solid #5e1226;padding:20px 0;margin:0 0 44px;">
+        <p style="font-size:12px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#5e1226;margin:0 0 8px;">Remember this</p>
+        <p style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(21px,4vw,28px);line-height:1.25;letter-spacing:0;color:#231b19;margin:0;text-wrap:pretty;">{{ article.content.remember }}</p>
+      </section>
+
+      <p style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(17px,3vw,20px);color:#5e1226;margin:0 0 48px;letter-spacing:0;">Tell a good story. Make it stick. Leave a mark.</p>
+
+      <div style="border-top:1px solid rgba(35,27,25,0.1);padding-top:28px;">
+        <p style="font-size:13px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#8a7d76;margin:0 0 12px;">More useful reads</p>
+        <sc-for list="{{ related }}" as="r" hint-placeholder-count="3">
+          <a href="#" onClick="{{ r.open }}" style="display:block;padding:12px 0;font-size:18px;font-weight:600;color:#5e1226;border-bottom:1px solid rgba(35,27,25,0.08);" style-hover="color:#3f0b18">{{ r.title }} →</a>
+        </sc-for>
+      </div>
+    </article>
+  </div>
+  </sc-if>
+
+  <footer style="border-top:1px solid rgba(35,27,25,0.1);padding:28px clamp(20px,5vw,64px);display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;max-width:1100px;margin:0 auto;font-size:14px;color:#7a6f6a;">
+    <a href="Mulberry & Reed Site.dc.html" style="font-family:'Cormorant Garamond',serif;font-weight:500;color:#5e1226;font-size:16px;">Mulberry &amp; Reed</a>
+    <span style="display:flex;flex-wrap:wrap;align-items:center;gap:20px;">
+      <a href="mailto:info@mulberryandreed.com" style="display:inline-flex;align-items:center;gap:8px;font-weight:600;color:#5e1226;" style-hover="color:#3f0b18;">info@mulberryandreed.com</a>
+      <a href="https://wa.me/9647885514118" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:8px;font-weight:600;color:#5e1226;" style-hover="color:#3f0b18;"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1-.2-.1-1-.4-2-1.2-.7-.7-1.2-1.5-1.4-1.7-.1-.2 0-.4.1-.5l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.8 2.7 4.3 3.8.6.3 1.1.4 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.2-.5-.3z"></path></svg>WhatsApp</a>
+    </span>
+    <span>© 2026 Mulberry &amp; Reed. All rights reserved.</span>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:&quot;100%&quot;,&quot;height&quot;:900}}">
+class Component extends DCLogic {
+  state = { articles: [], loaded: false, view: 'list', slug: null, query: '', cat: 'All', need: 'All', tab: 'guides', resources: [], rcat: 'All' };
+  categories = ["All","Brand","Marketing","Social","Content","Websites","Growth","Money","Customers","Business","Tools"];
+  needs = ["All","Get noticed","Get more customers","Make more money","Save money","Save time","Keep customers","Build your brand","Learn the basics"];
+
+  componentDidMount() {
+    import('./blog-data.js').then(m => {
+      const match = (window.location.hash || '').match(/post=([\w-]+)/);
+      const slug = match && m.articles.some(a => a.slug === match[1]) ? match[1] : null;
+      this.setState({ articles: m.articles, loaded: true, ...(slug ? { view: 'article', slug } : {}) });
+    }).catch(e => console.error('blog-data load failed', e));
+    import('./resources-data.js').then(m => {
+      this.setState({ resources: m.resources, ...((window.location.hash || '').includes('resources') ? { tab: 'resources' } : {}) });
+    }).catch(e => console.error('resources-data load failed', e));
+  }
+
+  open(slug) {
+    return (e) => { if (e) e.preventDefault(); this.setState({ view: 'article', slug }); try { window.scrollTo(0, 0); } catch (_) {} };
+  }
+  back = (e) => { if (e) e.preventDefault(); this.setState({ view: 'list' }); try { window.scrollTo(0, 0); } catch (_) {} };
+
+  pill(label, active, onClick) {
+    const base = 'font-family:inherit;font-size:14px;font-weight:600;white-space:nowrap;padding:9px 16px;border-radius:999px;cursor:pointer;transition:all .12s ease;border:1.5px solid ';
+    const style = active
+      ? base + '#5e1226;background:#5e1226;color:#faf7f2;'
+      : base + 'rgba(35,27,25,0.16);background:transparent;color:#4a403c;';
+    return { label, active, onClick, style };
+  }
+
+  filtered() {
+    const q = this.state.query.trim().toLowerCase();
+    return this.state.articles.filter(a => {
+      if (this.state.cat !== 'All' && a.category !== this.state.cat) return false;
+      if (this.state.need !== 'All' && a.need !== this.state.need) return false;
+      if (q) {
+        const hay = (a.title + ' ' + a.summary + ' ' + a.category + ' ' + a.need + ' ' + (a.keywords || []).join(' ')).toLowerCase();
+        if (!hay.includes(q)) return false;
+      }
+      return true;
+    });
+  }
+
+  renderVals() {
+    const isArticle = this.state.view === 'article' && this.state.slug;
+    const current = isArticle ? this.state.articles.find(a => a.slug === this.state.slug) : null;
+
+    const vis = this.filtered().map(a => ({
+      n: a.n, slug: a.slug, title: a.title, summary: a.summary,
+      readingTime: a.readingTime, category: a.category, open: this.open(a.slug)
+    }));
+
+    const catPills = this.categories.map(c =>
+      this.pill(c, this.state.cat === c, (e) => { if (e) e.preventDefault(); this.setState({ cat: c }); }));
+    const needPills = this.needs.map(n =>
+      this.pill(n === 'All' ? 'All' : n, this.state.need === n, (e) => { if (e) e.preventDefault(); this.setState({ need: n }); }));
+
+    const total = this.state.articles.length;
+    const count = vis.length;
+    const resultLabel = !this.state.loaded ? 'Loading guides…'
+      : (count === total ? `All ${total} guides` : `${count} guide${count === 1 ? '' : 's'}`);
+
+    let steps = [], related = [], hasExample = false, exampleLines = [], exampleNote = '';
+    if (current) {
+      steps = (current.content.steps || []).map((t, i) => ({ num: i + 1, text: t }));
+      related = (current.content.related || []).map(slug => {
+        const r = this.state.articles.find(a => a.slug === slug);
+        return r ? { title: r.title, open: this.open(r.slug) } : null;
+      }).filter(Boolean);
+      if (current.content.example) {
+        hasExample = true;
+        exampleLines = current.content.example.lines.map(t => ({ text: t }));
+        exampleNote = current.content.example.note;
+      }
+    }
+
+    const tabBase = 'font-family:inherit;font-size:16px;font-weight:600;background:none;border:none;cursor:pointer;padding:10px 4px;margin-bottom:-1px;border-bottom:2.5px solid ';
+    const resCats = ['All'].concat([...new Set(this.state.resources.map(r => r.category))]);
+    const visibleResources = this.state.resources.filter(r => this.state.rcat === 'All' || r.category === this.state.rcat);
+
+    return {
+      isGuides: this.state.tab === 'guides',
+      isResources: this.state.tab === 'resources',
+      showGuides: () => this.setState({ tab: 'guides' }),
+      showResources: () => this.setState({ tab: 'resources' }),
+      tabGuidesStyle: tabBase + (this.state.tab === 'guides' ? '#5e1226;color:#5e1226;' : 'transparent;color:#8a7d76;'),
+      tabResourcesStyle: tabBase + (this.state.tab === 'resources' ? '#5e1226;color:#5e1226;' : 'transparent;color:#8a7d76;'),
+      resCatPills: resCats.map(c => this.pill(c, this.state.rcat === c, (e) => { if (e) e.preventDefault(); this.setState({ rcat: c }); })),
+      visibleResources,
+      isList: !isArticle,
+      isArticle: !!isArticle,
+      article: current || { category: '', title: '', summary: '', readingTime: '', content: { short: '', learned: '', why: '', remember: '' } },
+      visible: vis,
+      catPills, needPills,
+      query: this.state.query,
+      resultLabel,
+      noResults: this.state.loaded && count === 0,
+      steps, related, hasExample, exampleLines, exampleNote,
+      hasPhoto: !!(current && current.photo),
+      photoEl: (current && current.photo) ? React.createElement('img', { src: current.photo, alt: current.title, style: { width: '100%', height: 'auto', display: 'block', borderRadius: 14 } }) : null,
+      onSearch: (e) => this.setState({ query: e.target.value }),
+      clearAll: (e) => { if (e) e.preventDefault(); this.setState({ query: '', cat: 'All', need: 'All' }); },
+      back: this.back,
+    };
+  }
+}
+</script>
+</body>
+</html>

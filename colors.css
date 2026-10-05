@@ -1,0 +1,24 @@
+:root{
+/* Site palette (from the live site source) */
+--paper:#FAF7F2;--ink:#231B19;--ink-2:#4A403C;--ink-3:#6A5F5A;--ink-4:#7A6F6A;--ink-5:#8A7D76;
+--berry:#7B1B33;--berry-deep:#5E1226;--berry-press:#571022;--rose:#C98A9B;
+--espresso:#231B19;--espresso-2:#2A211E;--espresso-3:#332824;
+--oat-1:#EFE8DD;--oat-hover:#F2ECE1;--oat-card:#F1EBE2;--berry-deep-hover:#3F0B18;--ink-article:#3A312E;--oat-2:#E7DDCE;--oat-ink:#A2937F;
+/* Brand colour board — primary */
+--mulberry:#2E0F2D;--ripe-berry:#8B1E3F;--red-berry:#C8223F;--pink-berry:#E07A7A;--white-mulberry:#F4E9D7;--leaf-green:#3E7D32;--fresh-leaf:#8FBF5B;--forest-green:#1F4D2B;
+/* Brand colour board — supporting accents */
+--deep-mulberry:#180A1A;--plum:#4B1F4A;--berry-pink:#A6385B;--soft-coral:#F2A7A1;--blush:#F9D7D2;--young-leaf:#CFE3A1;--olive:#6B8F3E;--sage:#A7C193;
+/* Brand colour board — neutrals */
+--earth:#3A322A;--stone:#A89B8C;--sand:#E8DDC9;--light:#FAF8F2;
+/* Brand colour board — gradients (optional) */
+--gradient-mulberry:linear-gradient(135deg,#2E0F2D 0%,#8B1E3F 60%,#C8223F 100%);/* @kind color */
+--gradient-berry:linear-gradient(135deg,#C8223F 0%,#F2A7A1 100%);/* @kind color */
+--gradient-leaf:linear-gradient(135deg,#3E7D32 0%,#CFE3A1 100%);/* @kind color */
+--gradient-natural:linear-gradient(135deg,#F4E9D7 0%,#6B8F3E 100%);/* @kind color */
+/* Semantic */
+--surface-page:var(--paper);--surface-dark:var(--espresso);--surface-dark-card:var(--espresso-2);--surface-dark-card-hover:var(--espresso-3);--surface-accent:var(--berry);--surface-placeholder:var(--oat-1);
+--text-strong:var(--ink);--text-body:var(--ink-2);--text-muted:var(--ink-3);--text-subtle:var(--ink-4);--text-quiet:var(--ink-5);--text-inverse:var(--paper);--text-inverse-muted:rgba(250,247,242,.72);--text-accent:var(--berry);--text-accent-on-dark:var(--rose);
+--action-primary:var(--berry);--action-primary-hover:var(--berry-press);--action-fg:var(--paper);
+--border-hairline:rgba(35,27,25,.08);--border-default:rgba(35,27,25,.12);--border-button:rgba(35,27,25,.25);--border-input:rgba(35,27,25,.14);--border-pill:rgba(35,27,25,.16);--border-callout:rgba(94,18,38,.18);--border-on-dark:rgba(250,247,242,.12);--border-on-accent:rgba(250,247,242,.5);
+--nav-glass:rgba(250,247,242,.92);
+}
